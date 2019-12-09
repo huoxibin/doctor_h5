@@ -1,0 +1,21 @@
+<%for(i=0;i<data.length;i++){%>
+    <%var formTitle = data[i].type;%>
+    <%var formTime = data[i].startTime.substr(0,10);%>
+    <%var visitType = data[i].visitType;%>
+    <%var recordId = data[i].id;%>
+    <div class="record mb20" recordId="<%=recordId%>">
+        <div class="record_top"><span><%=formTitle%></span><i><%=formTime%></i><span></span></div>
+        <div class="record_bot"><span>随访方式：</span><i><%=visitType%></i></div>
+    </div>
+<%}%>
+
+
+
+
+
+
+
+
+
+
+

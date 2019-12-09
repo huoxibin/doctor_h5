@@ -1,0 +1,72 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #F9F9F9;overflow-x: hidden">
+
+<div class="form_type_course" style="display: block">
+    <!-----------------------------------------------------讨论内容-------------------------------------------------->
+    <div class="commentArea">
+
+        <div class="yesTalk">
+            <ul class="history">
+                <!--<li commentId="46">
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">刚刚</span>
+                                <p class="replyNum">
+                                    <span class="replyCount">10</span>
+                                    <span class="wenzi">回复</span>
+                                </p>
+                            </div>
+                        </div>
+                </li>-->
+            </ul>
+            <div class="downLoad" style="display: none">
+                正在加载中---
+            </div>
+            <div class="showAllData" style="display: none">
+                 已展示全部数据
+            </div>
+        </div>
+
+        <dl class="noTalk" style="display: none">
+            <dt><img src="../images/H_noTalk.png"></dt>
+            <dd>不支持评论</dd>
+        </dl>
+    </div>
+    <!--------------评论区按钮---------------->
+    <div class="commentBtn">
+        <!--参与讨论(评论区)-->
+        <div class="btnOne">
+            <p style="color: #ccc">说说您的看法</p>
+        </div>
+        <!--参与讨论(输入区)-->
+        <!--参与讨论(输入区)-->
+        <div class="btnTwo" style="display: none">
+            <div class="discussion">
+                <input class="disInput" type="text" clickYes id="saytext" name="saytext" placeholder="说说您的看法" value=''/>
+            </div>
+            <div class="attend">
+                <img class="emotion" id="emotionId" src="../images/H_expression.png">
+                <span id="publish">发布</span>
+                <span id="publishFour" style="display: none">发布</span>
+                <span id="publishFive" style="display: none">发布</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('ejs/foot') %>
+</body>
+</html>

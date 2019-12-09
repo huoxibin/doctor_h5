@@ -1,0 +1,12 @@
+{
+    "site": "医生端H5",
+    "ico":"",
+    "styles": [
+        "../css/reset.css"
+    ],
+    "scripts": [
+        "../js/common/zepto.min.js",
+        "../js/common/fn.js",
+        "https://s13.cnzz.com/z_stat.php?id=1273630042&web_id=1273630042"
+    ]
+}

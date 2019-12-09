@@ -1,0 +1,59 @@
+<%- include('ejs/head') %>
+<body>
+<header class="Ynav Jnav" style="display: none;">
+    <em  class="a Y_tump Docjump J_jumpBtn"> </em>
+    <h1>邀请好友</h1>
+</header>
+<div class="invitesBanner">
+    <div class="bannerTxt hide">邀请您的好友一起加入哆咖医生   做多点执业吧</div>
+    <div class="goBack"></div>
+    <div class="invitesRule invitesImg"></div>
+</div>
+<div class="invitesCon">
+    <div class="shareBox_other">
+        <div class="top invitesImg"></div>
+        <ul class="clearfix shareIcon">
+            <li class="invitesImg shareIcon_3" id="wxP_ShareBtn"><p>朋友圈</p></li>
+            <li class="invitesImg shareIcon_1" id="wx_ShareBtn"><p>微信</p></li>
+            <li class="invitesImg shareIcon_2" id="qq_ShareBtn"><p>QQ好友</p></li>
+            <li class="invitesImg shareIcon_4" id="qqP_ShareBtn"><p>QQ空间</p></li>
+        </ul>
+    </div>
+    <div class="invitesBox">
+        <ul class="nav clearfix">
+            <li class="active">唤醒好友</li>
+            <li>好友列表</li>
+        </ul>
+        <div class="navBox">
+            <p>您邀请的好友还未提交资质认证，赶快去提醒他吧</p>
+            <div class="invitesList">
+                <!--<dl class="wrap clearfix">-->
+                    <!--<dd>-->
+                        <!--<div class="listName">北京</div>-->
+                        <!--<div class="listPhone">13100001111</div>-->
+                    <!--</dd>-->
+                    <!--<dt class="clearfix">-->
+                        <!--<div class="invitesBtn">去提醒</div>-->
+                    <!--</dt>-->
+                <!--</dl>-->
+                <!--<dl class="wrap clearfix">-->
+                    <!--<dd>-->
+                        <!--<div class="listName">北京</div>-->
+                        <!--<div class="listPhone">13100001111</div>-->
+                    <!--</dd>-->
+                    <!--<dt>-->
+                        <!--<div class="invitesBtn">去提醒</div>-->
+                    <!--</dt>-->
+                <!--</dl>-->
+            </div>
+        </div>
+        <div class="navBox hide">
+            <p>您邀请成功的好友都在这里</p>
+            <div class="friendList"></div>
+        </div>
+    </div>
+</div>
+
+<%- include('ejs/foot') %>
+</body>
+</html>

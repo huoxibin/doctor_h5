@@ -1,0 +1,63 @@
+<%- include('ejs/head') %>
+<body>
+<div class='wrap'>
+    <section class="Ynav">
+        <h1>辅医</h1>
+    </section>
+    <div class="Y_docIndex" style="overflow:hidden!important">
+        <div class='Y_medTitle'>
+            <div class='Y_medTitleCon'>
+                <!--<a href="Y_DC.html" style="display: block">-->
+                    <dl id="JBCX_click">
+                        <dt><img src="../images/Y_medicalIcon2.png"></dt>
+                        <dd>疾病查询</dd>
+                    </dl>
+                <!--</a>
+                <a href="Y_MediCalc.html" style="display: block">-->
+                    <dl id="JSQ_click">
+                        <dt><img src="../images/Y_medicalIcon3.png"></dt>
+                        <dd>医学计算器</dd>
+                    </dl>
+                <!--</a>-->
+                <dl>
+                    <dt><img src="../images/Y_medicalIcon.png"></dt>
+                    <dd>名医带教</dd>
+                </dl>
+            </div>
+        </div>
+        <div class='Y_medCon'>
+            <h2><img src="../images/Y_medicalIcon4.png">医学资讯<span><a class="a Amore" href="../html/Y_MedicalIn.html">查看更多></a></span></h2>
+            <div class="Y_medCon_CS">
+                <!--滚动区域-->
+                <div id="wrapper" class="Y_indexWrap JcontentBox" style="overflow: hidden;top:7.1rem!important;">
+                    <div id="scroller">
+                        <div id="pullDown">
+                            <span class="pullDownLabel"></span>
+                        </div>
+                        <div id="thelist" class="clearfix">
+                            <!--<div class='Y_medCon_C'>
+                            <dl>
+                                <dt><img src="../images/Y_medicalImg1.png"></dt>
+                                <dd>
+                                    <h3>中国医改四个新热点的聚焦</h3>
+                                    <p>2017-12-30</p>
+                                </dd>
+                            </dl>
+                        </div>-->
+                        </div>
+                        <div id="pullUp">
+                            <span class="pullUpLabel"></span>
+                        </div>
+                    </div>
+                    <!--滚动条-->
+                    <div class="Y_gdt">
+                        <div class="Y_gdt1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

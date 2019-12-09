@@ -1,0 +1,14 @@
+{
+  "title": "医学资讯",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/H_MedicalIn.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js",
+    "../js/common/iscroll.js",
+    "../js/projectJs/Y_MedicalIn.js"
+  ]
+}

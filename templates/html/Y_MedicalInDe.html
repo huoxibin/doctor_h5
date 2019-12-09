@@ -1,0 +1,97 @@
+<%- include('ejs/head') %>
+<!--<script type="text/javascript" charset="UTF-8" src="//res.cdn.openinstall.io/openinstall.js"></script>-->
+<body class="Y_HuiBody" style="position: relative">
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump infoDetail_btn"> </a>
+        <h1 class="XK_title"></h1>
+        <!--<b class="Y_tump"></b>-->
+        <span class="invitesImg collectBtn"></span>
+        <span class="invitesImg shareBtn"></span>
+    </section>
+    <section class="shareHeader hide">
+        <span class="logo"></span>
+        <span class="appName">哆咖医生</span>
+        <span class="openApp" id="openApp">打开</span>
+    </section>
+
+    <div class="JDCCon infoDetail">
+        <div class="infoDetail_inner" style="background: #fff;"></div>
+        <!-----------讨论内容--------------->
+        <div class="commentArea">
+            <div class="titleCon">
+                <i></i>
+                <span>精彩讨论</span>
+            </div>
+            <div class="yesTalk">
+                <ul class="history">
+                    <!--<li commentId="46">
+                            <div class="perImg">
+                                <img src="../images/JpatientD.png"/>
+                            </div>
+                            <div class="perSpeech">
+                                <div class="perName">
+                                    <div class="doctorName">李医生</div>
+                                    <div class="doctorSnap">
+                                        <span>17</span>
+                                        <img src="../images/H_collect_n.png"/>
+                                    </div>
+                                </div>
+                                <div class="speechCon">
+                                    好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                </div>
+                                <div class="speechTime">
+                                    <span class="talkTime">刚刚</span>
+                                    <p class="replyNum">
+                                        <span class="replyCount">10</span>
+                                        <span class="wenzi">回复</span>
+                                    </p>
+                                </div>
+                            </div>
+                    </li>-->
+                </ul>
+                <div class="downLoad" style="display: none">
+                    正在加载中---
+                </div>
+                <div class="showAllData" style="display: none">
+                    已展示全部数据
+                </div>
+            </div>
+
+            <dl class="noTalk" style="display: none">
+                <dt><img src="../images/H_noTalk.png"></dt>
+                <dd>该文章不支持讨论</dd>
+            </dl>
+        </div>
+        <div class="commentBtn">
+            <!--参与讨论(评论区)-->
+            <div class="btnOne">
+                <div class="discussion">
+                    <p>参与讨论</p>
+                </div>
+                <div class="attend goBottom">
+                    <img src="../images/h_history.png">
+                    <span>评论区</span>
+                </div>
+                <div class="attend goTop" style="display: none">
+                    <img src="../images/tips.png">
+                    <span>正文</span>
+                </div>
+            </div>
+            <!--参与讨论(输入区)-->
+            <div class="btnTwo" style="display: none">
+                <div class="discussion">
+                    <input class="disInput" type="text" clickYes id="saytext" name="saytext" placeholder="说说您的看法" value=''/>
+                </div>
+                <div class="attend">
+                    <img class="emotion" id="emotionId" src="../images/H_expression.png">
+                    <span id="publish">发布</span>
+                    <span id="publishFour" style="display: none">发布</span>
+                    <span id="publishFive" style="display: none">发布</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="getMore hide"><span class="getMoreBtn" id="getMoreBtn">打开APP查看更多详情</span></div>
+<%- include('ejs/foot') %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<%- include('ejs/head') %>
+<body class="swiperBody">
+<div class='wrap '>
+    <section class="Ynav Jnav">
+        <a href="javascript:;" class="Y_tump J_jumpBtnIback"></a>
+        <h1>提现记录</h1>
+    </section>
+    <div class="wapperbox JnoDatahide Y_docIndex" style="position: relative;overflow: hidden;height:100%">
+        <div class=" J_patient swiper-container JcontentBox" id="wrapper" style="overflow: hidden;">
+            <div class='J_patientList J_historyDeal' id="scroller" style="transition-property: transform; transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, -30px) scale(1) translateZ(0px); transition-duration: 400ms;">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+               <div id="thelist" class="clearfix">
+               </div>
+                <div id="pullUp">
+                    <span class="pullUpLabel"></span>
+                </div>
+            </div>
+            <div style="position: absolute; z-index: 100; width: 7px; bottom: 2px; top: 2px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;">
+                <div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transform: translate(0px, 4.09457px) translateZ(0px); transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); height: 41px; transition-duration: 400ms;"></div>
+            </div>
+        </div>
+       <dl class="JnoData">
+            <dt><img src="../images/Y_DCListSechBg.png" style="width:148px;height:126px;"></dt>
+            <dd>您还没有提现历史</dd>
+        </dl>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+    <% for(i=0;i<data.length;i++){
+        var nextData=data[i].data;
+    %>
+    <div class="J_incomeList J_incomeList<%=pageNum%>">
+        <%if(data[i].viewMonth==iNowMonth){%>
+           <h2 class="J_incomeMonth" style="visibility: hidden;height:0;overflow:hidden"><%=data[i].viewMonth%></h2>
+        <% } else { %>
+          <h2 class="J_incomeMonth"><%=data[i].viewMonth%></h2>
+        <% } %>
+        <ul>
+            <% for(j=0;j<nextData.length;j++){
+              var itime=nextData[j].successTime==null?'':nextData[j].successTime.split(' ')[0].split('-'); var itimes=nextData[j].successTime==null?'':nextData[j].successTime.split(' ')[1].split(':');
+            %>
+            <li class="p_item_finc clearfix">
+
+                    <h4 class="item_left">
+                        <p>
+                            <time><%=nextData[j].memo%></time>
+                        </p>
+                        <b class="p_state"><%=itime[1]%>-<%=itime[2]%>  <%=itimes[0]%>:<%=itimes[1]%></b>
+                    </h4>
+                    <h6 class="item_right item_money">+<%=nextData[j].amount%></h6>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+

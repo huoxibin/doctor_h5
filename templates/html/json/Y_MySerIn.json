@@ -1,0 +1,11 @@
+{
+  "title": "我的服务-服务介绍",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/J_style.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js"
+  ]
+}

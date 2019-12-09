@@ -1,0 +1,212 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody">
+<div class="course">
+    <section class="shareHeader">
+        <span class="logo"></span>
+        <span class="appName">哆咖医生</span>
+        <span class="openApp" id="openApp">打开</span>
+    </section>
+    <section class="videoImg">
+        <img src="" alt="">
+        <div class="course_icon videoImg_btn" id="videoOpenApp"></div>
+    </section>
+    <section class="courseTitle"></section>
+    <!--课程学习-->
+    <ul class="course_ul" style="display: none">
+        <li class="icon-time"></li>
+        <li class="icon-view"><span class="course_icon"></span><i></i></li>
+        <li class="icon-collect"><span class="course_icon"></span><i></i></li>
+    </ul>
+    <!--课程直播-->
+    <div class="course_ul_two" style="display: none">
+        <p class="icon-time">
+
+        </p>
+        <p class="watch">
+            <img src="../images/profile_view.png"/>
+            <span id="watchPerson"></span>人观看
+        </p>
+    </div>
+</div>
+<!-----------------------------------------------------------------------------课程学习---------------------------------->
+<section class="course_intr course_tab" style="display: none">
+    <section class="course_nav">
+        <div class="active">课程介绍</div>
+        <div>讲师介绍</div>
+        <div>课程讨论</div>
+    </section>
+    <div id="course_box">
+        <section class="course_box course_introduce"></section>
+        <section class="course_box doctor_intr hide">
+            <dl>
+                <dd class="doctorUrl"><img src="" alt=""></dd>
+                <dt>
+                    <div class="top"><span class="doctorName"></span><span class="titleName"></span></div>
+                    <div class="bot"><span class="hospitalName"></span><span class="departmentName"></span></div>
+                </dt>
+            </dl>
+            <div class="doctor_introduce"></div>
+        </section>
+        <section class="course_box course_discuss hide" style="margin: 0">
+            <div class="form_type_course" style="display: block">
+                <div class="commentArea">
+                    <!--<div class="titleCon">
+                        <i></i>
+                        <span>精彩讨论</span>
+                    </div>-->
+                    <div class="yesTalk">
+                        <ul class="history">
+                            <!--<li commentId="46">
+                                    <div class="perImg">
+                                        <img src="../images/JpatientD.png"/>
+                                    </div>
+                                    <div class="perSpeech">
+                                        <div class="perName">
+                                            <div class="doctorName">李医生</div>
+                                            <div class="doctorSnap">
+                                                <span>17</span>
+                                                <img src="../images/H_collect_n.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="speechCon">
+                                            好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                        </div>
+                                        <div class="speechTime">
+                                            <span class="talkTime">刚刚</span>
+                                            <p class="replyNum">
+                                                <span class="replyCount">10</span>
+                                                <span class="wenzi">回复</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                            </li>-->
+                        </ul>
+                        <div class="downLoad" style="display: none">
+                            正在加载中---
+                        </div>
+                        <div class="showAllData" style="display: none">
+                            已展示全部数据
+                        </div>
+                    </div>
+
+                    <dl class="noTalk" style="display: none">
+                        <dt><img src="../images/H_noTalk.png"></dt>
+                        <dd>该课程不支持评论</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!-----------------------------------------------------------------------------课程直播---------------------------------->
+<section class="course_intr_two course_tab" style="display: none">
+    <section class="course_nav">
+        <div class="active">课程详情</div>
+        <div>课程讨论</div>
+        <div>相关课程</div>
+    </section>
+    <div id="course_box_two">
+        <section class="course_box doctor_intr">
+            <dl>
+                <dd class="doctorUrl"><img src="" alt=""></dd>
+                <dt>
+                    <div class="top"><span class="doctorName"></span><span class="titleName"></span></div>
+                    <div class="bot"><span class="hospitalName"></span><span class="departmentName"></span></div>
+                </dt>
+            </dl>
+            <div class="doctor_introduce"></div>
+            <div class="huo_doctor">
+                <p class="titleHuo">课程介绍</p>
+                <p class="countHuo oneCont">
+
+                </p>
+                <p class="titleHuo">课程提纲</p>
+                <p class="countHuo twoCont">
+
+                </p>
+            </div>
+        </section>
+        <section class="course_box course_discuss hide" style="margin: 0">
+            <div class="form_type_course" style="display: block">
+                <div class="commentArea">
+                    <!--<div class="titleCon">
+                        <i></i>
+                        <span>精彩讨论</span>
+                    </div>-->
+                    <div class="yesTalk">
+                        <ul class="history">
+                            <!--<li commentId="46">
+                                    <div class="perImg">
+                                        <img src="../images/JpatientD.png"/>
+                                    </div>
+                                    <div class="perSpeech">
+                                        <div class="perName">
+                                            <div class="doctorName">李医生</div>
+                                            <div class="doctorSnap">
+                                                <span>17</span>
+                                                <img src="../images/H_collect_n.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="speechCon">
+                                            好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                        </div>
+                                        <div class="speechTime">
+                                            <span class="talkTime">刚刚</span>
+                                            <p class="replyNum">
+                                                <span class="replyCount">10</span>
+                                                <span class="wenzi">回复</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                            </li>-->
+                        </ul>
+                        <div class="downLoad" style="display: none">
+                            正在加载中---
+                        </div>
+                        <div class="showAllData" style="display: none">
+                            已展示全部数据
+                        </div>
+                    </div>
+
+                    <dl class="noTalk" style="display: none">
+                        <dt><img src="../images/H_noTalk.png"></dt>
+                        <dd>该课程不支持评论</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section class="course_box course_introduce hide" style="margin:0;padding: 0">
+            <ul id="relationCourse">
+                <!--<li>-->
+                    <!--<div class="content">-->
+                        <!--<div class="title">-->
+                            <!--高血压的血压差越大，危险程度成-->
+                            <!--正比例还是反比列。-->
+                        <!--</div>-->
+                        <!--<div class="watch">-->
+                            <!--<p class="statusOne">-->
+                                <!--<img src="../images/imgreview.png"/>-->
+                            <!--</p>-->
+                            <!--<p class="person">-->
+                                <!--<img src="../images/profile_view.png"/>-->
+                                <!--<span>0</span>人观看-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="img">-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+            <dl class="noTalkTwo" style="display: none">
+                <dt><img src="../images/nodatarelative.png"></dt>
+                <dd>暂无相关数据</dd>
+            </dl>
+        </section>
+
+    </div>
+</section>
+
+<div class="hide recruitgomore"><span class="getMoreBtn" id="getMoreBtn">打开APP查看更多详情</span></div>
+<%- include('ejs/foot') %>
+</body>
+</html>

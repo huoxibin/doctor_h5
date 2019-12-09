@@ -1,0 +1,71 @@
+<div class="Y_docIndex JindexBox">
+    <div class='Y_DCdetails JDCCon'>
+        <%if(data.intro){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">疾病介绍</h2>
+            <p><%=data.intro%></p>
+        </div>
+        <%}%>
+
+        <%if(data.cause){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">病因</h2>
+            <p><%=data.cause%></p>
+        </div>
+        <%}%>
+
+        <%if(data.symptom){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">疾病症状</h2>
+            <p><%=data.symptom%></p>
+        </div>
+        <%}%>
+
+        <%if(data.complication){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">并发症</h2>
+            <p><%=data.complication%></p>
+        </div>
+        <%}%>
+
+        <%if(data.diagnose){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">诊断</h2>
+            <p><%=data.diagnose%></p>
+        </div>
+        <%}%>
+        <%if(medicine!=''){%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">相关药品</h2>
+            <p> <%=medicine%> </p>
+        </div>
+        <%}else{%>
+        <div class='Y_DCdetails1'>
+            <h2 class="sign_d_title">相关药品</h2>
+            <p> <%=data.medicineDescribe%> </p>
+        </div>
+        <%}%>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

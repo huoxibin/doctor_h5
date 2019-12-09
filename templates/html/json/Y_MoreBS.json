@@ -1,0 +1,14 @@
+{
+    "site": "血糖更多",
+    "ico":"",
+    "styles": [
+        "../css/Y_style.css"
+    ],
+    "scripts": [
+        "../js/common/Cookie.js",
+        "../js/common/touch.js",
+        "../js/common/iscroll.js",
+        "../js/common/ejs.min.js",
+        "../js/projectJs/Y_MoreBS.js"
+    ]
+}

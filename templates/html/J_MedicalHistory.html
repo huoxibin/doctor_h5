@@ -1,0 +1,210 @@
+<%- include('ejs/head') %>
+<body class="Jhealth JhealthMedical">
+<div class="wrap">
+    <section class="Ynav">
+        <span ihref="J_signPDetail.html" class="a Y_tump patientBack"> </span>
+        <h1>既往病史</h1>
+    </section>
+    <form class="Y_docIndex" id="medicalHistory_form">
+    <div class="weui-cells weui-cells_form medicalHistory_box" style="margin-bottom: 100px">
+        <input class="weui-input" id="medicalHistory" name='medicalHistory' type="hidden" >
+        <div class="weui-cell S_radio check0" isname="check0">
+            <div class="weui-cell__hd"><label  class="weui-label">无</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb1" isname="jb1">
+            <div class="weui-cell__hd"><label class="weui-label">高血压</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb2" isname="jb2">
+            <div class="weui-cell__hd"><label class="weui-label">冠心病</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb3" isname="jb3">
+            <div class="weui-cell__hd"><label  class="weui-label">糖尿病</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb4" isname="jb4">
+            <div class="weui-cell__hd"><label  class="weui-label">高血脂</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb5" isname="jb5">
+            <div class="weui-cell__hd"><label class="weui-label" style="width: 120px">脑梗死/脑卒中</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb6" isname="jb6">
+            <div class="weui-cell__hd"><label class="weui-label">脑出血</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb7" isname="jb7">
+            <div class="weui-cell__hd"><label class="weui-label">肝病</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb8" isname="jb8">
+            <div class="weui-cell__hd"><label class="weui-label">结核</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb9" isname="jb9">
+            <div class="weui-cell__hd"><label class="weui-label">肿瘤</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb10" isname="jb10">
+            <div class="weui-cell__hd"><label class="weui-label">手术</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+
+        <div class="weui-cell S_check jb11" isname="jb11">
+            <div class="weui-cell__hd"><label class="weui-label">外伤</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+
+
+        <div class="weui-cell S_check jb12" isname="jb12">
+            <div class="weui-cell__hd"><label class="weui-label">脂肪肝</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+
+        <div class="weui-cell S_check jb15" isname="jb15">
+            <div class="weui-cell__hd"><label class="weui-label">消化道溃疡</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb16" isname="jb16">
+            <div class="weui-cell__hd"><label class="weui-label">高尿酸</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb17" isname="jb17">
+            <div class="weui-cell__hd"><label class="weui-label">痛风</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb18" isname="jb18">
+            <div class="weui-cell__hd"><label class="weui-label">肥胖症</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb19" isname="jb19">
+            <div class="weui-cell__hd"><label class="weui-label" style="width: 100%">动脉粥样硬化</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb20" isname="jb20">
+            <div class="weui-cell__hd"><label class="weui-label">肾脏病</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb21" isname="jb21">
+            <div class="weui-cell__hd"><label class="weui-label">骨关节炎</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb22" isname="jb22">
+            <div class="weui-cell__hd"><label class="weui-label">骨质疏松</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb23" isname="jb23">
+            <div class="weui-cell__hd"><label class="weui-label">外周血管疾病</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb24" isname="jb24">
+            <div class="weui-cell__hd"><label class="weui-label">巨大儿生产史</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+        <div class="weui-cell S_check jb25" isname="jb25">
+            <div class="weui-cell__hd"><label class="weui-label" style="width: 100%">多囊卵巢综合征</label></div>
+            <div class="weui-cell__bd">
+                <i></i>
+            </div>
+        </div>
+
+        <div class="medHistory" style="border-bottom: 1px solid #e5e5e5">
+
+            <div class="weui-cell S_check H_border jb26" isname="jb26">
+                <div class="weui-cell__hd"><label class="weui-label">癌症</label></div>
+                <div class="weui-cell__bd">
+                    <i></i>
+                </div>
+            </div>
+
+            <div class="medInput" isname="jb26Info">
+                <textarea id="jb26Info" class="textLine" name="jb26Info" placeholder="请输入疾病名称"></textarea>
+            </div>
+
+        </div>
+
+        <div class="medHistory">
+            <div class="weui-cell S_check H_border jb27" isname="jb27">
+                <div class="weui-cell__hd"><label class="weui-label">血液病</label></div>
+                <div class="weui-cell__bd">
+                    <i></i>
+                </div>
+            </div>
+            <div class="medInput" isname="jb27Info">
+                <textarea id="jb27Info" class="textLine" name="jb27Info" placeholder="请输入疾病名称"></textarea>
+            </div>
+
+        </div>
+
+        <div class="medHistory">
+            <div class="weui-cell S_check H_border jb28" isname="jb28" style="border-top: 1px solid #e5e5e5">
+                <div class="weui-cell__hd"><label class="weui-label">其他</label></div>
+                <div class="weui-cell__bd">
+                    <i></i>
+                </div>
+            </div>
+            <div class="medInput" isname="jb28Info">
+                <textarea id="jb28Info" class="textLine" name="jb28Info" placeholder="请输入其他既往病史"></textarea>
+            </div>
+        </div>
+
+
+    </div>
+    </form>
+    <dl class="JnoData">
+        <dt><img src="../images/Y_HeathBg1.png"></dt>
+        <dd>该患者还没有完善既往病史</dd>
+    </dl>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

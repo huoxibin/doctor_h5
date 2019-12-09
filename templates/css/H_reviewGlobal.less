@@ -1,0 +1,293 @@
+@r:50rem;
+
+.form_type_course{
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 0/@r 0/@r 0/@r 0/@r;
+  z-index: 10;
+}
+
+/*-------------------------评论内容样式-------------------------------*/
+.commentArea{
+  margin-top: 0/@r;
+  min-height: 800/@r;
+  margin-bottom: 100/@r;
+  background: #fff;
+  padding: 0/@r 30/@r 100/@r 30/@r;
+  /*滚动条-------start*/
+  .iscrollDisList{
+    position: relative;
+    padding-bottom: 50/@r;
+    #wrapper{
+      position: absolute;
+      top: 10px;
+      bottom:0px;
+      height: 1400/@r!important;
+      overflow: hidden!important;
+    }
+  }
+  /*滚动条---------end*/
+  .titleCon{
+    height: 90/@r;
+    line-height: 90/@r;
+    position: relative;
+    border-bottom: 1px solid #FAFAFA;
+    i{
+      display: inline-block;
+      background-image: linear-gradient(-180deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+      border-radius: 3px;
+      width: 6/@r;
+      height: 30/@r;
+      position: absolute;
+      top: 32/@r;
+    }
+    span{
+      padding-left:25/@r;
+      font-size: 30/@r;
+      color: #333333;
+      font-weight:bolder;
+    }
+  }
+  /*----------yesTalk-------------*/
+  .yesTalk{
+    li{
+      padding: 30/@r 0/@r;
+      border-bottom: 1px solid #FAFAFA;
+      display: flex;
+      justify-content: space-between;
+      .perImg{
+        display: flex;
+        justify-content: flex-start;
+        width:84/@r;
+        height:84/@r;
+        background: url(../images/JpatientDP.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 50%;
+      }
+      .perSpeech{
+        margin-left: 30/@r;
+        flex: 1;
+        .perName{
+          display: flex;
+          justify-content: space-between;
+          .doctorName{
+            font-size: 32/@r;
+            color: #333333;
+          }
+          .doctorSnap{
+            span{
+              font-size: 30/@r;
+              color:#CCCCCC;
+              padding-right: 20/@r;
+            }
+            img{
+              width: 35/@r;
+              height: 30/@r;
+              padding-bottom: 10/@r;
+            }
+          }
+        }
+        .speechCon{
+          margin-top:20/@r;
+          font-size: 28/@r;
+          color: #666666;
+        }
+        .speechTime{
+          margin-top:20/@r;
+          height: 37/@r;
+          line-height: 37/@r;
+          .talkTime{
+            font-size: 26/@r;
+            color: #999999;
+            padding-right: 0/@r!important;
+          }
+          .replyNum{
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 10/@r;
+            background: #fff;
+            font-size: 20/@r;
+            min-width:100/@r;
+            height:40/@r;
+            text-align: center;
+            line-height: 40/@r;
+            border-radius: 16/@r;
+            .replyCount{
+              font-size: 24/@r;
+              color: #999999;
+            }
+            .wenzi{
+              font-size: 26/@r;
+              color: #999999;
+            }
+          }
+        }
+        .speechTwo{
+          margin-top:20/@r;
+          background: #FAFAFA;
+          border-radius: 10/@r;
+          box-sizing: border-box;
+          padding: 20/@r;
+          .getList{
+            p{
+              margin: 0;
+              padding: 0;
+              .doctorName{
+                font-size: 24/@r;
+                color: #333333;
+              }
+              .talkCont{
+                padding-left: 10/@r;
+                font-size: 24/@r;
+                color: #666666;
+              }
+            }
+            p:nth-child(2){
+              margin-top: 10/@r;
+            }
+          }
+          .totalLength{
+            margin-top: 10/@r;
+            p{
+              font-size: 24/@r;
+              color: #49DDEF;
+            }
+          }
+        }
+      }
+    }
+    .downLoad{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+    }
+    .showAllData{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+      font-weight: 600;
+    }
+  }
+  /*----------noTalk(禁言)-------------*/
+  .noTalk{
+    width:100%;
+    text-align: center;
+    margin-top: 0/@r;
+    padding-top:50/@r;
+    img{
+      width: 350/@r;
+      height: 250/@r;
+    }
+    dd{
+      margin-top: 30/@r;
+      margin-bottom:80/@r;
+    }
+  }
+}
+
+/*-----------------------主评论那些按钮样式----------------------------*/
+.commentBtn{
+  .btnOne{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 120/@r;
+    padding: 25/@r 30/@r;
+    p{
+      box-sizing: border-box;
+      width: 100%;
+      height: 70/@r;
+      font-size: 30/@r;
+      line-height: 70/@r;
+      text-align:left;
+      padding-left: 40/@r;
+      color: #666666;
+      background: #F1F1F1;
+      border: 1px solid #DEDBDB;
+      border-radius: 12/@r;
+    }
+  }
+  .btnTwo{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #666666;
+      }
+    }
+  }
+}
+
+//表情样式添加
+#facebox{
+  width: 100%;
+  left: 0px!important;
+  top:118/@r!important;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  //height: 300/@r;
+  //overflow-y: scroll;
+  table{
+    width: 90%;
+    margin-left: 5%;
+    tr{
+      line-height: 70/@r!important;
+      td{
+        line-height: 70/@r!important;
+      }
+    }
+  }
+}
+
+/*-------------------------点赞与没点赞的类名----------------*/
+.snapClass{
+  color: #6DE4F2!important;
+}
+.noSnapClass{
+
+}

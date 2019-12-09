@@ -1,0 +1,11 @@
+{
+  "title": "疾病搜索-暂无数据",
+  "styles": [
+    "../css/Y_style.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js"
+  ]
+}

@@ -1,0 +1,566 @@
+@r:50rem;
+/* Clearfix */
+.clearfix:after{ height:0; visibility:hidden; display:block; font-size:0; content:""; clear:both;}
+.clearfix{ display:inline-table;}
+.clearfix{ height:1%; zoom:1;}
+.clearfix{ display:block;}
+input[type="radio"],input[type="checkbox"]{
+  display: none;
+}
+input[type="text"]:disabled{
+  color: #3e3e3e !important;
+}
+/* Clearfix */
+.course_icon{
+  background: url(../images/course.png) no-repeat top center;
+  background-size: 500/@r 500/@r;
+}
+.hide{
+  display: none;
+}
+.course{
+  padding-top: 2.8rem;
+  font-family: PingFangSC-Medium;
+  background: #ffffff;
+  padding-bottom: 34/@r;
+}
+/*分享header*/
+.shareHeader{
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-left: 60/@r;
+  padding-right: 60/@r;
+  padding-top: 20/@r;
+  height: 140/@r;
+  width: 100%;
+  background: #ffffff;
+  z-index: 100;
+  .logo{
+    display: inline-block;
+    width: 102/@r;
+    height: 102/@r;
+    background: url("../images/logo.png") no-repeat center center;
+    background-size: 102/@r 102/@r;
+    float:left;
+  }
+  .openApp{
+    display: inline-block;
+    width: 120/@r;
+    height: 60/@r;
+    background-image: linear-gradient(-1deg, #47DCF0 0%, #66E7E2 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+    border-radius: 30px;
+    text-align:center;
+    color:#ffffff;
+    line-height: 60/@r;
+    font-size: 30/@r;
+    float:right;
+    margin-top: 22/@r;
+  }
+  .appName{
+    display: inline-block;
+    font-size: 30/@r;
+    color: #000000;
+    margin-left: 30/@r;
+    margin-top: 30/@r;
+  }
+}
+/*分享header*/
+
+.videoImg{
+  width: 100%;
+  height: 420/@r;
+  position: relative;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .videoImg_btn{
+    width: 88/@r;
+    height: 88/@r;
+    background-position: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}
+.doctor_Info{
+  font-family: PingFangSC-Medium;
+  margin-bottom: 32/@r;
+  h1{
+    margin-top: 21/@r;
+    text-align: center;
+    line-height: 56/@r;
+    margin-bottom: 12/@r;
+    i{
+      font-size: 40/@r;
+      color: #333333;
+      margin-right: 26/@r;
+    }
+    span{
+      font-size: 28/@r;
+    }
+  }
+  p{
+    text-align: center;
+    font-size: 30/@r;
+    color: #999999;
+    line-height: 42/@r;
+    i{
+      margin-right: 30/@r;
+    }
+  }
+}
+.doctor_Info_txt{
+  border-top: 1px solid #F0F0F0;
+  padding: 24/@r 30/@r 0 30/@r;
+  font-family: PingFangTC-Regular;
+  font-size: 30/@r;
+  color: #000000;
+  line-height: 42/@r;
+  text-indent: 2em;
+  text-align: justify;
+}
+.pubBox{
+  font-family: PingFangSC-Medium;
+  margin-top: 20/@r;
+  background: #ffffff;
+}
+.course_list{
+  padding-top: 24/@r;
+}
+.pubIcon{
+  padding:0 33/@r;
+  font-size: 32/@r;
+  line-height: 46/@r;
+  color: #333333;
+  i{
+    display: inline-block;
+    width: 6/@r;
+    height: 30/@r;
+    background-image: linear-gradient(-179deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+    background-image: -webkit-linear-gradient(-179deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+    border-radius: 3px;
+    float: left;
+    margin-right: 17/@r;
+    margin-top: 10/@r;
+  }
+}
+.course_list_li,.article_list_li,.case_list_li{
+  padding: 0 58/@r;
+  li{
+    width: 301/@r;
+    //height: 170/@r;
+    margin-right: 30/@r;
+    margin-top: 23/@r;
+    float: left;
+    div{
+      height: 170/@r;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      .broadcast_live{
+        width: 100/@r;
+        height: 40/@r;
+        position: absolute;
+        top: 0;
+        left: 26/@r;
+      }
+      .broadcast_wait{
+        width: 60/@r;
+        height: 40/@r;
+        position: absolute;
+        top: 0;
+        left: 26/@r;
+      }
+      .broadcast_playback{
+        width: 60/@r;
+        height: 40/@r;
+        position: absolute;
+        top: 0;
+        left: 26/@r;
+      }
+      img{
+        width: 301/@r;
+        height: 170/@r;
+      }
+    }
+    p{
+      margin-top:20/@r;
+      font-size: 28/@r;
+      color: #666666;
+      line-height: 40/@r;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+    }
+  }
+  li:nth-child(2n){
+    margin-right: 0;
+  }
+}
+
+
+.courseTitle{
+  margin: 20/@r 30/@r 30/@r 30/@r;
+  font-size: 36/@r;
+  line-height: 50/@r;
+  color: #333333;
+  font-weight: 600;
+}
+.course_ul{
+  margin-left:30/@r;
+  li{
+    display: inline-block;
+    font-size: 30/@r;
+    height: 42/@r;
+    line-height: 42/@r;
+    color: #B4B4B4;
+    margin-right:50/@r;
+  }
+  .icon-view{
+    span{
+      display: inline-block;
+      width: 29/@r;
+      height: 19/@r;
+      background-position: 0 -94/@r;
+      margin-right:25/@r;
+      position: relative;
+      top: -2/@r;
+    }
+  }
+  .icon-collect{
+    span{
+      display: inline-block;
+      width: 20/@r;
+      height: 19/@r;
+      background-position: 0 -119/@r;
+      margin-right:25/@r;
+      position: relative;
+      top: -2/@r;
+    }
+  }
+}
+.course_ul_two{
+  height: 37/@r;
+  display: flex;
+  justify-content: space-between;
+  padding: 0/@r 30/@r;
+  .icon-time{
+    flex: 1;
+    font-size: 30/@r;
+    color: #666666;
+  }
+  .watch{
+    font-size: 26/@r;
+    color: #999999;
+    img{
+      width: 23/@r;
+      height: 25/@r;
+      padding-right: 20/@r;
+    }
+
+  }
+}
+
+.contentBig{
+  padding-bottom: 35/@r;
+}
+
+
+/*课程讨论*/
+.form_type_course{
+  margin-top: 20/@r;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 0/@r 0/@r 0/@r 0/@r;
+  z-index: 10;
+}
+
+
+/*评论内容样式*/
+.commentArea{
+  margin-top: 0/@r;
+  min-height: 300/@r;
+  margin-bottom: 100/@r;
+  background: #fff;
+  padding: 0/@r 33/@r 100/@r 33/@r;
+  /*滚动条-------start*/
+  .iscrollDisList{
+    position: relative;
+    padding-bottom: 50/@r;
+    #wrapper{
+      position: absolute;
+      top: 10px;
+      bottom:0px;
+      height: 1400/@r!important;
+      overflow: hidden!important;
+    }
+  }
+  /*滚动条---------end*/
+  .titleCon{
+    height: 90/@r;
+    line-height: 90/@r;
+    position: relative;
+    border-bottom: 1px solid #FAFAFA;
+    i{
+      display: inline-block;
+      background-image: linear-gradient(-180deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+      border-radius: 3px;
+      width: 6/@r;
+      height: 30/@r;
+      position: absolute;
+      top: 32/@r;
+    }
+    span{
+      padding-left:25/@r;
+      font-size: 32/@r;
+      color: #333333;
+      font-weight:normal!important;
+    }
+  }
+  /*----------yesTalk-------------*/
+  .yesTalk{
+    li{
+      padding: 30/@r 0/@r;
+      border-bottom: 1px solid #FAFAFA;
+      display: flex;
+      justify-content: space-between;
+      .perImg{
+        display: flex;
+        justify-content: flex-start;
+        width:84/@r;
+        height:84/@r;
+        background: url(../images/JpatientDP.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 50%;
+      }
+      .perSpeech{
+        margin-left: 30/@r;
+        flex: 1;
+        .perName{
+          display: flex;
+          justify-content: space-between;
+          .doctorName{
+            font-size: 32/@r;
+            color: #333333;
+          }
+          .doctorSnap{
+            span{
+              font-size: 30/@r;
+              color:#CCCCCC;
+              padding-right: 20/@r;
+            }
+            img{
+              width: 35/@r;
+              height: 30/@r;
+              padding-bottom: 10/@r;
+            }
+          }
+        }
+        .speechCon{
+          margin-top:20/@r;
+          font-size: 28/@r;
+          color: #666666;
+        }
+        .speechTime{
+          margin-top:20/@r;
+          height: 37/@r;
+          line-height: 37/@r;
+          .talkTime{
+            font-size: 26/@r;
+            color: #999999;
+            padding-right: 0/@r!important;
+          }
+          .replyNum{
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 10/@r;
+            background: #fff;
+            font-size: 20/@r;
+            min-width:100/@r;
+            height:40/@r;
+            text-align: center;
+            line-height: 40/@r;
+            border-radius: 16/@r;
+            .replyCount{
+              font-size: 24/@r;
+              color: #999999;
+            }
+            .wenzi{
+              font-size: 26/@r;
+              color: #999999;
+            }
+          }
+        }
+        .speechTwo{
+          margin-top:20/@r;
+          background: #FAFAFA;
+          border-radius: 10/@r;
+          box-sizing: border-box;
+          padding: 20/@r;
+          .getList{
+            p{
+              margin: 0;
+              padding: 0;
+              .doctorName{
+                font-size: 24/@r;
+                color: #333333;
+              }
+              .talkCont{
+                padding-left: 10/@r;
+                font-size: 24/@r;
+                color: #666666;
+              }
+            }
+            p:nth-child(2){
+              margin-top: 10/@r;
+            }
+          }
+          .totalLength{
+            margin-top: 10/@r;
+            p{
+              font-size: 24/@r;
+              color: #49DDEF;
+            }
+          }
+        }
+      }
+    }
+    .downLoad{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+    }
+    .showAllData{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+      font-weight: 600;
+    }
+  }
+  /*----------noTalk(禁言)-------------*/
+  .noTalk{
+    width:100%;
+    text-align: center;
+    margin-top: 0/@r;
+    padding-top:50/@r;
+    img{
+      width: 350/@r;
+      height: 250/@r;
+    }
+    dd{
+      margin-top: 30/@r;
+      margin-bottom:80/@r;
+    }
+  }
+}
+
+/*主评论那些按钮样式*/
+.commentBtn{
+  .btnOne{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      p{
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        text-align:center;
+        color: #666666;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #666666;
+      }
+    }
+  }
+  .btnTwo{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #666666;
+      }
+    }
+  }
+}
+
+/*点赞与没点赞的类名*/
+.snapClass{
+  color: #6DE4F2!important;
+}
+.noSnapClass{
+
+}

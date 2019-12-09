@@ -1,0 +1,20 @@
+<% if (data.length>0){ %>
+    <% for(i=0;i<data.length;i++){%>
+    <li>
+        <div  class="IcatClick" ishref="../html/Y_DCdetails.html?category=<%=category%>&diseaseName=<%=data[i]%>" Icat="<%=category%>">
+            <h2><%=data[i]%></h2>
+            <span><img src="../images/Y_DCListicon.png"></span>
+        </div>
+    </li>
+    <% } %>
+<% } else {%>
+<dl class="JnoData">
+    <dt><img src="../images/nopatient.png"></dt>
+    <dd>暂时没有疾病内容</dd>
+</dl>
+<% } %>
+
+
+
+
+

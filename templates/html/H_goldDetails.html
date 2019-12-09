@@ -1,0 +1,79 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #fff;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+    <h1>金币明细</h1>
+</section>
+
+<div class="form_type" style="display: block">
+    <div id="select_5" class="select_5 H_incomeTitle">
+        <input type="text" class="select-value2 form-control" value="" readonly="readonly" style="transform: translateY(0px)";>
+        <img src="../images/JserBottom.png"/>
+    </div>
+
+    <!--滚动区域-->
+    <div id="wrapper" style="overflow: hidden;">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownLabel">下拉查看下一月份数据</span>
+            </div>
+            <div id="thelist" style="min-height: 60vh">
+                <div class="billText">
+                    <!--4月份-->
+                    <div class="nextMonth">
+                        <!--<div class="bill">
+                            <p class="billTime"></p>
+                            <ul class="billList"></ul>
+                        </div>-->
+                    </div>
+                    <!--3月份-->
+                    <div class="currentMonth">
+                        <div class="bill">
+                            <p class="billTime">
+                                <!--2018-12-->
+                            </p>
+                            <ul class="billList">
+                                <!--<li id="2" memo="提现">
+                                    <div class="billOne">
+                                        <img src="../images/Y_listicon1.png"/>
+                                        <span class="billType">语音咨询</span>
+                                    </div>
+                                    <div class="billTwo">
+                                        +30.00
+                                    </div>
+                                    <div class="billThree">
+                                        <span class="timeOne">01-10</span>
+                                        <span class="timeTwo">13:30</span>
+                                    </div>
+                                </li>-->
+                            </ul>
+                            <p class="billNoData">
+                                当月暂无数据
+                            </p>
+                        </div>
+                    </div>
+                    <!--2月份-->
+                    <div class="lastMonth">
+                        <!--<div class="bill">
+                            <p class="billTime"></p>
+                            <ul class="billList"></ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉查看上一月份数据</span>
+            </div>
+        </div>
+        <!--滚动条-->
+        <div class="Y_gdt">
+            <div class="Y_gdt1"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<%- include('ejs/foot') %>
+</body>
+</html>

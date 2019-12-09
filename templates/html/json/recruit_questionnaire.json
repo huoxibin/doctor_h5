@@ -1,0 +1,15 @@
+{
+  "title": "患者招募问卷",
+  "styles": [
+      "../css/Y_style.css",
+      "../css/recruit.css"
+  ],
+  "scripts": [
+      "../js/common/jquery-1.8.1.min.js",
+      "../js/common/Cookie.js",
+      "../js/common/touch.js",
+      "../js/common/iscroll.js",
+      "../js/common/ejs.min.js",
+      "../js/projectJs/recruit_questionnaire.js"
+  ]
+}

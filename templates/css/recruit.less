@@ -1,0 +1,756 @@
+@r:50rem;
+/* Clearfix */
+.clearfix:after{ height:0; visibility:hidden; display:block; font-size:0; content:""; clear:both;}
+.clearfix{ display:inline-table;}
+.clearfix{ height:1%; zoom:1;}
+.clearfix{ display:block;}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+.recruitBg.active{
+  overflow: hidden;
+}
+input[type="radio"],input[type="checkbox"]{
+  display: none;
+}
+input[type="text"]:disabled{
+  color: #3e3e3e !important;
+}
+[id^="h_salt_"]:checked + label{
+  border: 1px solid #54E1E9;
+}
+[id^="h_salt_"] + label{
+  display: inline-block;
+  width: 40/@r;
+  height: 40/@r;
+  border: 1px solid #979797;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 15/@r;
+  position: relative;
+  top: 10/@r;
+}
+[id^="h_salt_"]:checked + label:after{
+  content: "";
+  display: block;
+  width: 26/@r;
+  height: 26/@r;
+  background: #54E1E9;
+  position: absolute;
+  left: 7/@r;
+  top: 7/@r;
+  border-radius: 50%;
+}
+[id^="h_salt_"]:checked + label + i{
+  color: #54e1e9!important;
+  font-size: 30/@r;
+}
+/* Clearfix */
+.hide{
+  display: none !important;
+}
+/*招募样式*/
+.recruitBg{
+  position: relative;
+  background: #f9f9f9;
+}
+.invitesImg {
+  background: url(../images/invites.png) no-repeat top center;
+  background-size: 10rem 6rem;
+}
+.recruit_icon{
+  background: url(../images/recruit_icon.png) no-repeat top center;
+  background-size: 500/@r 300/@r;
+}
+/*头部样式*/
+.header{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-top:40/@r;
+  height:128/@r;
+  line-height:128/@r;
+  background-image: linear-gradient(90deg, #49DDEF 0%, #57E2E9 60%,#64E6E2 100%);
+  position: relative;
+  position: fixed;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:9;
+  .goBack{
+    float:left;
+    margin-left:24/@r;
+    color:#fff;
+    margin-top:8/@r;
+    position: relative;
+    width:20%;
+    height:80/@r;
+  }
+  .goBack::after{
+    content:'';
+    position: absolute;
+    width:20/@r;
+    height:40/@r;
+    background:url(../images/arrow_left.png) no-repeat;
+    background-size:cover;
+    margin-top:10/@r;
+  }
+  h1{
+    position:absolute;
+    left:50%;
+    height:50/@r;
+    line-height:50/@r;
+    margin-top:18/@r;
+    font-size:36/@r;
+    color: #FFFFFF;
+    font-weight:normal;
+    -webkit-transform:translate(-50%,0%);
+    transform:translate(-50%,0%);width: 63%;
+    overflow: hidden; -text-overflow: ellipsis;text-align:center; -white-space:nowrap;
+  }
+  .collectBtn{
+    display: inline-block;
+    width: 40/@r;
+    height: 44/@r;
+    background-position: 0 -197/@r;
+    position: absolute;
+    top: 60/@r;
+    right: 90/@r;
+  }
+  .collectBtn.active{
+    background-position: -58/@r -197/@r;
+  }
+  .shareBtn{
+    display: inline-block;
+    width: 44/@r;
+    height: 44/@r;
+    background-position: -114/@r -197/@r;
+    position: absolute;
+    top: 60/@r;
+    right: 20/@r;
+  }
+}
+/*招募详情页内容样式*/
+.container{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 2.56rem;
+  font-family: PingFangSC-Medium;
+}
+.recruit{
+  //padding-left: 30/@r;
+  padding-bottom: 180/@r;
+  .recruit-title{
+    font-size: 36/@r;
+    color: #333333;
+    line-height: 50/@r;
+    padding: 40/@r 0 20/@r 30/@r;
+    font-weight: 600;
+  }
+  .recruit-time{
+    padding-left: 30/@r;
+    font-size: 28/@r;
+    color: #999999;
+    line-height: 40/@r;
+    margin-bottom: 42/@r;
+  }
+  .recruit-intr{
+    position: relative;
+    font-size: 32/@r;
+    color: #333333;
+    line-height: 46/@r;
+    padding-left: 20/@r;
+    margin-bottom: 20/@r;
+    font-weight: 600;
+  }
+  .recruit-intr::after{
+    content: "";
+    width: 4/@r;
+    height: 30/@r;
+    background: #333333;
+    border-radius: 7/@r;
+    position: absolute;
+    top: 10/@r;
+    left: 0;
+  }
+  .recruit-con{
+    font-size: 30/@r;
+    line-height: 42/@r;
+    color: #333333;
+    margin-bottom: 20/@r;
+  }
+  .recruit-txt{
+    padding-right: 30/@r;
+    font-size: 30/@r;
+    color: #333333;
+    line-height: 42/@r;
+    text-align: justify;
+  }
+  .recruit-intr1{
+    font-size: 32/@r;
+    color: #333333;
+    font-weight: 600;
+    position: relative;
+    margin: 40/@r 0 20/@r 0;
+  }
+}
+.join-btn{
+  width:80%;
+  margin: 40/@r auto 0 auto;
+  height: 90/@r;
+  line-height: 90/@r;
+  font-size: 32/@r;
+  color: #FFFFFF;
+  text-align: center;
+  background-image: linear-gradient(-180deg, #6CE9DE 0%, #47DDF1 100%);
+  background-image: -webkit-linear-gradient(-180deg, #6CE9DE 0%, #47DDF1 100%);
+  border-radius: 30px;
+}
+/*招募详情页内容样式*/
+
+/*招募-报名页面-样式*/
+.recruit-join{
+  padding-left: 30/@r;
+  padding-bottom: 130/@r;
+  h1{
+    margin-top:40/@r;
+    font-size: 32/@r;
+    line-height: 42/@r;
+    color: #333333;
+  }
+  .recruit-join-radio{
+    padding-left: 20/@r;
+    margin: 20/@r 0;
+  }
+  .recruit-join-input{
+    padding-left:20/@r;
+    div{
+      margin-top:20/@r;
+      width:580/@r;
+      padding: 14/@r 0;
+      height: 42/@r;
+      line-height: 42/@r;
+      font-size: 30/@r;
+      color: #333333;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      padding-left:20/@r;
+      background: #ffffff;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    input{
+      margin-top:20/@r;
+      width:580/@r;
+      padding: 14/@r 0;
+      height: 42/@r;
+      line-height: 42/@r;
+      font-size: 30/@r;
+      color: #333333;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      padding-left:20/@r;
+    }
+    textarea{
+      margin-top:20/@r;
+      width:600/@r;
+      //padding: 14/@r 0 0 0;
+      //height: 42/@r;
+      //line-height: 42/@r;
+      font-size: 30/@r;
+      color: #333333;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+  .recruit-join-input.div-input{
+    width: 560/@r;
+    //min-height: 20px;
+    max-height: 154/@r;
+    margin-left: 20/@r;
+    margin-top: 20/@r;
+    outline: 0;
+    border: 1px solid #979797;
+    font-size: 30/@r;
+    line-height: 42/@r;
+    padding: 14/@r 20/@r;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 4px;
+    background: #fff;
+  }
+  .join-agreement{
+    font-size: 28/@r;
+    color: #999999;
+    margin-top: 62/@r;
+    height: 36/@r;
+    line-height:36/@r;
+    width: 450/@r;
+    margin-left: auto;
+    margin-right: auto;
+    .recruit_icon_box{
+      width: 60/@r;
+      height: 60/@r;
+      float: left;
+      position: relative;
+      top: -7/@r;
+      i{
+        display: inline-block;
+        width: 36/@r;
+        height: 36/@r;
+        background-position: -58/@r -102/@r;
+        margin-right: 20/@r;
+        position:relative;
+        top: 8/@r;
+      }
+      i.active{
+        display: inline-block;
+        width: 36/@r;
+        height: 36/@r;
+        background-position: 0 -102/@r;
+      }
+    }
+    span{
+      color: #151515;
+    }
+  }
+}
+.submit-btn{
+  width:590/@r;
+  height: 90/@r;
+  line-height: 90/@r;
+  background-image: linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+  background-image: -webkit-linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+  border-radius: 12px;
+  font-size: 36/@r;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 100/@r auto 0 auto;
+  transform: translateX(-15/@r);
+  -webkit-transform: translateX(-15/@r);
+}
+.submit-btn.disabled{
+  background: #E6E6E6;
+  color: #FFFFFF;
+}
+/*招募-报名页面-样式*/
+
+/*分享header*/
+.shareHeader{
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-left: 60/@r;
+  padding-right: 60/@r;
+  padding-top: 20/@r;
+  height: 140/@r;
+  width: 100%;
+  background: #ffffff;
+  z-index: 100;
+  .logo{
+    display: inline-block;
+    width: 102/@r;
+    height: 102/@r;
+    background: url("../images/logo.png") no-repeat center center;
+    background-size: 102/@r 102/@r;
+    float:left;
+  }
+  .openApp{
+    display: inline-block;
+    width: 120/@r;
+    height: 60/@r;
+    background-image: linear-gradient(-1deg, #47DCF0 0%, #66E7E2 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+    border-radius: 30px;
+    text-align:center;
+    color:#ffffff;
+    line-height: 60/@r;
+    font-size: 30/@r;
+    float:right;
+    margin-top: 22/@r;
+  }
+  .appName{
+    display: inline-block;
+    font-size: 30/@r;
+    color: #000000;
+    margin-left: 30/@r;
+    margin-top: 30/@r;
+  }
+}
+/*分享header*/
+
+/*协议弹窗样式*/
+.tc_box{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.tc{
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+.tc_agreement{
+  width: 100%;
+  background: #fff;
+  border-radius: 12px 12px 0px 0px;
+  transition: all ease-in;
+  height:877/@r;
+  padding-bottom: 130/@r;
+  position: absolute;
+  bottom: -1007/@r;
+  left: 0;
+  h1{
+    height:100/@r;
+    line-height: 100/@r;
+    border: 1px solid #F0F0F0;
+    font-size: 32/@r;
+    color: #333333;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+    font-weight:600;
+    margin-bottom: 40/@r;
+  }
+  .tc_agreement-txt{
+    margin-bottom: 130/@r;
+    padding:0 30/@r;
+    font-size: 32/@r;
+    height:700/@r;
+    color: #333333;
+    line-height: 46/@r;
+    text-align: justify;
+    overflow-y: scroll;
+    h2{
+      font-size: 32/@r;
+      line-height: 46/@r;
+    }
+    p{
+      text-indent: 2em;
+    }
+  }
+  .tc_agreement-btn{
+    width:100%;
+    height: 100/@r;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    span{
+      display: block;
+      width: 50%;
+      float: left;
+      line-height: 100/@r;
+      font-size: 32/@r;
+      text-align: center;
+    }
+    .btn-left{
+      background: #F0F0F0;
+      color: #999999;
+    }
+    .btn-right{
+      background: #6DE4F2;
+      color: #FFFFFF;
+    }
+  }
+}
+/*协议弹窗样式*/
+
+/*招募流程页面样式*/
+.recruit-process-top{
+  height: 379/@r;
+  width: 100%;
+  background: url("../images/recruit_top.png") no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+  margin-bottom: 48/@r;
+  i{
+    display: inline-block;
+    width: 100/@r;
+    height: 40/@r;
+    background-position: 0 -146/@r;
+    position:absolute;
+    top: 90/@r;
+    left: 30/@r;
+  }
+}
+.recruit-process{
+  font-family: PingFangSC-Medium;
+  article{
+    padding: 0 30/@r;
+    font-size: 28/@r;
+    color: #173d41;
+    line-height: 42/@r;
+    text-align: justify;
+    margin-bottom: 28/@r;
+  }
+}
+.recruit-process-mid{
+   font-family: PingFangSC-Medium;
+   height: 471/@r;
+   width: 690/@r;
+   background: url("../images/recruit_mid.png") no-repeat center center;
+   background-size: 690/@r 471/@r;
+   position: relative;
+   margin: 54/@r auto 0 auto;
+   box-shadow: 0 0 11px #afe3e9;
+   -webkit-box-shadow: 0 0 11px #afe3e9;
+   border-radius: 14px;
+  .step{
+    margin-bottom: 60/@r;
+    padding-top: 134/@r;
+    height: 56/@r;
+    span{
+      color: #fff;
+      font-size: 30/@r;
+      display: inline-block;
+      width: 171/@r;
+      height: 56/@r;
+      background: url("../images/recruit-step.png") no-repeat center center;
+      background-size: 181/@r 56/@r;
+      float:left;
+      line-height: 56/@r;
+      padding-left:10/@r;
+      margin-left: 35/@r;
+    }
+    span:nth-child(1){
+      margin-left: 40/@r;
+    }
+  }
+  article{
+    padding: 0 40/@r;
+    font-size: 30/@r;
+    line-height: 42/@r;
+    text-align: justify;
+    margin-bottom:10/@r;
+  }
+ }
+.recruit-process-bot{
+  font-family: PingFangSC-Medium;
+  height: 469/@r;
+  width: 690/@r;
+  background: url("../images/recruit_bot.png") no-repeat center center;
+  background-size: 690/@r 469/@r;
+  position: relative;
+  margin: 60/@r auto 0 auto;
+  box-shadow: 0 0 11px #afe3e9;
+  -webkit-box-shadow: 0 0 11px #afe3e9;
+  border-radius: 14px;
+  article{
+    width:100%;
+    font-size: 30/@r;
+    line-height: 42/@r;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.recruit-contact{
+  margin-top: 54/@r;
+  margin-bottom: 100/@r;
+  padding-left: 30/@r;
+  font-family: PingFangSC-Medium;
+  font-size: 28/@r;
+  color: #173d41;
+  line-height: 60/@r;
+  a{
+    font-size: 36/@r;
+    color: #3becee;
+    font-weight:600;
+  }
+}
+/*招募流程页面样式*/
+
+/*选择性别弹窗*/
+.sex_box .com_pop_box{
+  border-radius: 12px !important;
+}
+.sex_box .com_pop_t{
+  font-size: 38/@r;
+  color: #7F7E7C;
+  text-align: center;
+  height: 112/@r;
+  line-height: 112/@r;
+  border-bottom: 1px solid #D8D8D8 !important;
+}
+.sex_box p{
+  font-size: 38/@r;
+  color: #7F7E7C;
+  text-align: center;
+  height: 94/@r;
+  line-height: 94/@r;
+}
+.sex_box p:last-child{
+  border-top: 1px solid #D8D8D8;
+  color: #49DDEF !important;
+}
+
+/*选择地区弹窗*/
+.cityBox{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: absolute;
+  bottom: -891/@r;
+  left: 0;
+  width: 100%;
+  height: 891/@r;
+  padding-top: 50/@r;
+}
+.choosed{
+  padding-left: 30/@r;
+  font-size: 30/@r;
+  color: #B4B4B4;
+  margin-bottom: 30/@r;
+}
+.choosed_info{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30/@r;
+  height:88/@r;
+  background: #FAFAFA;
+  line-height:88/@r;
+  margin-bottom: 30/@r;
+}
+.choosed_info span{
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height:88/@r;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin-right: 60/@r;
+}
+.choosed_info span.active{
+  color: #6DE4F2;
+}
+.choosed_info span.active:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 6/@r;
+  background: #6DE4F2;
+  position: absolute;
+  bottom: 0;
+  //left: 50%;
+  //margin-left: -30/@r;
+}
+.cityBox h1{
+  color: #333333;
+  font-size: 38/@r;
+  line-height: 38/@r;
+  text-align: center;
+  padding-bottom: 50/@r;
+  position: relative;
+}
+.cityBox h1 div{
+  display: inline-block;
+  float: right;
+  width: 100/@r;
+  height: 100/@r;
+  position: absolute;
+  top: -30/@r;
+  right: 0;
+}
+.cityBox h1 div i{
+  width: 36/@r;
+  height: 36/@r;
+  display: inline-block;
+  background-position: -472/@r 5/@r;
+  margin: 32/@r auto;
+}
+.cityBox ul li{
+  font-size: 30/@r;
+  color: #666666;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30/@r;
+  width: 100%;
+  float: left;
+  height: 460/@r;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.cityBox ul li div{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  height: 80/@r;
+  line-height: 80/@r;
+}
+
+/*招募报名成功后的弹窗样式*/
+.submit_box{
+  .img{
+    width: 94/@r;
+    height: 94/@r;
+    background-position: 0 0;
+    margin: 60/@r auto 20/@r auto;
+  }
+  p{
+    font-size: 32/@r;
+    line-height: 52/@r;
+    text-align: center;
+    color: #666666;
+    margin-bottom: 60/@r;
+  }
+}
+.ques-body{
+  width: 100%;
+  overflow: hidden;
+}
+.questionnaire{
+  padding-top: 2.56rem;
+  width: 100%;
+  height: 100%;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  //overflow: hidden;
+}
+
+/*iphoneX 添加高度*/
+.container.iphoneX{
+  padding-top: 3.46rem !important;
+}
+.recruitgomore{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-top: 30/@r;
+  width: 100%;
+  height: 140/@r;
+  z-index:111;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.recruitgomore .getMoreBtn{
+  display: block;
+  width: 598/@r;
+  height: 80/@r;
+  line-height: 80/@r;
+  background-image: linear-gradient(-1deg, #47DCF0 0%, #66E7E2 100%);
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+  border-radius: 40px;
+  font-size: 30/@r;
+  color: #FFFFFF;
+  text-align: center;
+  margin:0 auto;
+}

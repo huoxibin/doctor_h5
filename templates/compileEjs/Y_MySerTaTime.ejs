@@ -1,0 +1,46 @@
+<div class="Y_DateatopC">
+    <div class='Y_MediCalcLt'>
+        <ul>
+            <%for(i in data){ var s = i;var ss = s.split(",");%>
+               <li><p><%= ss[0]%></p><p><%= ss[1]%></p></li>
+            <%}%>
+        </ul>
+    </div>
+    <div class='Y_MediCalcRt'>
+        <%for(i in data){%>
+               <div class="Y_MediCalcRtCon">
+                   <%for(j in data[i]){%>
+                    <div class="Y_DateTime">
+                        <h2><%=j%></h2>
+                        <ul>
+                           <%var Y_datas=data[i][j];for(var k=0;k<Y_datas.length;k++){%>
+                              <%if(Y_datas[k].status==1){%>
+                                      <li class="Y_SerVo" status="<%=Y_datas[k].status%>" timeId="<%=Y_datas[k].timeId%>"><%=Y_datas[k].time%></li>
+                                <%}else if(Y_datas[k].status==2){%>
+                                    <li class="Y_SerVi" status="<%=Y_datas[k].status%>" timeId="<%=Y_datas[k].timeId%>"><%=Y_datas[k].time%></li>
+                                <%}else{%>
+                                    <li status="<%=Y_datas[k].status%>" timeId="<%=Y_datas[k].timeId%>"><%=Y_datas[k].time%></li>
+                                <%}%>
+                           <%}%>
+                        </ul>
+                    </div>
+                   <%}%>
+             </div>
+        <%}%>
+    </div>
+</div>
+<div class="Y_DateaBotC2">
+    <div class="Y_DateaBot">
+        <div class="Y_DateaBotC1">
+            <p><b></b>允许语音咨询</p>
+            <p><b></b>允许视频咨询</p>
+        </div>
+    </div>
+    <dl>
+        <dt><span class="switch-off" themecolor="#53D76A" id="fly"></span></dt>
+        <dd>
+            <h3>循环</h3>
+            <p>开启后，将自动生成更多接听时间</p>
+        </dd>
+    </dl>
+</div>

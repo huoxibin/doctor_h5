@@ -1,0 +1,49 @@
+<% for(i=0;i<data.length;i++){%>
+    <%if(Y_MeCaText){%>
+        <%if(Y_MeCaText==data[i].category_name){%>
+        <li class="on">
+            <dl>
+                <dt>
+                    <img src="../images/Y_MediCalcIcon<%=Number(data[i].category_index)+1%>_active.png">
+                </dt>
+                <dd><i><%=data[i].category_name%></i><b><%=data[i].cnt%></b></dd>
+            </dl>
+        </li>
+        <%}else{%>
+        <li>
+            <dl>
+                <dt>
+                    <img src="../images/Y_MediCalcIcon<%=Number(data[i].category_index)+1%>.png">
+                </dt>
+                <dd><i><%=data[i].category_name%></i><b><%=data[i].cnt%></b></dd>
+            </dl>
+        </li>
+        <%}%>
+    <%}else{%>
+        <%if(i==0){%>
+        <li class="on">
+            <dl>
+                <dt>
+                    <img src="../images/Y_MediCalcIcon<%=Number(data[i].category_index)+1%>_active.png">
+                </dt>
+                <dd><i><%=data[i].category_name%></i><b><%=data[i].cnt%></b></dd>
+            </dl>
+        </li>
+        <%}else{%>
+        <li>
+            <dl>
+                <dt>
+                    <img src="../images/Y_MediCalcIcon<%=Number(data[i].category_index)+1%>.png">
+                </dt>
+                <dd><i><%=data[i].category_name%></i><b><%=data[i].cnt%></b></dd>
+            </dl>
+        </li>
+        <%}%>
+    <%}%>
+<% } %>
+
+
+
+
+
+

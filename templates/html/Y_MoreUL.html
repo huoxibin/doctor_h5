@@ -1,0 +1,43 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="overflow: hidden!important;background: #fff">
+<div class='Y_wrap wrap'>
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+        <h1>全部记录</h1>
+    </section>
+    <div class="Y_MoreBS Y_MoreAH">
+        <!--图表-->
+        <div class="shadowWrapper shadowWrapper1">
+            <!--滚动区域-->
+            <div id="wrapper" style="overflow: hidden;top:0;">
+                <div id="scroller">
+                    <div id="pullDown">
+                        <span class="pullDownLabel">下拉刷新</span>
+                    </div>
+                    <div id="thelist" class="Y_MoreUL">
+                        <!--<ul data-year="" class="ulItem">
+                            <li class="calendar" style="border: 0;height: 40px;margin: 0;margin-left: 20px;">2017</li>
+                            <li>
+                                &lt;!&ndash;时间&ndash;&gt;
+                                <h2 class="time"><span>02-26  21:06</span></h2>
+                                <div>
+                                    <ol>
+                                        <li>酮体:<b>(-)0.0mmol/L</b></li>
+                                    </ol>
+                                </div>
+                                <p>本次检测未发现异常,请继续保持。</p>
+                            </li>
+                        </ul>-->
+                    </div>
+                    <div id="pullUp">
+                        <span class="pullUpLabel">上拉加载更多</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--图表end-->
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

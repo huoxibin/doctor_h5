@@ -1,0 +1,44 @@
+<% if (data.length>0){ %>
+<ul>
+    <% var nowYear = new Date().getFullYear();for(i=0;i<data.length;i++){
+        var birYear=Number(data[i].birthDay.split('-')[0]);
+    %>
+    <li class="p_item"  isId="<%=data[i].id%>">
+        <a href="javascript:;" class="flexbox">
+            <% if (data[i].headImg!=''&&data[i].headImg!=null){ %>
+                <img class="p_phone Jimg"  src="<%=data[i].headImg%>"  />
+            <% } else {%>
+               <p class="Jimg"> <img class="p_phone"   src="../images/huanPoto.png" /></p>
+            <% } %>
+
+            <b class="p_name"><%=data[i].name%></b>
+            <label class="p_sex">
+                <% if (data[i].sex==2){ %>
+                女
+                <% } else {%>
+                男
+                <% } %>
+            </label>
+            <i class="p_age">
+                <%=nowYear-birYear%>
+            岁</i>
+        </a>
+    </li>
+    <% } %>
+</ul>
+<% } else {%>
+<dl class="JnoData">
+    <dt><img src="../images/nopatient.png"></dt>
+    <dd>您还没有添加患者</dd>
+</dl>
+<% } %>
+
+
+
+
+
+
+
+
+
+

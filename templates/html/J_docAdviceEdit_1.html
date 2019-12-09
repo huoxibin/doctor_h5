@@ -1,0 +1,150 @@
+<%- include('ejs/head') %>
+<body class="huiBody">
+<div class='wrap'>
+    <div class="J_patient J_temp">
+        <div class="TNB_list TNB_form">
+            <!--<section class="Ynav temNav">
+                <a href="J_docAdviceList.html" class="Y_tump adviceBack"> </a>
+                <h1 class="category">糖尿病咨询模板</h1>
+                <span class="temSave">保存</span>
+                <i class="temOk">确定</i>
+            </section>
+            <div class="Y_docIndex">
+                <form class="TNB_listForm">
+                    <div class="Teminput_item">
+                        <h4 class="clearfix">
+                            <label>问诊时间</label>
+                            <div class="form_right">
+                                <input type="text" name="startTime" value="2017-12-23"/>
+                                <em> d</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>患病年限</label>
+                            <div class="form_right">
+                                <input type="text" name="sickYears" placeholder="请输入患病年限"/>
+                                <em>年</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>确诊医院</label>
+                            <div class="form_right">
+                                <input type="text"  name="hospitalName"  placeholder="请输入确诊医院"/>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix form_block">
+                            <label>本次咨询原因</label>
+                            <div class="form_right">
+                                <textarea name="askReason" placeholder="请输入咨询原因"></textarea>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix item_title">
+                            <label>血压情况</label>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>历史最高血压值</label>
+                            <div class="form_right">
+                                <input type="text" name="highestNum" placeholder=""/>/
+                                <input type="text" name="highestNum" placeholder=""/>
+                                <em>mmHg</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>近期血压水平</label>
+                            <div class="form_right">
+                                <input type="text" name="highestNum" placeholder=""/>/
+                                <input type="text" name="highestNum" placeholder=""/>
+                                <em>mmHg</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix form_block">
+                            <label>引起血压升高的原因</label>
+                            <div class="form_right">
+                                <textarea name="askReason" placeholder="请输入引起血压升高的原因"></textarea>
+                            </div>
+                        </h4>
+
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix item_title">
+                            <label>用药情况</label>
+                        </h4>
+                        <div class="selectH4 isTap2"> &lt;!&ndash;其他&ndash;&gt;
+                            <h4 class="clearfix">
+                                <label>药品名称</label>
+                                <div class="form_right">
+                                    <input type="text" placeholder="请输入药品名称"/>
+                                </div>
+                            </h4>
+                            <h4 class="clearfix">
+                                <label>用药剂量</label>
+                                <div class="form_right">
+                                    <input type="text" placeholder="请输入用药剂量"/>
+                                    <em>mmol/l</em>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix form_block">
+                            <label>健康建议</label>
+                            <i class="Jtips">Tips >></i>
+                            <div class="form_right">
+                                <textarea placeholder="请输入您对本次咨询的健康建议" name="advise" class="TNB_advTTextarea"></textarea>
+                            </div>
+                        </h4>
+                    </div>
+                </form>
+            </div>-->
+        </div>
+        <div class="TNB_list TNB_medicType TNB_adviceType Jhide">
+            <section class="Ynav temNav">
+                <a href="javascript:;" class="Y_tump adviceBack adviceBackIn"> </a>
+                <h1 class="category">Tips</h1>
+                <i class="TNB_adviceTypeOk">确定</i>
+            </section>
+            <div class="Y_docIndex">
+                <form class="TNB_listForm">
+                    <input class="TNB_adviceTypeInp" type="hidden"/>
+                    <div class="Teminput_item">
+                        <h4 class="TNB_medTypeSelect clearfix" isval="1">
+                            <label>低盐低脂饮食</label>
+                            <div class="form_right">
+                                <em class=""></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="2">
+                            <label>坚持运动</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="3">
+                            <label>坚持口服降压药</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="4">
+                            <label>继续监测血压</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="5">
+                            <label>如有必要，到医院就诊</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

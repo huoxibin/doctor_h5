@@ -1,0 +1,12 @@
+{
+  "title": "会员规则",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/J_style.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js"
+  ]
+}

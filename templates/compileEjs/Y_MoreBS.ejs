@@ -1,0 +1,128 @@
+<% var itemDate= data.result; for(i in itemDate){%>
+    <% var Y_data=itemDate[i];for(var j in Y_data){%>
+        <ul data-year="<%= j%>" class="ulItem">
+            <%if(j!=nowYear&&j!=lastYear){%>
+                <li class="calendar" style="border: 0;height: 40px;margin: 0;margin-left: 20px;"></i><%= j%></li>
+            <%}%>
+            <% var Y_data1=Y_data[j];for(var k=0;k<Y_data1.length;k++ ){ var yearlist=Y_data1[k];%>
+            <% Ydata(yearlist.measuringDate+" 1:1:1") %>
+            <li>
+                <!--时间-->
+                <div class="time"><span><%=times2%></span></div>
+                <!--空腹-->
+                <div class="Y_data">
+                    <div class="Y_datas">
+                        <%if(yearlist.emptyStomach!=null && yearlist.emptyStomachLevel!=null){%>
+                            <% var emptyStomachLevel=yearlist.emptyStomachLevel.split(",");var emptyStomach=yearlist.emptyStomach.split(","); for(var s=0;s<emptyStomachLevel.length;s++){ %>
+                            <%if(emptyStomachLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span style="text-align:center;"><%=emptyStomach[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(emptyStomachLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span style="text-align:center;"><%=emptyStomach[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span style="text-align:center;"><%=emptyStomach[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--早晨后两小时-->
+                <div class="Y_data Y_data1">
+                    <div class="Y_datas">
+                        <%if(yearlist.afterBreakfast!=null && yearlist.afterBreakfastLevel!=null){ %>
+                            <% var afterBreakfastLevel=yearlist.afterBreakfastLevel.split(",");var afterBreakfast=yearlist.afterBreakfast.split(","); for(var s=0;s<afterBreakfastLevel.length;s++){ %>
+                            <%if(afterBreakfastLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=afterBreakfast[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(afterBreakfastLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=afterBreakfast[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=afterBreakfast[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--午餐前-->
+                <div class="Y_data">
+                    <div class="Y_datas">
+                        <%if(yearlist.beforeLunch!=null && yearlist.beforeLunchLevel!=null){%>
+                            <% var beforeLunchLevel=yearlist.beforeLunchLevel.split(",");var beforeLunch=yearlist.beforeLunch.split(","); for(var s=0;s<beforeLunchLevel.length;s++){ %>
+                            <%if(beforeLunchLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=beforeLunch[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(beforeLunchLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=beforeLunch[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=beforeLunch[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--午餐后两小时-->
+                <div class="Y_data Y_data1">
+                    <div class="Y_datas">
+                        <%if(yearlist.afterLunch!=null && yearlist.afterLunchLevel!=null){%>
+                            <% var afterLunchLevel=yearlist.afterLunchLevel.split(",");var afterLunch=yearlist.afterLunch.split(","); for(var s=0;s<afterLunchLevel.length;s++){ %>
+                            <%if(afterLunchLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=afterLunch[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(afterLunchLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=afterLunch[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=afterLunch[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--晚餐前-->
+                <div class="Y_data">
+                    <div class="Y_datas">
+                        <%if(yearlist.beforeDinner!=null && yearlist.beforeDinnerLevel!=null){%>
+                            <% var beforeDinnerLevel=yearlist.beforeDinnerLevel.split(",");var beforeDinner=yearlist.beforeDinner.split(","); for(var s=0;s<beforeDinnerLevel.length;s++){ %>
+                            <%if(beforeDinnerLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=beforeDinner[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(beforeDinnerLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=beforeDinner[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=beforeDinner[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--晚餐后两小时-->
+                <div class="Y_data Y_data1">
+                    <div class="Y_datas">
+                        <%if(yearlist.afterDinner!=null && yearlist.afterDinnerLevel!=null){%>
+                            <% var afterDinnerLevel=yearlist.afterDinnerLevel.split(",");var afterDinner=yearlist.afterDinner.split(","); for(var s=0;s<afterDinnerLevel.length;s++){ %>
+                            <%if(afterDinnerLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=afterDinner[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(afterDinnerLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=afterDinner[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=afterDinner[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+                <!--睡前-->
+                <div class="Y_data">
+                    <div class="Y_datas">
+                        <%if(yearlist.beforeBed!=null && yearlist.beforeBedLevel!=null){%>
+                            <% var beforeBedLevel=yearlist.beforeBedLevel.split(",");var beforeBed=yearlist.beforeBed.split(","); for(var s=0;s<beforeBedLevel.length;s++){ %>
+                            <%if(beforeBedLevel[s].indexOf("高")>-1){%>
+                            <div class="beyond"><span><%=beforeBed[s]%></span><img src="../images/Y_up.png" class="arrow"></div>
+                            <%}else if(beforeBedLevel[s].indexOf("低")>-1){ %>
+                            <div class="lower"><span><%=beforeBed[s]%></span><img src="../images/Y_down.png" class="arrow"></div>
+                            <%}else{%>
+                            <div class=""><span><%=beforeBed[s]%></span></div>
+                            <%}%>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+            </li>
+            <% }%>
+        </ul>
+    <% } %>
+<% } %>

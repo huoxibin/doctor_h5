@@ -1,0 +1,15 @@
+{
+  "title": "",
+  "ico":"",
+  "styles": [
+    "../css/H_goToLogin.css"
+  ],
+  "scripts": [
+    "../js/common/jquery-1.8.1.min.js",
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/iscroll.js",
+    "../js/common/ejs.min.js",
+    "../js/projectJs/H_goToLogin.js"
+  ]
+}

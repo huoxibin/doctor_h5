@@ -1,0 +1,61 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="overflow: hidden!important;background: #fff">
+<div class='Y_wrap wrap'>
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+        <h1>全部记录</h1>
+    </section>
+    <!--数据-->
+    <div class="Y_MoreBP">
+        <!--图表-->
+        <div class="shadowWrapper">
+            <div class="title">
+                <span class="time" style="width:38%;">时间<b>min</b></span>
+                <span>体重<b>KG</b></span>
+                <span>体脂含量<b>%</b></span>
+                <span>类型<b></b></span>
+            </div>
+            <!--滚动区域-->
+            <div id="wrapper" style="overflow: hidden;">
+                <div id="scroller">
+                    <div id="pullDown">
+                        <span class="pullDownLabel">下拉刷新</span>
+                    </div>
+                    <div id="thelist">
+                    </div>
+                    <div id="pullUp">
+                        <span class="pullUpLabel">上拉加载更多</span>
+                    </div>
+                </div>
+                <!--滚动条-->
+                <div class="Y_gdt">
+                    <div class="Y_gdt1"></div>
+                </div>
+            </div>
+        </div>
+        <!--图表end-->
+    </div>
+    <!--数据end-->
+</div>
+<!-- 模态框 -->
+<div class="layer" id="back" disabled="disabled">
+    <div class="layer-content">
+        <div class="layer-header">
+            <h2>测量异常</h2>
+        </div>
+        <div class="layer-body">
+            <h3>光脚</h3>
+            <p>一定要光脚，穿着厚袜子或鞋可能会测不出来哦！</p>
+            <h3>保持脚底干净</h3>
+            <p>请保持脚底干净，脚底沾有脏污或者过于潮湿都是有可能无法成功测量。！</p>
+            <h3>把秤放在平坦、坚硬的地面上</h3>
+            <p>秤脚上的传感器要接触到坚硬的地面，才会给予更精确的测量反馈。</p>
+            <h3>均匀站在秤面上</h3>
+            <p>以秤的中心为准，双脚平行分布在两侧。</p>
+        </div>
+    </div>
+
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

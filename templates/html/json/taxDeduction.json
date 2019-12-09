@@ -1,0 +1,13 @@
+{
+  "title": "扣税说明",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/J_style.css",
+    "../css/invites.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js"
+  ]
+}

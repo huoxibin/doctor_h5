@@ -1,0 +1,43 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody">
+<div class='Y_wrap wrap'>
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+        <h1>图形</h1>
+        <b><a href="Y_MoreBP.html">图表</a></b>
+    </section>
+    <div class="Y_MoreBP2">
+        <!--图形-->
+        <div class="Y_MoreBPTX">
+            <div class="Y_BPDate">
+                <span><input name="appDate" id="appDate" onfocus='this.blur();' type="text"></span>
+                <span class="Y_1">至</span>
+                <span><input name="appDate1" id="appDate1" onfocus='this.blur();' type="text"></span>
+            </div>
+            <div class="healthContent">
+                <div class="healthCon healthPressure">
+                    <div class="healthList Ptrend">
+                        <div class="press_con Ptrend_con">
+                            <h2>血压</h2>
+                            <div class="press_area Ptrend_area" id="Ptrend_area">
+                                折线图
+                            </div>
+                        </div>
+                    </div>
+                    <div class="healthList PPulse">
+                        <div class="press_con PPulse_con">
+                            <h2>心率</h2>
+                            <div class="press_area PPulse_area" id="PPulse_area">
+                                折线图
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--图形end-->
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

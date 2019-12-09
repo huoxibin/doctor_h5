@@ -1,0 +1,30 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #ffffff;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:window.history.back();" class="Y_tump  infoDetail_btn"> </a>
+    <h1>健康方案</h1>
+</section>
+
+<div class="form_type">
+
+    <div class="special_title">
+        <i></i>
+        <span>特别叮嘱</span>
+    </div>
+    <div class="noSpecial_text">
+        <textarea name="" id="noSpecialTxt" value="" placeholder="请督促用户完成自测数据和相关问卷填写"></textarea>
+    </div>
+    <div class="remindContent">
+        该用户未完成自测数据和相关问卷填写无法形成基础干
+        预方案
+    </div>
+    <div id="remindBtn">
+        <div class="sure">
+            督促
+        </div>
+    </div>
+</div>
+
+<%- include('ejs/foot') %>
+</body>
+</html>

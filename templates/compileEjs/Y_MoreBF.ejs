@@ -1,0 +1,61 @@
+<% var itemDate= data.result; for(i in itemDate){ %>
+<ul datas="<%= i%>" class="ulItem">
+    <%if(i!=lastdatas){%>
+    <%if(itemDate[i].length!=0){%>
+        <%if(i=='today'){%>
+        <li class="calendar">今天</li>
+        <%}else if(i=='yesterday'){%>
+        <li class="calendar">昨天</li>
+        <%}else{%>
+        <li class="calendar">更早</li>
+        <%}%>
+        <%}%>
+    <%}%>
+    <% itemDate[i].forEach(function(data,index){%>
+    <li><a <%if(data.bodyfatRate!=0-0){%> href="../html/Y_MoreBFDetail.html?id=<%=data.id%>" <%}%>>
+        <!--时间-->
+        <div class="Y_data time" style="width:38%;">
+            <%if(i=='earlier'){%>
+            <span><%=data.measuringTime%></span>
+            <%}else{%>
+            <% Ydata(data.measuringTime) %>
+            <span><%=times3%></span>
+            <%}%>
+        </div>
+        <!--体重-->
+        <div class="Y_data">
+                <div class=""><span><%=data.weight%></span></div>
+        </div>
+        <!--脂肪含量-->
+        <div class="Y_data">
+                <%if(data.bmi!=0-0){%>
+                <div class=""><span><%=data.bodyfatRate%></span></div>
+                <%}else{%>
+                <div class="" id="renameClick"><span><img src="../images/Y_BFHisicon.png"></span></div>
+                <%}%>
+
+        </div>
+            <!--类型-->
+            <div class="Y_data">
+                <%if (data.bmi<=0-0) {%>
+                <div class="" id="renameClick"><span><img src="../images/Y_BFHisicon.png"></span></div>
+                <%}else if (data.bmi < 18.5) {%>
+                <div class=""><span style="color:#FFAB2B!important;">偏瘦</span></div>
+                <%}else if (data.bmi >= 18.5 && data.bmi < 24) {%>
+                <div class=""><span style="color:#6590FF!important;">标准</span></div>
+                <%} else if (data.bmi >= 24 && data.bmi < 27) {%>
+                <div class=""><span style="color:#FF6262!important;">超重</span></div>
+                <%} else if (data.bmi >= 27 && data.bmi < 30) {%>
+                <div class=""><span style="color:#FF6262!important;">肥胖前期</span></div>
+                <%} else if (data.bmi >= 30 && data.bmi < 35) {%>
+                <div class=""><span style="color:#FF6262!important;">I度肥胖</span></div>
+                <%} else if (data.bmi >= 35 && data.bmi < 40) {%>
+                <div class=""><span style="color:#FF6262!important;">II度肥胖</span></div>
+                <%} else {%>
+                <div class=""><span style="color:#FF6262!important;">III度肥胖</span></div>
+                <%}%>
+            </div>
+        </a></li>
+    <% })%>
+</ul>
+<% } %>

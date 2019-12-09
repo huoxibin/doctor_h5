@@ -1,0 +1,20 @@
+<div class="vedioTitle">
+    <p><%=data.consensusName%></p>
+    <div>
+        <span><%='来源：' + data.articleSource%></span>
+        <span class="H_pubTime"></span>
+    </div>
+</div>
+<div class="Y_familyCD">
+    <!--图文-->
+    <div id="textBox">
+        <div class="ql-container ql-snow">
+            <div class="ql-editor">
+                <%=data.consensusContent.replace(/\t/g,'&nbsp;&nbsp;&nbsp;')%>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyrightMsg">
+    <p>版权归原创作者所有，转载仅作分享，如有侵权请联系后台删除。<br/>联系方式：400-1110-120</p>
+</div>

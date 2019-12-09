@@ -1,0 +1,107 @@
+<div class="Y_MoreBFCon">
+    <div class="Y_MoreBFConBot">
+        <div class="BotType">
+            <p class="BotType_o">体重</p>
+            <p class="BotType_t"><%=data.bodyWeight%></p>
+        </div>
+        <div class="BotTp">
+            <%if(data.bmi<18.5){%>
+            <span style="color:#FFAB2B!important;"><%=data.analyzeFatType%></span>
+            <%}else if(data.bmi >= 24.0){%>
+            <span style="color:#FF6262!important;"><%=data.analyzeFatType%></span>
+            <%}else{ %>
+            <span style="color:#6590FF!important;"><%=data.analyzeFatType%></span>
+            <%}%>
+        </div>
+        <div class="BotType">
+            <p class="BotType_o">脂肪</p>
+            <p class="BotType_t"><%=data.bodyfatRate%></p>
+        </div>
+    </div>
+    <div class="Y_MoreBFConAny">
+        <h2>分析报告</h2>
+        <div class="report">
+            <p class="title">核心指标</p>
+
+           <!--<p class="warning"><%=data.listHightData.length%>项特别注意指标</p>
+            <div class="content">
+                <div class="content_left">
+                    <div class="content_img"><img src="../images/Group_9.png"/></div>
+                    <div class="content_o">体重</div>
+                    <div class="content_t">88.76Kg</div>
+                    <div class="content_r">偏高</div>
+                </div>
+                <div class="arrow_loc">
+                    <span>
+                    </span>
+                    <div class="weight">
+                        <div class="weight_con">
+                            可以看到这个矩形是由四个三角形组成的，绘制三角形，只要让其余三个三角形颜色透明即可。利用“transparent”属性就可以做到
+                        </div>
+                        <s>
+                            <i></i>
+                        </s>
+                    </div>
+                </div>
+            </div>-->
+
+            <%if(data.listHightData.length == 0){%>
+                <div class="listHightData" style="display: none">
+                    <p class="warning"><%=data.listHightData.length%>项特别注意指标</p>
+                    <div id="listHightData_list"></div>
+                </div>
+            <%}else{%>
+                <div class="listHightData">
+                    <p class="warning"><%=data.listHightData.length%>项特别注意指标</p>
+                    <div id="listHightData_list"></div>
+                </div>
+            <%}%>
+
+            <%if(data.listLowData.length == 0){%>
+                <div class="listLowData" style="display: none">
+                    <p class="warning_t"><%=data.listLowData.length%>项警告指标</p>
+                    <div id="listLowData"></div>
+                </div>
+            <%}else{%>
+                <div class="listLowData">
+                    <p class="warning_t"><%=data.listLowData.length%>项警告指标</p>
+                    <div id="listLowData"></div>
+                </div>
+            <%}%>
+
+            <%if(data.listNormalData.length == 0){%>
+                <div class="listNormalData" style="display: none">
+                    <p class="warning_r"><%=data.listNormalData.length%>项放心指标</p>
+                    <div id="listNormalData"></div>
+                </div>
+            <%}else{%>
+                <div class="listNormalData">
+                    <p class="warning_r"><%=data.listNormalData.length%>项放心指标</p>
+                    <div id="listNormalData"></div>
+                </div>
+            <%}%>
+
+            <p class="title_body">身体指标</p>
+            <div class="body_target">
+                <div class="target">
+                    <div class="age">
+                        <img src="../images/Group_21.png"/>
+                        <span>身体年龄</span>
+                    </div>
+                    <div class="age_number">
+                        <%=data.bodyAge%>
+                    </div>
+                </div>
+                <div class="target">
+                    <div class="age">
+                        <img src="../images/Group_22.png"/>
+                        <span>BMI</span>
+                    </div>
+                    <div class="age_number">
+                        <%=data.bmi%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

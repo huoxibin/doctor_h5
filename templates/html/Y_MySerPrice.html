@@ -1,0 +1,50 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody MediCalcBody">
+<section class="Ynav">
+   <a href="javascript:;" class="Y_tump"></a>
+   <h1>设置服务费用</h1>
+   <b class="Y_tump">确定</b>
+</section>
+<div class="Y_docIndex">
+   <div class='wrap Y_MySerPrice'>
+       <form class="Y_MediContForm">
+           <div class="Y_MediCalcDeT">
+               <ul>
+                   <li class="Y_TXTNo">
+                       <div class="Y_height input-item height-select">
+                           <p>单次时长为15分/次</p>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="Y_height input-item height-select">
+                           <p>服务定价</p>
+                           <span data-unit="元/次">
+                             <input class="flex Y_Price" type="number" name="param1" value="" placeholder="请输入服务费用">
+                           </span>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="Y_height input-item height-select">
+                           <p>分成收入</p>
+                           <span data-unit="元/次">
+                              <input class="flex Y_Price2" type="number" name="param2" value="" placeholder="请输入服务费用" readonly unselectable="on" onfocus="this.blur()">
+                          </span>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+           <div class="Y_MediCalcDeB">
+               <p>费用设置规则：</p>
+               <p>1，建议定价区间30元/次-150元/次</p>
+               <p>2，每月5号可调整服务费，一年最多可调整6次</p>
+               <p>3，平台会扣除您的业务服务费<b></b>%</p>
+               <p>4，每次服务结束后平台会按照国家标准代扣您单次服务的劳务报酬所得税</p>
+               <p>5，修改后的服务费用只针对于未购买服务的用户</p>
+               <p>6，如有其他疑问，请联系客服：400-1110-120</p>
+           </div>
+       </form>
+   </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

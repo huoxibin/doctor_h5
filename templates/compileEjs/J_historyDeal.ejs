@@ -1,0 +1,37 @@
+   <% var nowYear = new Date().getFullYear();for(i=0;i<data.length;i++){
+        var itime=data[i].createTime==null?'':data[i].createTime.split(' ')[0]; var itimes=data[i].createTime==null?'':data[i].createTime.split(' ')[1];
+    %>
+   <div class="m-t-10"></div>
+    <div class="p_item swiper-slide getter-item">
+        <a     <%if(memo!=''&&memo!=undefined){%>
+                href="J_historyDetail.html?id=<%=data[i].id%>&memo=<%=memo%>"
+                <% } else { %>
+                   href="J_historyDetail.html?id=<%=data[i].id%>"
+                <% } %>  class="Y_tump">
+
+            <h4 class="item_left" style="width:70%;position:relative;">
+                <p style="margin-top:0;">
+                    <time><%=itime%></time>
+                    <i><%=itimes%></i>
+                </p>
+                <% if (data[i].status==1){ %>
+                    <b class="p_state p_stateIng" style="overflow: inherit;">处理中</b>
+                <% } else{%>
+                    <b class="p_state" style="color:#57E2E9;overflow: inherit;">已完成</b>
+                <% } %>
+            </h4>
+            <h6 class="item_right item_money"><%=data[i].amount%></h6>
+        </a>
+    </div>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<div class="j_patient_up J_historyDealBox">
+    <section class="Ynav">
+       <!-- <a    <%if(memo!=''&&memo!=undefined){%>
+                href="J_historyDeal.html?memo=<%=memo%>"
+                <% } else { %>
+                href="J_historyDeal.html"
+                <% } %>  class="Y_tump">
+
+        </a>-->
+        <a href="javascript:window.history.back();" class="Y_tump"></a>
+        <h1 class="category">
+            <% if (data.status==1){ %>
+            处理中
+            <% } else if(data.status==2){%>
+            处理中
+            <% } else if(data.status==3){%>
+            交易成功
+            <% } else{%>
+            交易成功
+            <% } %>
+        </h1>
+    </section>
+    <div class="p_datTop flexbox J_historyDeal">
+        <div class="p_cont">
+            <h2><%=data.bookedAccount%></h2>
+            <b class="name">到账金额（元）</b>
+        </div>
+    </div>
+</div>
+<div class="p_datBottom p_datBottomHis">
+    <h4>
+        <label>提现金额</label>
+        <span class="sex">￥<%=data.amount%></span>
+    </h4>
+    <h4>
+        <label>代扣转账费</label>
+        <span class="sex">￥<%=data.taxAccount%></span>
+    </h4>
+    <h4>
+        <label>提现到</label>
+        <span class="birthDay"><%=data.toView%></span>
+    </h4>
+    <h4>
+        <label>申请时间</label>
+        <span class="healthCard">
+            <% if (data.createTime!=null ||data.createTime!='' ){ %>
+            <%=data.createTime%>
+            <% } else{%>
+
+            <% } %>
+        </span>
+    </h4>
+    <% if (data.status==3){ %>
+        <h4>
+            <label>到账时间</label>
+            <span class="familyNo"><%=data.successTime%></span>
+        </h4>
+        <h4>
+            <label>支付宝订单号</label>
+            <span class="familyNo"><%=data.thirdOrderNumber%></span>
+        </h4>
+        <h4>
+            <label>流水号</label>
+            <span class="familyNo"><%=data.orderNo%></span>
+        </h4>
+    <% } %>
+</div>
+
+
+
+
+
+
+
+
+

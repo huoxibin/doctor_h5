@@ -1,0 +1,91 @@
+<%- include('ejs/head') %>
+<body>
+<header class="Ynav Jnav">
+    <a href="javascript:;"  class="a Y_tump Docjump"> </a>
+    <h1>知情同意书</h1>
+</header>
+<section class="container">
+    <h1 class="rule_title" style="font-size: 0.6rem;line-height:0.8rem;margin-top:0.4rem;margin-bottom:0.4rem;">尊敬的医生/患者及家属：</h1>
+
+    <div class="rule_txt">
+        <p>您好！感谢您参与医哆咖（健科云网）（以下简称“平台”）临床试验报名，参与相关的临床试验。为了确保试验的顺利进行并且很好的保证您的利益，请您务必完整阅读此知情同意书，并且确保您知晓并同意以下内容，如不同意请勿在平台进行报名或者其他操作；如您在平台进行报名或其他操作，视为您知晓并同意本知情同意书的全部内容：</p>
+    </div>
+
+    <div class="ruleBox">
+        <div class="rule_title">一、关于临床试验</div>
+        <div class="rule_txt">临床试验是一项医学研究，目的是确定一种新药或一项治疗方法的疗效与安全性以及存在的副作用，是为帮助医生找到改善、控制、治疗疾病最佳方法所进行的研究性工作。每个试验都尝试找到更好的方法来预防，诊断和治疗疾病。临床试验是长期细致的研究过程中的最后阶段，设计执行良好的临床试验是发现能够提高人类健康的最快和最安全的方法。</div>
+
+        <div class="rule_title">二、关于研究</div>
+        <div class="rule_txt">
+            每次研究我们都会在自有平台（公众号“哆咖云医”和“医哆咖”、“哆咖医生APP”等）进行发布，可以进行具体查看。另外每个临床试验研究都有不同的设计和目的，想要获得更多的试验相关信息，也可在试验组致电您的时候，详细咨询试验组。平台只对患者信息负责，受合作试验组（以下简称“合作方”）委托进行患者招募。
+        </div>
+
+        <div class="rule_title">三、关于报名</div>
+        <div class="rule_txt">
+            1、请认真且详细填写患者的病情及治疗信息，如果您是推荐医生，请确认您所填写信息的患者同意参加此项研究并且授权您来填写信息。并且承诺报名过程中提交的信息资料完全真实，无任何虚构事实及隐瞒真相的情况，并承担相应的法律责任。越精确的信息，可以大大提高临床试验入组的可能性。<br/>
+            2、本次报名完全秉承自愿原则，如在报名成功后因任何原因无法继续参加，可以随时选择退出。<br/>
+            3、报名成功后平台只负责将您提交的资料发送给合作试验组，所有报名患者都会在初筛后收到相关的短信，如果短信中提及已经被推荐给xxx试验组，请在收到短信通知后关闭陌生电话拦截功能，并且注意接听陌生电话（号码来源为上海）。由合作方进行后续筛选考察，并由合作方自行决定是否可以入组。平台不承担任何其他责任。<br/>
+        </div>
+
+        <div class="rule_title">四、关于保密</div>
+        <div class="rule_txt">
+            1、您提交给平台的所有资料，平台会严格遵守保密原则，但您必须知晓并同意向平台提交的所有资料允许平台提交给合作方进行后续筛选，就此您不能以侵犯隐私权及其他侵权等理由要求平台承担责任。<br/>
+            2、您知晓并同意，对于平台因为计算机系统、网络安全等问题，而导致的资料意外泄漏，平台不对此负责。<br/>
+            3、您应妥善保管好自己的报名信息及账户信息，如因您的个人原因导致信息泄露或丢失的，由您自行承担责任。<br/>
+        </div>
+
+        <div class="rule_title">五、关于通知</div>
+        <div class="rule_txt">
+            您知晓并同意，平台的各类通知，通过网页公告、系统通知、官方管理账号通知（公开或私下）、短信、电子邮件或者常规信件进行，通知发出后，即被视为已送达您。您对平台的通知，需通过平台正式公布的联系方式、通信地址、电子邮件地址等联系信息进行传达。
+        </div>
+
+        <div class="rule_title">六、关于风险</div>
+        <div class="rule_txt">
+            平台郑重提醒您，临床试验研究具有一定的不可预知的风险性、不适及不良反应等，您全部知晓并承诺完全具有相应风险的承担能力。您知悉并确认，因您进行临床试验而产生的所有风险或后果等均与健科云网、平台无关。
+        </div>
+
+        <div class="rule_title">七、在法律允许的最大范围内，平台保留对本知情同意书的最终解释权。</div>
+        <div class="rule_txt" style="margin-bottom: 2rem;">
+            如果您已经充分了解上述内容，并且承诺自愿参加临床试验，请勾选“已阅读并同意《知情同意书》”提交报名。<br/>
+            如果您在填写报名表的过程中有任何咨询或是疑问，欢迎联系我们！<br/>
+            致电：18514795050（工作时间：周一到周五早9点半至下午6点半）<br/>
+            添加微信：YiDoKa-1（添加时请您注明所患疾病和是患者还是推荐医生）<br/>
+        </div>
+    </div>
+</section>
+<%- include('ejs/foot') %>
+<script>
+$(function () {
+    var name = getRequestParam('name'),
+        sex = getRequestParam('sex'),
+        age = getRequestParam('age'),
+        mobile = getRequestParam('mobile'),
+        location = getRequestParam('location'),
+        provinceId = getRequestParam('provinceId'),
+        cityId = getRequestParam('cityId'),
+        diseaseHistory = getRequestParam('diseaseHistory'),
+        cureHistory = getRequestParam('cureHistory'),
+        infoId = getRequestParam('infoId'),
+        id = getRequestParam('id');
+    $('.Docjump').on('tap', function () {
+        GHUTILS.OPENPAGE({ //招募加入页面
+            url: "recruit.html",
+            extras: {
+                // "name": decodeURI(name),
+                // "sex": decodeURI(sex),
+                // "age": age,
+                // "mobile": mobile,
+                // "location": decodeURI(location),
+                // "provinceId": provinceId,
+                // "cityId": cityId,
+                // "diseaseHistory": decodeURI(diseaseHistory),
+                // "cureHistory": decodeURI(cureHistory),
+                // "infoId": infoId
+                "id": id
+            }
+        });
+    })
+})
+</script>
+</body>
+</html>

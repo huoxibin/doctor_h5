@@ -1,0 +1,151 @@
+<!--头部标题-->
+<div class="j_patient_up h_patient_up">
+    <section class="Ynav">
+        <dfn   class="a Y_tump J_jumpBtnIback"> </dfn>
+        <h1 class="category">患者详情</h1>
+    </section>
+</div>
+
+<!--个人信息-->
+<div class="h_datTop">
+
+    <div class="h_cont">
+        <%
+        var isex='';
+        data.sex==2?isex='女':isex='男';
+        %>
+        <div class="h_cont_one">
+            <div class="h_pic">
+                <% if (data.headImg!=''&&data.headImg!=null){ %>
+                <img  src="<%=data.headImg%>"/>
+                <% } else {%>
+                <img src="../images/JpatientD.png">
+                <% } %>
+            </div>
+            <div class="h_info">
+                <div>
+                    <span><%=data.name%></span>
+                    <span><%=isex%></span>
+                    <span><%=data.age%>岁</span>
+                </div>
+                <div>
+                    <span>身份证号</span>
+                    <span><%=data.idCard%></span>
+                </div>
+            </div>
+        </div>
+        <div class="h_cont_four">
+            <div class="">现住址</div>
+            <div class="">
+                <%=data.address%>
+            </div>
+        </div>
+        <div class="h_cont_four">
+            <div class="">签约时间</div>
+            <div class="">
+                <%=data.signTime.split(' ')[0]%>
+            </div>
+        </div>
+        <div class="h_cont_two">
+            <div class="">签约服务</div>
+            <div class="serPackage">
+                <span><%=data.totalPack%></span>个
+            </div>
+            <div id="signPackage">
+                <img src="../images/huiRight.png">
+            </div>
+        </div>
+        <div class="h_cont_three">
+            <div class="">人群分类</div>
+            <div id="crowd">
+                <div class="crowdList">
+                    <!--<span>儿童、</span>-->
+                </div>
+                <!--<img src="../images/huiRight.png">-->
+            </div>
+            <div id="personZhan">
+                <img src="../images/huiRight.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--档案信息-->
+<div class="p_datBottom h_datBottom">
+    <div class="splitText"></div>
+    <h4 class="sign_d_title">健康档案数据</h4>
+    <h4>
+        <a class="SelftestData">
+            <label>自测数据</label>
+            <b class="signLink"></b>
+        </a>
+    </h4>
+    <h4>
+        <a href="../html/J_ReportList.html?userId=<%=data.memberId%>&signInfoId=<%=signInfoId%>" class="healthReport">
+            <label>健康报告</label>
+            <b class="signLink"></b>
+        </a>
+    </h4>
+    <h4>
+        <a href="../html/J_MedicalHistory.html?iurl=medicalHistory&userId=<%=data.memberId%>&signInfoId=<%=signInfoId%>" class="historyP">
+            <label>既往病史</label>
+            <b class="signLink"></b>
+        </a>
+    </h4>
+    <h4>
+        <a class="onlineAsk"  href="../html/J_docAdviceList.html?memberId=<%=data.memberId%>&style=2&signInfoId=<%=signInfoId%>&doctorName=<%=doctorName%>&state=<%=state%>" >
+            <label>线上咨询</label>
+            <b class="signLink"></b>
+        </a>
+    </h4>
+    <!--已下新增-->
+    <h4>
+        <a class="onlineAsk" id="tamper">
+          <label>干预方案</label>
+          <span class="schemeName"></span>
+          <b class="signLink"></b>
+        </a>
+    </h4>
+</div>
+
+<!-- 弹框 -->
+<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <div class="tc_disease">
+        <div class="search_box clearfix">
+            <span class="cancel">取消</span>
+            <span class="set">确定</span>
+        </div>
+        <div class="test_type_box">
+            <!--考虑到ui设计稿布局麻烦点-->
+            <div class="illness_form">
+                <input id="illnessList" name='illnessList' type="hidden" >
+                <div class="jibing">
+                    <div class="illness" isname="高血压">高血压</div>
+                    <div class="illness" isname="糖尿病">糖尿病</div>
+                    <div class="illness" isname="老人">老人</div>
+                    <div class="illness" isname="儿童">儿童</div>
+                </div>
+                <div class="jibing">
+                    <div class="illness" isname="孕产妇">孕产妇</div>
+                    <div class="illness" isname="肺结核">肺结核</div>
+                    <div class="illness" isname="精神疾病">精神疾病</div>
+                    <div class="illness disabled" isname=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="aorTab">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

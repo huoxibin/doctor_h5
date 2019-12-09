@@ -1,0 +1,20 @@
+<%- include('ejs/head') %>
+<body>
+<script src="https://player.polyv.net/livescript/liveplayer.js"></script>
+<div id='player'></div>
+<%- include('ejs/foot') %>
+<script type="text/javascript">
+    var _width = document.body.clientWidth || document.documentElement.clientWidth;
+    var _height = parseInt((parseInt(_width)/750)*422);
+    var obj = document.getElementById('player');
+    var uid = getRequestParam('uid') || null;
+    var vid = getRequestParam('vid') || null;
+    var player = polyvObject('#player').livePlayer({
+        width: _width,
+        height: _height,
+        uid: uid,
+        vid: vid
+    });
+</script>
+</body>
+</html>

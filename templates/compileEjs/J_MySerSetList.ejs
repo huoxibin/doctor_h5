@@ -1,0 +1,48 @@
+<% if (data!=null && data.length>0){ %>
+<input type="hidden" id="packIcon">
+<ul>
+    <% for(i=0;i<data.length;i++){%>
+    <li isId="<%=data[i].id%>">
+        <p><%=data[i].name%></p>
+        <span>
+            <img src="../images/JserBottom.png">
+            <% if (bar==0){%>
+                <% if (data[i].isShow==1){selectArr.push(data[i].id)%>
+                   <i isId="<%=data[i].id%>" class="checkBox active"></i>
+                <% } else {%>
+                   <i isId="<%=data[i].id%>" class="checkBox"></i>
+                <% } %>
+            <% } else {%>
+              <i isId="<%=data[i].id%>" class="checkBox"></i>
+            <% } %>
+        </span>
+        <div class="J_setDetailbox">
+            <h4><label><%=data[i].frequency%>次/年</label><dfn>费用：￥<%=data[i].price%></dfn></h4>
+            <h6><%=data[i].description%></h6>
+            <% var iDatas=JSON.stringify(data[i]);if (bar==0 && isCaptain==1){%>
+                <% if (data[i].isTemplateitem==1){%>
+                   <button isBtn="1"  isData='<%=iDatas%>' type="button" class="editSer">编辑</button>
+                <% } else {%>
+                   <button isBtn="0"   isData='<%=iDatas%>' type="button" class="editSer">编辑</button>
+                <% } %>
+            <% }%>
+        </div>
+    </li>
+    <% } %>
+</ul>
+<% } else {%>
+<dl class="JnoData">
+    <dt><img src="../images/MyserDui.png"></dt>
+    <dd>没有服务项</dd>
+</dl>
+<% } %>
+
+
+
+
+
+
+
+
+
+

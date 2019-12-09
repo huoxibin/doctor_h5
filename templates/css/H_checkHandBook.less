@@ -1,0 +1,211 @@
+@r:50rem;
+/*---------------iscroll样式必备------------------*/
+#wrapper{
+  position: absolute;
+  top:65px!important;
+  height: 1260/@r;
+  overflow: hidden!important;
+}
+#wrapper ul li{
+  padding:0/@r 30/@r;
+}
+/*------------这是类名为form_type的大盒子----------*/
+.form_type{
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 128/@r 0/@r 0/@r 0/@r;
+}
+.Ynav b{
+  margin-top: -8/@r;
+  margin-right:35/@r;
+}
+/*--------------------------------------------------检查手册主页------------------------------------------------------*/
+.chenkBook{
+  background: #fff;
+  width: 100%;
+  height:238/@r;
+  padding:0 40@r;
+  display: flex;
+  justify-content: space-around;
+  .target{
+    padding-top: 41/@r;
+    text-align: center;
+    img{
+      width: 100/@r;
+      height: 100/@r;
+    }
+    p{
+      margin-top: 24/@r;
+      font-size: 28/@r;
+      color: #333333;
+    }
+  }
+}
+.checkLine{
+  width: 100%;
+  height: 20/@r;
+}
+.checkTitle{
+  padding: 0 30/@r;
+  background: #fff;
+  .titleCon{
+    height: 90/@r;
+    line-height: 90/@r;
+    position: relative;
+    border-bottom: 1px solid #FAFAFA;
+    i{
+      display: inline-block;
+      background-image: linear-gradient(-180deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+      border-radius: 3px;
+      width: 6/@r;
+      height: 30/@r;
+      position: absolute;
+      top: 32/@r;
+    }
+    span{
+      padding-left:20/@r;
+      font-size: 32/@r;
+      color: #333333;
+      font-weight:bolder;
+    }
+  }
+  ul{
+    li{
+      border-bottom: 1px solid #FAFAFA;
+      min-height: 90/@r;
+      line-height: 90/@r;
+      font-size: 30/@r;
+      color: #333333;
+    }
+  }
+}
+/*--------------------------------------------------检查手册-一级二级------------------------------------------------------*/
+.handList{
+  ul{
+    .titleCon{
+      padding-left: 30/@r;
+      font-weight: bolder;
+      font-size: 30/@r;
+      color: #333333;
+      width:100%;
+      height: 90/@r;
+      line-height: 90/@r;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #F0F0F0;
+      img{
+        width: 31/@r;
+        height:15/@r;
+        padding-top: 37.5/@r;
+        padding-right: 60/@r;
+      }
+    }
+    .checkList{
+      display: none;
+      background: #FAFAFA;
+      li{
+        margin:0 30/@r;
+        background: #FAFAFA;
+        height: 90/@r;
+        line-height: 90/@r;
+        border-bottom: 1px solid #F0F0F0;
+      }
+    }
+  }
+}
+/*--------------------------------------------------检查手册-三级列表------------------------------------------------------*/
+.history{
+  li{
+    margin:0 30/@r;
+    background: #fff;
+    height: 90/@r;
+    line-height: 90/@r;
+    border-bottom: 1px solid #F0F0F0;
+    font-weight:bolder;
+  }
+}
+/*--------------------------------------------------检验手册详情页面------------------------------------------------------*/
+.viewMore{
+  width: 100%;
+  height: 80/@r;
+  margin-top: 100/@r;
+  z-index:111;
+  .getMoreBtn{
+    display: block;
+    width: 598/@r;
+    height: 80/@r;
+    line-height: 80/@r;
+    background-image: linear-gradient(-1deg, #47DCF0 0%, #66E7E2 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+    border-radius: 40px;
+    font-size: 30/@r;
+    color: #FFFFFF;
+    text-align: center;
+    margin:0 auto;
+  }
+}
+
+
+/*分享之后的header*/
+.invitesImg {
+  background: url(../images/invites.png) no-repeat top center;
+  background-size: 10rem 6rem;
+}
+.collectBtn{
+  display: inline-block;
+  width: 40/@r;
+  height: 44/@r;
+  background-position: 0 -197/@r;
+  position: absolute;
+  top: 60/@r;
+  right: 90/@r;
+}
+.collectBtn.active{
+  background-position: -58/@r -197/@r;
+}
+.shareBtn{
+  display: inline-block;
+  width: 44/@r;
+  height: 44/@r;
+  background-position: -114/@r -197/@r;
+  position: absolute;
+  top: 60/@r;
+  right: 20/@r;
+}
+.checkDetail{
+  padding: 40/@r 30/@r;
+  background: #fff;
+  .handBookTitle{
+    font-size: 32/@r;
+    color: #333333;
+    font-weight: bolder;
+  }
+  .checkTop{
+    margin-top:20/@r;
+    font-size: 30/@r;
+    color: #333333;
+  }
+  .sampleType,.referenceRange,.clinicalYi,.sourceKao,.xgDiseases{
+    margin-top: 40/@r;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

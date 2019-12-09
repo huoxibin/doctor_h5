@@ -1,0 +1,150 @@
+<div class="j_patient_up">
+    <section class="Ynav">
+        <dfn   class="a Y_tump J_jumpBtnIback"> </dfn>
+        <h1 class="category">患者详情</h1>
+    </section>
+    <div class="p_datTop flexbox">
+        <div class="p_cont">
+            <%
+            var isex='';
+            data.sex==2?isex='女':isex='男';
+            %>
+            <% if (data.headImg!=''&&data.headImg!=null){ %>
+            <!--<img  src="<%=data.headImg%>"  class="datPhont JImgs" />-->
+            <h6 class="datPhont JImgs" style="background:url(<%=data.headImg%>) center center;background-size:cover"></h6>
+            <% } else {%>
+                <p class="JImgs JpatientImgs"><img src="../images/JpatientD.png"  class="datPhont" /></p>
+            <% } %>
+            <b class="name"><i><%=data.name%></i>&nbsp;&nbsp;<%=isex%>&nbsp;&nbsp;<%=data.age%>岁</b>
+        </div>
+    </div>
+</div>
+<div class="p_datBottom">
+    <input type="hidden" id="pat_memberId" value="<%=data.id%>" />
+    <input type="hidden" id="pat_familyId" value="<%=data.familyId%>" />
+    <input type="hidden" id="pat_imAccid" value="<%=data.imAccid%>" />
+    <h4>
+        <label>出生日期</label>
+        <span class="birthDay"><%=data.birthDay%></span>
+    </h4>
+    <h4 class="H4patient">
+        <label>既往病史</label>
+        <div class="flRight">
+            <% if(data.healthInfo!=null && data.healthInfo!=''){ var healthInfo=decodeURIComponent(data.healthInfo).split(',');
+            for(var j=0;j<healthInfo.length;j++){%>
+                <%  switch(healthInfo[j])
+                {
+                    case 'check0':
+                        healthInfo[j]='无'
+                        break;
+                    case 'jb1':
+                        healthInfo[j]='高血压'
+                        break;
+                    case "jb2":
+                        healthInfo[j]='冠心病'
+                        break;
+                    case "jb3":
+                        healthInfo[j]='糖尿病'
+                        break;
+                    case "jb4":
+                        healthInfo[j]='高血脂'
+                        break;
+                    case "jb5":
+                        healthInfo[j]='脑梗死/脑卒中'
+                        break;
+                    case "jb6":
+                        healthInfo[j]='脑出血'
+                        break;
+                    case "jb7":
+                        healthInfo[j]='肝病'
+                        break;
+                    case "jb8":
+                        healthInfo[j]='结核'
+                        break;
+                    case "jb9":
+                        healthInfo[j]='肿瘤'
+                        break;
+                    case "jb10":
+                        healthInfo[j]='手术'
+                        break;
+                    case "jb11":
+                        healthInfo[j]='外伤'
+                        break;
+                    case "jb12":
+                        healthInfo[j]='脂肪肝'
+                        break;
+                    case "jb15":
+                        healthInfo[j]='消化道溃疡高'
+                        break;
+                    case "jb16":
+                        healthInfo[j]='尿酸'
+                        break;
+                    case "jb17":
+                        healthInfo[j]='痛风'
+                        break;
+                    case "jb18":
+                        healthInfo[j]='肥胖症'
+                        break;
+                    case "jb19":
+                        healthInfo[j]='动脉粥样硬化'
+                        break;
+                    case "jb20":
+                        healthInfo[j]='肾脏病'
+                        break;
+                    case "jb21":
+                        healthInfo[j]='骨关节炎'
+                        break;
+                    case "jb22":
+                        healthInfo[j]='骨质疏松'
+                        break;
+                    case "jb23":
+                        healthInfo[j]='外周血管疾病'
+                        break;
+                    case "jb24":
+                        healthInfo[j]='巨大儿生产史'
+                        break;
+                    case "jb25":
+                        healthInfo[j]='多囊卵巢综合征'
+                        break;
+                    case "jb26":
+                        healthInfo[j]='癌症'
+                        break;
+                    case "jb27":
+                        healthInfo[j]='血液病'
+                        break;
+                    case "jb28":
+                        healthInfo[j]='其他'
+                        break;
+                }%>
+                <span class="historyDis"><%=healthInfo[j]%></span>
+            <% } %>
+            <% }else{%>
+                <span class="historyDis">未完善</span>
+            <%}%>
+            <button type="button" class="p_downIcon"></button>
+        </div>
+    </h4>
+    <h4>
+        <label>医保卡号</label>
+        <span class="healthCard"><%=data.healthCard%></span>
+    </h4>
+    <h4>
+        <label>家庭号</label>
+        <span class="familyNo"><%=data.familyNo%></span>
+    </h4>
+    <h4>
+        <a class="historyP" href="../html/J_docAdviceList.html?memberId=<%=data.id%>&style=1" >
+            <label>咨询记录</label>
+            <b class="signLink"></b>
+        </a>
+    </h4>
+</div>
+
+
+
+
+
+
+
+
+

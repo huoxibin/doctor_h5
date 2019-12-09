@@ -1,0 +1,13 @@
+{
+  "title": "我的服务-图文咨询",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/J_style.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js",
+    "../js/projectJs/Y_MySerPrice.js"
+  ]
+}

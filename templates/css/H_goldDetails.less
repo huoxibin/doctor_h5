@@ -1,0 +1,293 @@
+@r:50rem;
+/*---------------iscroll样式必备------------------*/
+#wrapper{
+  position: absolute;
+  top:220/@r!important;
+  height: 1260/@r;
+  overflow: hidden!important;
+}
+/*------------这是类名为form_type的大盒子----------*/
+.form_type{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 128/@r 0/@r 500/@r 0/@r;
+}
+.select-value2{
+  top:0;
+}
+//上面的时间选择器
+#select_5{
+  position: fixed;
+  background: #fff;
+  z-index: 8;
+  top: 128/@r;
+  left: 0;
+  width: 100%;
+  height:104/@r;
+  line-height:104/@r;
+}
+#select_5 input{
+  font-size: 32/@r;
+  color: #333333;
+  text-align:center;
+  font-weight:bold;
+  width: 100%;
+  height: 100%;
+  line-height:104/@r;
+}
+#select_5 img{
+  width: 25/@r;
+  height:10/@r;
+  position: absolute;
+  top: 50/@r;
+  right:34%;
+}
+
+//下面的内容
+.billText{
+  //margin-top: 104/@r;
+}
+.nextMonth{
+  .bill{
+    width: 100%;
+    height: auto;
+    .billTime{
+      width: 100%;
+      height: 82/@r;
+      background: #FAFAFA;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      padding: 0 28/@r;
+    }
+    .billNoData{
+      width: 100%;
+      height: 82/@r;
+      background: #fff;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      text-align: center;
+      display: none;
+    }
+    .billList{
+      li{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #F0F0F0;
+        background: #fff;
+        height: 100/@r;
+        line-height: 100/@r;
+        padding: 0 28/@r;
+        div{
+          height: 100/@r;
+          line-height: 100/@r;
+        }
+        .billOne{
+          flex: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items:center;
+          line-height: 100/@r;
+          img{
+            width: 38/@r;
+            height: 38/@r;
+            padding-right: 18/@r;
+          }
+          .billType{
+            font-size: 28/@r;
+            color: #666666;
+          }
+        }
+        .billTwo{
+          flex: 1;
+          text-align: center;
+          font-size: 30/@r;
+          color: #666666;
+        }
+        .billThree{
+          flex: 1;
+          font-size: 26/@r;
+          color: #B4B4B4;
+          display: flex;
+          justify-content: flex-end;
+          .timeTwo{
+            padding-left: 12/@r;
+          }
+        }
+      }
+    }
+  }
+}
+.currentMonth{
+  .bill{
+    width: 100%;
+    height: auto;
+    .billTime{
+      width: 100%;
+      height: 82/@r;
+      background: #FAFAFA;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      padding: 0 28/@r;
+    }
+    .billNoData{
+      width: 100%;
+      height: 82/@r;
+      background: #fff;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      text-align: center;
+      display: none;
+    }
+    .billList{
+      li{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #F0F0F0;
+        background: #fff;
+        height: 100/@r;
+        line-height: 100/@r;
+        padding: 0 28/@r;
+        div{
+          height: 100/@r;
+          line-height: 100/@r;
+        }
+        .billOne{
+          flex: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items:center;
+          line-height: 100/@r;
+          img{
+            width: 38/@r;
+            height: 38/@r;
+            padding-right: 18/@r;
+          }
+          .billType{
+            font-size: 28/@r;
+            color: #666666;
+          }
+        }
+        .billTwo{
+          flex: 1;
+          text-align: center;
+          font-size: 30/@r;
+          color: #666666;
+        }
+        .billThree{
+          flex: 1;
+          font-size: 26/@r;
+          color: #B4B4B4;
+          display: flex;
+          justify-content: flex-end;
+          .timeTwo{
+            padding-left: 12/@r;
+          }
+        }
+      }
+    }
+  }
+}
+.lastMonth{
+  .bill{
+    width: 100%;
+    height: auto;
+    .billTime{
+      width: 100%;
+      height: 82/@r;
+      background: #FAFAFA;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      padding: 0 28/@r;
+    }
+    .billNoData{
+      width: 100%;
+      height: 82/@r;
+      background: #fff;
+      line-height: 82/@r;
+      font-size: 30/@r;
+      color: #666666;
+      text-align: center;
+      display: none;
+    }
+    .billList{
+      li{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #F0F0F0;
+        background: #fff;
+        height: 100/@r;
+        line-height: 100/@r;
+        padding: 0 28/@r;
+        div{
+          height: 100/@r;
+          line-height: 100/@r;
+        }
+        .billOne{
+          flex: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items:center;
+          line-height: 100/@r;
+          img{
+            width: 38/@r;
+            height: 38/@r;
+            padding-right: 18/@r;
+          }
+          .billType{
+            font-size: 28/@r;
+            color: #666666;
+          }
+        }
+        .billTwo{
+          flex: 1;
+          text-align: center;
+          font-size: 30/@r;
+          color: #666666;
+        }
+        .billThree{
+          flex: 1;
+          font-size: 26/@r;
+          color: #B4B4B4;
+          display: flex;
+          justify-content: flex-end;
+          .timeTwo{
+            padding-left: 12/@r;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

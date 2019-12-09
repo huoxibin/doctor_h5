@@ -1,0 +1,98 @@
+<%- include('ejs/head') %>
+<body>
+<section>
+    <h1>填写您的个人信息</h1>
+    <ul class="personInfo">
+        <li><span>真实姓名：</span><input type="text" placeholder="请输入您的真实姓名" name="doctorName" id="doctorName"></li>
+        <li><span>所在医院：</span><input class="hospital" placeholder="请输入您所在的执业机构" readonly="readonly" ></li>
+        <li><span>科室：</span><input type="text" class="department_value" id="department_value" value="" placeholder="请选择您所在的科室" readonly="readonly" style="transform: translateY(0px);"></li>
+        <li><span>职称：</span><input type="text" class="title_value" id="title_value" value="" placeholder="请选择您的职称" readonly="readonly"  style="transform: translateY(0px);"></li>
+        <li><span>手机号：</span><input type="text" txtype="tel_move" placeholder="请输入您的手机号码" name="phone" id="phoneNum"></li>
+        <li><span>验证码：</span><input type="text" txtype="phoneCode" placeholder="请输入验证码" name="verificationCode" id="verificationCode"><i id="phoneCode">获取验证码</i></li>
+    </ul>
+    <button class="submit" id="submit">提交</button>
+</section>
+<!--弹窗-->
+<div class="tc_Box hide">
+    <div class="tc hide"></div>
+    <!--医院-->
+    <div class="cityBox hide">
+        <h1>请选择执业地区<div class="closeTc_Pr"><i class="invitesImg closeTc"></i></div></h1>
+        <div class="choosed">已选择</div>
+        <div class="choosed_info">
+            <span id="province_span" class="hide"></span>
+            <span id="city_span" class="hide"></span>
+            <span id="area_span" class="active">请选择</span>
+            <!--<span class="active">请选择</span>-->
+        </div>
+        <div class="choosed">选择区县</div>
+        <ul class="clearfix cityBox_inner">
+            <li class="city_1"></li>
+            <li class="city_2 hide"></li>
+            <li class="city_3 hide"></li>
+        </ul>
+    </div>
+    <div class="tc_hospital hide">
+        <h1><div class="closeBtn_Pr"><i class="invitesImg confirmBtn"></i></div>请选择医院<div class="confirmBtn_Pr"><i class="invitesImg confirmBtn"></i></div></h1>
+        <ul class="hospitalList clearfix">
+            <li></li>
+        </ul>
+        <div class="choosed">其他</div>
+        <input id="otherhHospital" type="text" placeholder="请输入医院名称">
+    </div>
+    <!--科室-->
+    <div class="tc_department hide">
+        <h1>选择职称</h1>
+        <ul class="departmentList clearfix">
+            <li class="departmentLeft">
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <article></article>
+            </li>
+            <li class="departmentRight">
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <div>北京</div>
+                <article></article>
+            </li>
+        </ul>
+        <div class="departmentBtn clearfix"><span>取消</span><span>确定</span></div>
+    </div>
+    <!--职称-->
+    <div class="tc_title hide">
+        <h1>选择职称 <i></i></h1>
+        <ul class="titleList">
+            <li class="active">医生</li>
+            <li>主治医师</li>
+            <li>主任医师</li>
+            <li>副主任医师</li>
+            <li>助理医师</li>
+            <li>医生</li>
+            <li>主治医师</li>
+            <li>主任医师</li>
+            <li>副主任医师</li>
+            <li>助理医师</li>
+        </ul>
+        <div class="titleBtn clearfix"><span>取消</span><span>确定</span></div>
+    </div>
+    <!--注册成功弹窗-->
+    <div class="registerSuccess hide">
+        <div class="invitesImg"></div>
+        <h1>提交成功</h1>
+        <p>您的信息已提交，您可以下载哆咖医生APP，资质认证成功后，即获得新人现金红包，还有更多惊喜～</p>
+        <div class="successBtn ">下载哆咖医生</div>
+    </div>
+</div>
+<!--<div class="mPicker hide"><div class="mPicker-mask hide"></div></div>-->
+<%- include('ejs/foot') %>
+</body>
+</html>

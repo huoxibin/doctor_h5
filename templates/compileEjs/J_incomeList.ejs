@@ -1,0 +1,60 @@
+
+    <% for(i=0;i<data.length;i++){
+        var nextData=data[i].data;
+    %>
+
+    <div class="J_incomeList J_incomeList<%=pageNum%>">
+        <%if(data[i].viewMonth==iNowMonth){%>
+           <h2 class="J_incomeMonth" style="visibility: hidden;height:0;overflow:hidden"><%=data[i].viewMonth%></h2>
+        <% } else { %>
+          <h2 class="J_incomeMonth"><%=data[i].viewMonth%></h2>
+        <% } %>
+        <ul>
+            <% for(j=0;j<nextData.length;j++){
+              var itime=nextData[j].successTime==null?'':nextData[j].successTime.split(' ')[0].split('-'); var itimes=nextData[j].successTime==null?'':nextData[j].successTime.split(' ')[1].split(':');
+            %>
+            <li class="p_item">
+                <a <%if(nextData[j].memo=='提现'){%>
+                        href="J_historyDeal.html?id=<%=nextData[j].id%>&memo=<%=nextData[j].memo%>"
+                    <% } else { %>
+                        href="J_incomeDetail.html?id=<%=nextData[j].id%>&memo=<%=nextData[j].memo%>"
+                    <% } %>  class="clearfix">
+                    <%if(nextData[j].turnoverFrom=='1'){%>
+                       <span><img src="../images/Y_listicon3.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='2'){%>
+                       <span><img src="../images/Y_listicon1.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='3'){%>
+                            <span><img src="../images/Y_listicon2.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='4'){%>
+                            <span><img src="../images/Y_listicon1.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='5'){%>
+                            <span><img src="../images/Y_listicon1.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='6'){%>
+                            <span><img src="../images/Y_listicon1.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='7'){%>
+                            <span><img src="../images/Y_listicon5.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='11'){%>
+                            <span><img src="../images/Y_listicon1.png"></span>
+                    <%}else if(nextData[j].turnoverFrom=='201'){%>
+                            <span><img src="../images/Y_listicon4.png"></span>
+                    <%}%>
+                    <h4 class="item_left"><%=nextData[j].memo%></h4>
+                    <h5><%=nextData[j].turnoverType%><%=nextData[j].amount%></h5>
+                    <h6 class="item_right item_money"><%=itime[1]%>-<%=itime[2]%>  <%=itimes[0]%>:<%=itimes[1]%></h6>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,421 @@
+@r:50rem;
+
+
+.Hnav{
+  height: 2.56rem;
+  background: #C6C6C6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 10;
+  .dialogTop{
+    position: fixed;
+    top: 55/@r;
+    width: 100%;
+    text-align: center;
+    height: 90/@r;
+    line-height: 90/@r;
+    background: #fff;
+    border-top-left-radius:25/@r;
+    border-top-right-radius:25/@r;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 36/@r;
+    color: #333333;
+    z-index:101;
+    img{
+      width: 30/@r;
+      height: 30/@r;
+      position: absolute;
+      left: 40/@r;
+      top:30/@r;
+    }
+  }
+}
+
+
+.replyBox{
+  width: 100%;
+  height: auto;
+  //z-index: 8;
+  //position: relative;
+}
+
+.progressBar{
+  width: 100%;
+  height: 75/@r;
+  background: #C6C6C6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+.dingWei{
+  margin-top: 150/@r;
+}
+
+.dialogReply{
+  background: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 1200px;
+}
+
+.dialogTop{
+  position: fixed;
+  top: 55/@r;
+  width: 100%;
+  text-align: center;
+  height: 90/@r;
+  line-height: 90/@r;
+  background: #fff;
+  border-top-left-radius:25/@r;
+  border-top-right-radius:25/@r;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 36/@r;
+  color: #333333;
+  z-index:101;
+  img{
+    width: 30/@r;
+    height: 30/@r;
+    position: absolute;
+    left: 40/@r;
+    top:30/@r;
+  }
+}
+
+
+.docotrTalk{
+  background: #fff;
+  margin-top: 90/@r;
+  padding: 26/@r 30/@r 40/@r 30/@r;
+  border-bottom: 1px solid #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  .perImg{
+    display: flex;
+    justify-content: flex-start;
+    width:84/@r;
+    height:84/@r;
+    background: url(../images/JpatientDP.png) no-repeat top center;
+    background-size: cover;
+    border-radius: 50%;
+    //img{
+    //  width:84/@r;
+    //  height:84/@r;
+    //}
+  }
+  .perSpeech{
+    margin-left: 30/@r;
+    flex: 1;
+    .perName{
+      display: flex;
+      justify-content: space-between;
+      .doctorName{
+        font-size: 32/@r;
+        color: #333333;
+      }
+      .doctorSnap{
+        span{
+          font-size: 30/@r;
+          color:#CCCCCC;
+          padding-right: 20/@r;
+        }
+        img{
+          width: 35/@r;
+          height: 30/@r;
+          padding-bottom: 10/@r;
+        }
+      }
+    }
+    .speechCon{
+      margin-top:20/@r;
+      font-size: 28/@r;
+      color: #666666;
+    }
+    .speechTime{
+      margin-top:20/@r;
+      height: 37/@r;
+      line-height: 37/@r;
+      .talkTime{
+        font-size: 26/@r;
+        color: #999999;
+        padding-right: 40/@r;
+      }
+    }
+  }
+}
+.dialogAll{
+  background: #fff;
+  width:100%;
+  padding: 20/@r 30/@r 30/@r 30/@r;
+  font-size: 30/@r;
+  color: #333333;
+  font-weight: bolder;
+}
+.doctorDiscuss{
+  background: #fff;
+  width: 100%;
+  min-height: 600/@r;
+  margin-bottom: 150/@r;
+  ul{
+    li{
+      padding: 26/@r 30/@r 40/@r 30/@r;
+      border-bottom: 1px solid #FAFAFA;
+      display: flex;
+      justify-content: space-between;
+      .perImg{
+        display: flex;
+        justify-content: flex-start;
+        width:84/@r;
+        height:84/@r;
+        background: url(../images/JpatientDP.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 50%;
+        //img{
+        //  width:84/@r;
+        //  height:84/@r;
+        //}
+      }
+      .perSpeech{
+        margin-left: 30/@r;
+        flex: 1;
+        .perName{
+          display: flex;
+          justify-content: space-between;
+          .doctorName{
+            font-size: 32/@r;
+            color: #333333;
+          }
+          .doctorSnap{
+            span{
+              font-size: 30/@r;
+              color:#CCCCCC;
+              padding-right: 20/@r;
+            }
+            img{
+              width: 35/@r;
+              height: 30/@r;
+              padding-bottom: 10/@r;
+            }
+          }
+        }
+        .speechCon{
+          margin-top:20/@r;
+          font-size: 28/@r;
+          color: #666666;
+        }
+        .speechTime{
+          margin-top:20/@r;
+          height: 37/@r;
+          line-height: 37/@r;
+          .talkTime{
+            font-size: 26/@r;
+            color: #999999;
+            padding-right: 40/@r;
+          }
+          .wenzi{
+            font-size: 26/@r;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+  .downLoad{
+    width: 100%;
+    height: 100/@r;
+    text-align: center;
+    line-height: 100/@r;
+    font-size: 24/@r;
+    color: #999999;
+  }
+  .showAllData{
+    width: 100%;
+    height: 100/@r;
+    text-align: center;
+    line-height: 100/@r;
+    font-size: 24/@r;
+    color: #999999;
+    font-weight: 600;
+  }
+}
+.showAllComments{
+  width:100%;
+  height: 100/@r;
+  font-size: 30/@r;
+  color: #333333;
+  text-align: center;
+  line-height: 100/@r;
+}
+.dialogCommentBtn{
+  z-index: 110;
+  width: 100%;
+  position: fixed;
+  bottom: 0/@r;
+  .btnOne{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    padding: 25/@r 30/@r;
+    p{
+      box-sizing: border-box;
+      width: 100%;
+      height: 70/@r;
+      font-size: 30/@r;
+      line-height: 70/@r;
+      text-align:left;
+      padding-left: 40/@r;
+      color: #666666;
+      background: #F1F1F1;
+      border: 1px solid #DEDBDB;
+      border-radius: 12/@r;
+    }
+  }
+  .btnTwo{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #6DE4F2;
+      }
+    }
+  }
+  .btnThree{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #6DE4F2;
+      }
+    }
+  }
+  .keyBoard{
+    width: 100%;
+    height: 0/@r;
+    background: #fff;
+  }
+}
+
+
+.snapClass{
+  color: #6DE4F2!important;
+}
+.noSnapClass{
+
+}
+
+//暂无数据
+.H_noData{
+  width:100%;
+  text-align: center;
+  margin-top: 100/@r;
+  img{
+    width: 350/@r;
+    height: 250/@r;
+  }
+  dd{
+    margin-top: 30/@r;
+    margin-bottom:80/@r;
+    font-size: 30/@r;
+    color: #666;
+  }
+}
+
+.h_hide{
+  display: none!important;
+}
+
+//表情样式添加
+#facebox{
+  width: 100%;
+  left: 0px!important;
+  top:118/@r!important;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  //height: 300/@r;
+  //overflow-y: scroll;
+  table{
+    width: 90%;
+    margin-left: 5%;
+    tr{
+      line-height: 70/@r!important;
+      td{
+        line-height: 70/@r!important;
+      }
+    }
+  }
+}

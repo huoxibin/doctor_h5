@@ -1,0 +1,57 @@
+<% if (data!=null && data.length>0){ %>
+<ul>
+    <% for(i=0;i<data.length;i++){%>
+    <%if(jump==0){%>
+    <li>
+        <a href="J_MySerSetList.html?bar=<%=jump%>&id=<%=data[i].id%>&packageName=<%=data[i].packName%>&packageNum=<%=data[i].itemCount%>">
+            <p><%=data[i].packName%></p>
+            <span>
+                <b>共<%=data[i].itemCount%>项服务</b>
+                <img class="Jimgshu" src="../images/Y_DCListicon.png">
+            </span>
+        </a>
+    </li>
+    <% }else{%>
+    <li>
+        <a href="J_MySerSetList.html?bar=<%=jump%>&id=<%=data[i].id%>&packageName=<%=data[i].name%>&packageNum=<%=data[i].templateNum%>">
+            <p><%=data[i].name%></p>
+            <span>
+                <b>共<%=data[i].templateNum%>项服务</b>
+                <img class="Jimgshu" src="../images/Y_DCListicon.png">
+            </span>
+        </a>
+    </li>
+    <%}%>
+    <% } %>
+</ul>
+<% } else {%>
+<%if(jump==0){%>
+<% if(teamRole==1){ /*判断是否是队长身份*/ %>
+<dl class="JnoData">
+    <dt><img src="../images/MyserDui.png"></dt>
+    <dd>请去服务包模板设置您的服务包</dd>
+</dl>
+<% } else {%>
+<dl class="JnoData">
+    <dt><img src="../images/MyserUs.png"></dt>
+    <dd>您的队长还没有设置家医服务包</dd>
+</dl>
+<% } %>
+<%}else{%>
+<dl class="JnoData">
+    <dt><img src="../images/MyserDui.png"></dt>
+    <dd>暂无服务包模板</dd>
+</dl>
+<% } %>
+
+<% } %>
+
+
+
+
+
+
+
+
+
+

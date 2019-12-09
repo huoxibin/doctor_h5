@@ -1,0 +1,42 @@
+<% var itemDate= data.result; for(i in itemDate){ %>
+<ul datas="<%= i%>" class="ulItem">
+    <%if(i!=lastdatas){%>
+    <%if(itemDate[i].length!=0){%>
+    <%if(i=='today'){%>
+    <li class="calendar">今天</li>
+    <%}else if(i=='yesterday'){%>
+    <li class="calendar">昨天</li>
+    <%}else{%>
+    <li class="calendar">更早</li>
+    <%}%>
+    <%}%>
+    <%}%>
+    <% itemDate[i].forEach(function(data,index){%>
+    <li class="Y_lidata" Y_lidata='<%=JSON.stringify(data)%>'>
+        <!--时间-->
+        <div class="Y_data time" style="width:38%;padding-left:0;text-align:center;">
+            <%if(i=='earlier'){%>
+            <span><%=data.measuringTime%></span>
+            <%}else{%>
+            <% Ydata(data.measuringTime) %>
+            <span><%=times3%></span>
+            <%}%>
+        </div>
+        <!--心率-->
+        <div class="Y_data">
+            <div><span><%=data.averageHeartRate%></span></div>
+        </div>
+        <!--心脏节律异常风险-->
+        <div class="Y_data">
+            <%if(data.heartRisk==1){%>
+            <div style="width:35%!important;"><span style="color:#6590FF!important;">正常</span></div>
+            <%}else if(data.heartRisk==2){%>
+            <div style="width:35%!important;"><span style="color:#FFAB2B!important;">偏低</span></div>
+            <%}else if(data.heartRisk==3){%>
+            <div style="width:35%!important;"><span style="color:#FF6262!important;">偏高</span></div>
+            <%}%>
+        </div>
+    </li>
+    <% })%>
+</ul>
+<% } %>

@@ -1,0 +1,116 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody">
+<div class="wrap">
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump  infoDetail_btn"></a>
+        <h1>健康管理</h1>
+        <!--<b class="Y_tump"></b>-->
+        <span class="trackPlan_disease"></span>
+        <span class="trackPlan_search"></span>
+    </section>
+    <div class="" style="padding-top: 2.46rem;">
+        <div class="trackPlan">
+            <div class="trackPlan_title">
+                <div class="trackPlan_medTitleCon">
+                    <dl>
+                        <dt><img src="../images/trackPlan.png"></dt>
+                        <dd>用户随访</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="trackPlan_tab clearfix">
+            <div class="trackPlan_nav active">随访计划</div>
+            <div class="trackPlan_nav">随访任务</div>
+        </div>
+    </div>
+</div>
+
+
+<!--用户随访-->
+<div class="trackPlan_con">
+    <div class="trackPlan_wrap">
+        <!--随访计划-->
+        <div class="slide trackPlan_slide">
+            <div id="wrap">
+                <div id="scroller">
+                    <div id="pullDown"><span class="pullDownLabel"></span></div>
+                    <div id="thelist" class="clearfix"></div>
+                    <div id="pullUp"><span class="pullUpLabel"></span></div>
+                </div>
+                <!--滚动条-->
+                <div class="Y_gdt">
+                    <div class="Y_gdt1"></div>
+                </div>
+            </div>
+        </div>
+        <!--随访任务-->
+        <div class="slide trackTask_slide hide" style="height:10rem; overflow: scroll;padding-bottom: 1rem;">
+            <div class="trackTask">
+                <div class="trackPlan_list done">
+                    <div class="listImg"></div>
+                    <div class="listInfo">
+                        <div class="listInfo_top"><span class="customer_name">张亮</span><span class="customer_male"></span><span class="customer_age">32岁</span></div>
+                        <div class="listInfo_bot">高血压、糖尿病、高血脂</div>
+                    </div>
+                </div>
+                <div class="trackTask_bot">线上随访<span class="trackMode_phone"></span><span class="trackTime">随访时间<i>2018.11.20</i></span></div>
+            </div>
+            <div class="trackTask">
+                <div class="trackPlan_list">
+                    <div class="listImg"></div>
+                    <div class="listInfo">
+                        <div class="listInfo_top"><span class="customer_name">张亮</span><span class="customer_male"></span><span class="customer_age">32岁</span></div>
+                        <div class="listInfo_bot">高血压、糖尿病、高血脂</div>
+                    </div>
+                </div>
+                <div class="trackTask_bot clearfix">线上随访<span class="trackMode_video"></span><span class="trackTime">随访时间<i>2018.11.20</i></span></div>
+            </div>
+            <div class="trackTask">
+                <div class="trackPlan_list">
+                    <div class="listImg"></div>
+                    <div class="listInfo">
+                        <div class="listInfo_top"><span class="customer_name">张亮</span><span class="customer_male"></span><span class="customer_age">32岁</span></div>
+                        <div class="listInfo_bot">高血压、糖尿病、高血脂</div>
+                    </div>
+                </div>
+                <div class="trackTask_bot clearfix">线上随访<span class="trackMode_video"></span><span class="trackTime">随访时间<i>2018.11.20</i></span></div>
+            </div>
+            <div class="trackTask">
+                <div class="trackPlan_list">
+                    <div class="listImg"></div>
+                    <div class="listInfo">
+                        <div class="listInfo_top"><span class="customer_name">张亮</span><span class="customer_male"></span><span class="customer_age">32岁</span></div>
+                        <div class="listInfo_bot">高血压、糖尿病、高血脂</div>
+                    </div>
+                </div>
+                <div class="trackTask_bot clearfix">线上随访<span class="trackMode_video"></span><span class="trackTime">随访时间<i>2018.11.20</i></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--健康干预-->
+<div class="healthMeddle_con hide"></div>
+
+<!-- 弹框 -->
+<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <div class="tc_disease">
+        <div class="search_box clearfix">
+            <span class="cancel">取消</span>
+            <span class="set">确定</span>
+        </div>
+        <div class="disease_box">
+            <span class="dis acBg">高血压</span>
+            <span class="dis">糖尿病</span>
+            <span class="dis">老人</span>
+            <span class="dis">儿童</span>
+            <span class="dis">孕产妇</span>
+            <span class="dis">特别关注</span>
+            <span class="dis acBg">其他</span>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

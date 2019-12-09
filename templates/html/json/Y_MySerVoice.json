@@ -1,0 +1,14 @@
+{
+  "title": "我的服务-语音咨询",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/honeySwitch.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js",
+    "../js/common/honeySwitch.js",
+    "../js/projectJs/Y_MySerVoice.js"
+  ]
+}

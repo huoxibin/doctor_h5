@@ -1,0 +1,26 @@
+<div class="Y_MoreECGCon">
+    <img src="<%=data.ecgImage%>">
+    <div class="Y_MoreECGConBot">
+        <h2>心电分析</h2>
+        <ul>
+            <li>记录开始时间：<%=data.measuringTime%></li>
+            <li>记录时长：30s</li>
+            <li>
+                <p>平均心率：<span <%if(data.heartRisk==1){%>style="color: #6590FF;"<%}else if(data.heartRisk==2){%>style="color:#FFAB2B;"<%}else if(data.heartRisk==3){%>style="color:#FF6262;"<%}%>><%=data.averageHeartRate%>次/分</span></p>
+                <p>节律正常范围：<%=data.rhythmNormal%>%</p>
+            </li>
+            <li>疑似心率不齐或早搏：<%=data.heartRateAbnormal%>%</li>
+            <li>疑似心房颤动或早搏：<%=data.atriumAbnormal%>%</li>
+        </ul>
+        <ul>
+            <li>
+                <p>心率正常范围：<%=data.heartRateNormal%>%</p>
+                <p>稍快稍慢：<%=data.heartRateExceed%>%</p>
+            </li>
+            <li>过快过慢：<%=data.heartRateSlightly%>%</li>
+        </ul>
+        <ul>
+            <li style="height: auto;overflow: hidden;line-height:24px;">心脏节律异常风险......<%if(data.heartRisk==1){%><span style="color:#6590FF!important;">正常</span> 您的心脏节律异常风险低。请您继续保持良好的生活习惯：清淡饮食、适量运动、保证睡眠、戒烟限酒。少量的异常节律可以是心律不齐或者早搏、干扰引起，请您咨询医师或专业人员。定期和随时监测，有助您提早发现心脏风险。<%}else if(data.heartRisk==2){%><span style="color:#FFAB2B!important;">偏低</span> 如您多次在静止、无干扰的状态下测量，异常节律仍高于10%，为了您的健康，请您咨询医师或专业人员。异常节律可以是心律不齐或者早搏、干扰引起，请您咨询医师或专业人员。请您定期或随时监测，跟踪心脏健康风险。<%}else if(data.heartRisk==3){%><span style="color:#FF6262!important;">偏高</span> 如您多次在静止、无干扰的状态下测量，异常节律仍高于20%，提示您的心脏可能存在心律失常风险，建议您尽快咨询医师或专业人员。请您定期和随时监测，跟踪心脏健康风险。<%}%></li>
+        </ul>
+    </div>
+</div>

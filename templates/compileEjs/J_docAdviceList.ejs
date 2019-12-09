@@ -1,0 +1,79 @@
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump H_backPre"></a>
+    <h1 class="category">咨询记录</h1>
+</section>
+<div class="Y_docIndex advice_list JindexBox JcontentBox">
+<% if (data.length>0){ %>
+<ul class="JDCCon">
+    <% for(i=0;i<data.length;i++){
+        var iData=new Date(data[i].acceptTime);
+        iData = iData.getFullYear() > 0 ? iData : new Date(data[i].acceptTime.replace(/-/g, "/"));
+        var isData=iData.format('yyyy-MM-dd');%>
+    <li class="advice_listLi">
+        <time><%=isData%></time>
+        <div class="ad_con" style="margin:0 auto 10px auto">
+            <h4 class="lastH4 clearfix">
+                <label>患病年限</label>
+                <% var sickYears='';if (data[i].sickYears.length>20){sickYears=data[i].sickYears.substr(0,20)+'...'; %>
+                    <p><%=sickYears%>年</p>
+                <% } else {sickYears=data[i].sickYears;%>
+                    <p><%=sickYears%>年</p>
+                <% } %>
+            </h4>
+            <h4 class="lastH4 clearfix">
+                <label>确诊医院</label>
+                <% var hospitalName='';if (data[i].hospitalName.length>20){hospitalName=data[i].hospitalName.substr(0,20)+'...'; %>
+                     <p><%=hospitalName%></p>
+                <% } else {hospitalName=data[i].hospitalName;%>
+                     <p><%=hospitalName%></p>
+                <% } %>
+            </h4>
+            <h4 class="lastH4 clearfix">
+                <label>咨询原因</label>
+                <p>
+                    <% var iReason='';if (data[i].askReason.length>20){iReason=data[i].askReason.substr(0,20)+'...'; %>
+                        <%=iReason%>
+                        <a class='Jmore JmoreBott'
+                                <% if (ifPatient=='1'){ %>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&ifPatient=1"
+                                <% } else {%>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&myPatient=1"
+                                <% } %>
+
+                        >查看更多>></a>
+                    <% } else {iReason=data[i].askReason;%>
+                        <%=iReason%>
+                        <a class='Jmore'
+                                <%if(styleD=='1'){%>
+                                <% if (ifPatient=='1'){ %>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&ifPatient=1&style=1"
+                                <% } else {%>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&myPatient=1&style=1"
+                                <% } %>
+                                <%}else{%>
+                                <% if (ifPatient=='1'){ %>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&ifPatient=1&style=2"
+                                <% } else {%>
+                           href="J_docAdviceDetail_<%=data[i].templetType%>.html?applyFormId=<%=data[i].applyFormId%>&memberId=<%=memberId%>&myPatient=1&style=2"
+                                <% } %>
+                                <%}%>
+                        >查看更多>></a>
+                    <% } %>
+                </p>
+            </h4>
+        </div>
+    </li>
+    <% } %>
+</ul>
+<% } else {%>
+<dl class="JnoData">
+    <dt><img src="../images/noadvice.png"></dt>
+    <dd>该患者暂无咨询记录</dd>
+</dl>
+<% } %>
+</div>
+
+
+
+
+

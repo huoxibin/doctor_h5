@@ -1,0 +1,50 @@
+<%- include('ejs/head') %>
+<body>
+<section class="wrap">
+    <section class="Ynav hide">
+        <a href="javascript:;" class="Y_tump  infoDetail_btn"></a>
+        <h1>签到</h1>
+    </section>
+    <section class="signBox">
+        <section class="sign-header">
+            <div class="sign-header-inner">
+                <span class="sign-month"></span>
+                <input type="text" class="select-value2 form-control" value="" readonly="readonly" style="transform: translateY(0px);">
+            </div>
+            <p class="remind-sign">
+                <i>签到提醒</i>
+                <label class="remind-sign-switch">
+                    <input class="switch" type="checkbox">
+                </label>
+            </p>
+        </section>
+        <ul class="clearfix sign-table week">
+            <li>周日</li>
+            <li>周一</li>
+            <li>周二</li>
+            <li>周三</li>
+            <li>周四</li>
+            <li>周五</li>
+            <li>周六</li>
+        </ul>
+        <ul id="body" class="clearfix sign-tbody day"></ul>
+        <section class="sign-btn">签到</section>
+        <a class="sign-rule" href="javascript:;">《签到成长值规则》</a>
+    </section>
+</section>
+
+<!-- 弹框 -->
+<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <div class="tc_sign">
+        <!-- sign-icon_5 => 签到1天icon  sign-icon_5 => 签到5天icon  sign-icon_30 => 签到30天icon -->
+        <div class="recruit_icon sign-icon sign-icon_1"></div>
+        <div class="sign-txt">今日签到成功</div>
+        <!-- sign-point_1 => 签到1天  sign-icon_5 => 签到5天  sign-icon_30 => 签到30天 -->
+        <div class="sign-point sign-point_1"> +5 成长值</div>
+        <div class="recruit_icon close"></div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

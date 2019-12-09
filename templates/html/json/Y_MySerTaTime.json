@@ -1,0 +1,15 @@
+{
+  "title": "我的服务-设置接听时间",
+  "styles": [
+    "../css/honeySwitch.css",
+    "../css/Y_style.css",
+    "../css/J_style.css"
+  ],
+  "scripts": [
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/ejs.min.js",
+    "../js/projectJs/Y_MySerTaTime.js",
+    "../js/common/honeySwitch.js"
+  ]
+}

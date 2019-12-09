@@ -1,0 +1,13 @@
+<%for(i=0;i<data.length;i++){%>
+<li>
+    <div class="MediCalCLick" ishref="../html/Y_MediCalcDe.html?category=<%=category%>&name=<%=data[i].name%>&Y_MeCaText=<%=$('.Y_MediCalcLt ul li.on').find('i').text()%>&Y_MeScroll=<%=Y_MeScroll%>" iName="<%=data[i].name%>">
+       <h3><%=data[i].name%></h3>
+    </div>
+</li>
+<% } %>
+
+
+
+
+
+

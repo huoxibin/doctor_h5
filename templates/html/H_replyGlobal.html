@@ -1,0 +1,101 @@
+<%- include('ejs/head') %>
+<body style="overflow-x: hidden;overflow-y: scroll">
+<section class="Hnav">
+    <div class="dialogTop">
+        <img src="../images/h_dialog.png"/>
+        <span></span>条回复
+    </div>
+</section>
+<div class="replyBox">
+    <!--<div class="progressBar"></div>-->
+    <div class="dialogReply">
+        <!------统计回复数量------->
+        <!--<div class="dialogTop">
+            <img src="../images/h_dialog.png"/>
+            <span>&lt;!&ndash;10&ndash;&gt;</span>条回复1
+        </div>-->
+
+        <div class="dingWei">
+            <!------该医生说的话------->
+            <div class="docotrTalk">
+                <div class="perImg">
+                    <!--<img src="../images/JpatientD.png"/>-->
+                </div>
+                <div class="perSpeech">
+                    <div class="perName">
+                        <div class="doctorName"><!--李医生--></div>
+                        <div class="doctorSnap">
+                            <span><!--17--></span>
+                            <img src="../images/H_collect_n.png"/>
+                        </div>
+                    </div>
+                    <div class="speechCon">
+                        <!--好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。-->
+                    </div>
+                    <div class="speechTime">
+                        <span class="talkTime"><!--37分钟前--></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dialogAll">
+                全部讨论
+            </div>
+            <!------讨论内容------->
+            <div class="doctorDiscuss">
+                <ul class="doctorDiscussList">
+                    <!--<li>
+                            <div class="perImg">
+                                <img src="../images/JpatientD.png"/>
+                            </div>
+                            <div class="perSpeech">
+                                <div class="perName">
+                                    <div class="doctorName">李医生1</div>
+                                    <div class="doctorSnap">
+                                        <span>17</span>
+                                        <img src="../images/H_collect_n.png"/>
+                                    </div>
+                                </div>
+                                <div class="speechCon">
+                                    好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                </div>
+                                <div class="speechTime">
+                                    <span class="talkTime">37分钟前</span>
+                                    <span class="wenzi">回复</span>
+                                </div>
+                            </div>
+                    </li>-->
+                </ul>
+                <div class="downLoad" style="display: none">
+                    正在加载中---
+                </div>
+                <div class="showAllData" style="display: none">
+                    已展示全部数据
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----底部输入框按钮事件-->
+    <div class="dialogCommentBtn">
+        <!--参与讨论(评论区)-->
+        <div class="btnOne" style="display: none">
+            <p style="color: #ccc">说说您的看法</p>
+        </div>
+        <!--参与讨论(输入区)-->
+        <div class="btnTwo">
+            <div class="discussion">
+                <input class="disInput" clickYes id="saytext" name="saytext" placeholder="说说您的看法" value=''/>
+            </div>
+            <div class="attend">
+                <img class="emotion" id="emotionId" src="../images/H_expression.png">
+                <span id="dialogPublish">发布</span>
+                <span id="dialogToSomePublish" style="display: none">发布</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('ejs/foot') %>
+</body>
+</html>

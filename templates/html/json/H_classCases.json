@@ -1,0 +1,23 @@
+{
+  "title": "病例详情",
+  "ico":"",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/photoswipe.css",
+    "../css/default-skin.css",
+    "../css/H_classCases.css"
+  ],
+  "scripts": [
+    "https://res.cdn.openinstall.io/openinstall.js",
+    "../js/common/jquery-1.8.1.min.js",
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/iscroll.js",
+    "../js/common/fastclick.js",
+    "../js/common/ejs.min.js",
+    "../js/common/photoswipe.js",
+    "../js/common/photoswipe-ui-default.min.js",
+    "../js/common/jquery.qqFace.js",
+    "../js/projectJs/H_classCases.js"
+  ]
+}

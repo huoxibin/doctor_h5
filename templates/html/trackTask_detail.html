@@ -1,0 +1,291 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #ffffff;">
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump  infoDetail_btn"> </a>
+    <h1>用户随访</h1>
+    <b class="Y_tump"></b>
+</section>
+<div class="trackPlan_detail">
+    <div class="trackTask_top" style="padding-left: 0;text-align: center"><span class="selectBox_show">高血压患者随访服务记录表</span></div>
+    <!--<div class="trackTask_top"><span class="selectBox_show">高血压患者随访服务记录表</span><i></i></div>-->
+    <div class="trackTask_user clearfix">
+        <ul class="trackTask_user_left">
+            <li><span>姓名：</span><span class="name"></span></li>
+            <li><span>随访日期：</span><span class="startTime"></span></li>
+            <li><span>随访方式：</span><span class="spanRadio"></span><i class="visitType"></i></li>
+        </ul>
+        <div class="makePhone"></div>
+    </div>
+
+    <!--高血压表单-->
+    <div class="form hypertension hide">
+        <form class="form_1" id="form_hypertension">
+            <div class="trackBox"><i class="icon"></i><span>症状 </span> (多选)</div>
+            <ul class="symptom_box clearfix">
+                <li><input type="checkbox" value="无症状" id="h_symptom_box1" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box1"></label><span class="status fontSize30">无症状</span></li>
+                <li><input type="checkbox" value="头痛头晕" id="h_symptom_box2" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box2"></label><span class="status fontSize30">头痛头晕</span></li>
+                <li><input type="checkbox" value="恶心呕吐" id="h_symptom_box3"name="h_symptom_box" class="symptomBox"><label for="h_symptom_box3"></label><span class="status fontSize30">恶心呕吐</span></li>
+                <li><input type="checkbox" value="眼花耳鸣" id="h_symptom_box4" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box4"></label><span class="status fontSize30">眼花耳鸣</span></li>
+                <li><input type="checkbox" value="呼吸困难" id="h_symptom_box5" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box5"></label><span class="status fontSize30">呼吸困难</span></li>
+                <li><input type="checkbox" value="心悸胸闷" id="h_symptom_box6" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box6"></label><span class="status fontSize30">心悸胸闷</span></li>
+                <li><input type="checkbox" value="鼻出血不止" id="h_symptom_box7" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box7"></label><span class="status fontSize30">鼻出血不止</span></li>
+                <li><input type="checkbox" value="四肢发麻" id="h_symptom_box8" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box8"></label><span class="status fontSize30">四肢发麻</span></li>
+                <li><input type="checkbox" value="下肢水肿" id="h_symptom_box9" name="h_symptom_box" class="symptomBox"><label for="h_symptom_box9"></label><span class="status fontSize30">下肢水肿</span></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>体征</span></div>
+            <ul class="sign_box">
+                <li><span>血压 (mmhg)</span><input type="text" value="" name="text_h_bloodPressure" txtype="FloatZ1000W" class="big"></li>
+                <li><span>体重 (kg)</span><input type="text" value="" name="text_h_weight" txtype="FloatZ1000W" class="big"></li>
+                <li><span>体脂指数 (BMI kg/m2)</span><input type="text" value="" name="text_h_BMI" txtype="FloatZ1000W" class="big"></li>
+                <li><span>心率 (次/分钟)</span><input type="text" value="" name="text_h_heartRate" txtype="FloatZ1000W" class="big"></li>
+                <li><span>其他</span><input type="text" value="" name="text_h_other" class="big"></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>生活方式指导</span></div>
+            <ul class="sign_box">
+                <li><span>日饮酒量 (两)</span><input type="text" value="" name="text_h_drink" txtype="FloatZ1000W" class="big"></li>
+                <li><span>日吸烟量 (只)</span><input type="text" value="" name="text_h_smoke" txtype="FloatZ1000W" class="big"></li>
+                <li>
+                    <span>摄盐情况 (咸淡)</span>
+                    <input type="radio" id="h_salt_1" name="radio_h_salt" value="0_轻" checked><label for="h_salt_1"></label><i class="fontSize30">轻</i>
+                    <input type="radio" id="h_salt_2" name="radio_h_salt" value="1_中"><label for="h_salt_2"></label><i class="fontSize30">中</i>
+                    <input type="radio" id="h_salt_3" name="radio_h_salt" value="2_重"><label for="h_salt_3"></label><i class="fontSize30">重</i>
+                </li>
+                <li>
+                    <span>运动</span>
+                    <input type="text" value="" name="text_h_sport_week" txtype="FloatZ1000W" class="small"><i>次/周</i>
+                    <input type="text" value="" name="text_h_sport_count" txtype="FloatZ1000W" class="small"><i>分钟/次</i>
+                </li>
+                <li>
+                    <span>心理调整</span>
+                    <input type="radio" id="h_adjust_1" name="radio_h_adjust" value="0_良好" checked><label for="h_adjust_1"></label><i class="fontSize30">良好</i>
+                    <input type="radio" id="h_adjust_2" name="radio_h_adjust" value="1_一般"><label for="h_adjust_2"></label><i class="fontSize30">一般</i>
+                    <input type="radio" id="h_adjust_3" name="radio_h_adjust" value="2_差"><label for="h_adjust_3"></label><i class="fontSize30">差</i>
+                </li>
+                <li>
+                    <span>遵医行为</span>
+                    <input type="radio" id="h_action_1" name="radio_action" value="0_良好" checked><label for="h_action_1"></label><i class="fontSize30">良好</i>
+                    <input type="radio" id="h_action_2" name="radio_action" value="1_一般"><label for="h_action_2"></label><i class="fontSize30">一般</i>
+                    <input type="radio" id="h_action_3" name="radio_action" value="2_差"><label for="h_action_3"></label><i class="fontSize30">差</i>
+                </li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>辅助检查</span><input type="text" name="text_h_examination"></div>
+            <div class="trackBox"><i class="icon"></i><span>服药依从性</span></div>
+            <ul class="medicine_box">
+                <li>
+                    <input type="radio" id="h_medicine_1" name="radio_medicine" value="0_规律" checked><label for="h_medicine_1"></label><i class="fontSize30">规律</i>
+                    <input type="radio" id="h_medicine_2" name="radio_medicine" value="1_间断"><label for="h_medicine_2"></label><i class="fontSize30">间断</i>
+                    <input type="radio" id="h_medicine_3" name="radio_medicine" value="2_不服药"><label for="h_medicine_3"></label><i class="fontSize30">不服药</i>
+                </li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>药物不良反应</span></div>
+            <div class="trackTxtArea">
+                <textarea name="textarea_h_drugReaction"></textarea>
+            </div>
+            <div class="trackBox"><i class="icon"></i><span>此次随访分类</span></div>
+            <div class="radio_four clearfix">
+                <div>
+                    <div><input type="radio" id="h_trackSort_1" name="radio_trackSort" value="0_控制满意" checked><label for="h_trackSort_1"></label><i class="fontSize30">控制满意</i></div>
+                    <div><input type="radio" id="h_trackSort_2" name="radio_trackSort" value="1_控制不满意"><label for="h_trackSort_2"></label><i class="fontSize30">控制不满意</i></div>
+                </div>
+                <div>
+                    <div><input type="radio" id="h_trackSort_3" name="radio_trackSort" value="2_不良反应"><label for="h_trackSort_3"></label><i class="fontSize30">不良反应</i></div>
+                    <div><input type="radio" id="h_trackSort_4" name="radio_trackSort" value="3_并发症"><label for="h_trackSort_4"></label><i class="fontSize30">并发症</i></div>
+                </div>
+            </div>
+            <div class="trackBox mt20"><i class="icon"></i><span>用药情况</span></div>
+            <ul class="sign_box">
+                <li><span>药物名称1</span><input type="text" value="" name="text_h_medicineName1" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_h_medicineName1_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_h_medicineName1_day" txtype="FloatZ1000W" class="small" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>药物名称2</span><input type="text" value="" name="text_h_medicineName2" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_h_medicineName2_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_h_medicineName2_day" class="small" txtype="FloatZ1000W" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>药物名称3</span><input type="text" value="" name="text_h_medicineName3" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_h_medicineName3_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_h_medicineName3_day" class="small" txtype="FloatZ1000W" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>其他药物</span><input type="text" value="" name="text_h_medicineName_other" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_h_medicineName_other_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_h_medicineName_other_day" class="small" txtype="FloatZ1000W" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>转诊</span></div>
+            <ul class="sign_box">
+                <li><span>原因</span><input type="text" value="" name="text_h_referral_reason" class="big"></li>
+                <li><span>机构及科别</span><input type="text" value="" name="text_h_referral_agency" class="big"></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>下次随访日期</span><input type="text" name="text_h_trackTime_next"></div>
+            <div class="trackBox mt20"><i class="icon"></i><span>随访医生签名</span><input type="text" name="text_h_doctorName"></div>
+        </form>
+        <div class="btnBox">
+            <button  class="btn" id="form_hypertension_btn">确定</button>
+        </div>
+    </div>
+    <!--糖尿病表单-->
+    <div class="form diabetes hide">
+        <form class="form_2" id="form_diabetes">
+            <div class="trackBox"><i class="icon"></i><span>症状 </span> (多选)</div>
+            <ul class="symptom_box clearfix">
+                <li><input type="checkbox" value="无症状" id="d_symptom_box1" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box1"></label><span class="status fontSize30">无症状</span></li>
+                <li><input type="checkbox" value="多饮" id="d_symptom_box2" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box2"></label><span class="status fontSize30">多饮</span></li>
+                <li><input type="checkbox" value="多食" id="d_symptom_box3" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box3"></label><span class="status fontSize30">多食</span></li>
+                <li><input type="checkbox" value="多尿" id="d_symptom_box4" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box4"></label><span class="status fontSize30">多尿</span></li>
+                <li><input type="checkbox" value="视力模糊" id="d_symptom_box5" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box5"></label><span class="status fontSize30">视力模糊</span></li>
+                <li><input type="checkbox" value="感染" id="d_symptom_box6" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box6"></label><span class="status fontSize30">感染</span></li>
+                <li><input type="checkbox" value="手脚麻木" id="d_symptom_box7" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box7"></label><span class="status fontSize30">手脚麻木</span></li>
+                <li><input type="checkbox" value="下肢浮肿" id="d_symptom_box8" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box8"></label><span class="status fontSize30">下肢浮肿</span></li>
+                <li><input type="checkbox" value="体重下降" id="d_symptom_box9" name="d_symptom_box" class="symptomBox"><label for="d_symptom_box9"></label><span class="status fontSize30">体重下降</span></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>体征</span></div>
+            <ul class="sign_box">
+                <li><span>血压 (mmhg)</span><input type="text" value="" name="text_d_bloodPressure" txtype="FloatZ1000W" class="big"></li>
+                <li><span>体重 (kg)</span><input type="text" value="" name="text_d_weight" txtype="FloatZ1000W" class="big"></li>
+                <li><span>体脂指数 (BMI kg/m2)</span><input type="text" value="" name="text_d_BMI" txtype="FloatZ1000W" class="big"></li>
+                <li><span>其他</span><input type="text" value="" name="text_d_heartRate" class="big"></li>
+                <div>
+                    <span>足背动脉搏动</span>
+                    <div><input type="radio" id="d_footPulse_1" name="radio_footPulse" value="0_触及正常" checked><label for="d_footPulse_1"></label><i class="fontSize30">触及正常</i></div>
+                    <div><input type="radio" id="d_footPulse_2" name="radio_footPulse" value="1_减弱(双侧 左侧 右侧)"><label for="d_footPulse_2"></label><i class="fontSize30">减弱(双侧 左侧 右侧)</i></div>
+                    <div><input type="radio" id="d_footPulse_3" name="radio_footPulse" value="2_消失(双侧 左侧 右侧)"><label for="d_footPulse_3"></label><i class="fontSize30">消失(双侧 左侧 右侧)</i></div>
+                </div>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>生活方式指导</span></div>
+            <ul class="sign_box">
+                <li><span>日饮酒量 (两)</span><input type="text" value="" name="text_d_drink" txtype="FloatZ1000W" class="big"></li>
+                <li><span>日吸烟量 (只)</span><input type="text" value="" name="text_d_smoke" txtype="FloatZ1000W" class="big"></li>
+                <li><span>主食 (克/天)</span><input type="text" value="" name="text_d_food" txtype="FloatZ1000W" class="big"></li>
+                <li>
+                    <span>运动</span>
+                    <input type="text" value="" name="text_d_sport_week" txtype="FloatZ1000W" class="small"><i>次/周</i>
+                    <input type="text" value="" name="text_d_sport_count" txtype="FloatZ1000W" class="small"><i>分钟/次</i>
+                </li>
+                <li>
+                    <span>心理调整</span>
+                    <input type="radio" id="d_adjust_1" name="radio_adjust" value="0_良好" checked><label for="d_adjust_1"></label><i class="fontSize30">良好</i>
+                    <input type="radio" id="d_adjust_2" name="radio_adjust" value="1_一般"><label for="d_adjust_2"></label><i class="fontSize30">一般</i>
+                    <input type="radio" id="d_adjust_3" name="radio_adjust" value="2_差"><label for="d_adjust_3"></label><i class="fontSize30">差</i>
+                </li>
+                <li>
+                    <span>遵医行为</span>
+                    <input type="radio" id="d_action_1" name="radio_action" value="0_良好" checked><label for="d_action_1"></label><i class="fontSize30">良好</i>
+                    <input type="radio" id="d_action_2" name="radio_action" value="1_一般"><label for="d_action_2"></label><i class="fontSize30">一般</i>
+                    <input type="radio" id="d_action_3" name="radio_action" value="2_差"><label for="d_action_3"></label><i class="fontSize30">差</i>
+                </li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>辅助检查</span></div>
+            <ul class="sign_box">
+                <li><span>空腹血糖值(mmol/L)</span><input type="text" value="" name="text_d_bloodSugar" txtype="FloatZ1000W" class="big"></li>
+                <li><span>糖化血糖蛋白</span><input type="text" value="" name="text_d_bloodProtein" class="small" txtype="FloatZ1000W" style="margin-left: 5.2rem;"><i>%</i></li>
+                <li><span>检查日期</span><input type="text" value="" name="text_d_inspectionDate" class="big"></li>
+            </ul>
+            <div class="trackBox"><i class="icon"></i><span>服药依从性</span></div>
+            <ul class="medicine_box">
+                <li>
+                    <input type="radio" id="d_medicine_1" name="radio_medicine" value="1_规律" checked><label for="d_medicine_1"></label><i class="fontSize30">规律</i>
+                    <input type="radio" id="d_medicine_2" name="radio_medicine" value="2_间断"><label for="d_medicine_2"></label><i class="fontSize30">间断</i>
+                    <input type="radio" id="d_medicine_3" name="radio_medicine" value="3_不服药"><label for="d_medicine_3"></label><i class="fontSize30">不服药</i>
+                </li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>药物不良反应</span></div>
+            <div class="trackTxtArea">
+                <textarea name="textarea_d_drugReaction"></textarea>
+            </div>
+            <div class="trackBox"><i class="icon"></i><span>低血糖反应</span></div>
+            <ul class="medicine_box">
+                <li>
+                    <input type="radio" id="d_lowBloodSugar_1" name="radio_lowBloodSugar" value="0_规律" checked><label for="d_lowBloodSugar_1"></label><i class="fontSize30">规律</i>
+                    <input type="radio" id="d_lowBloodSugar_2" name="radio_lowBloodSugar" value="1_间断"><label for="d_lowBloodSugar_2"></label><i class="fontSize30">间断</i>
+                    <input type="radio" id="d_lowBloodSugar_3" name="radio_lowBloodSugar" value="2_不服药"><label for="d_lowBloodSugar_3"></label><i class="fontSize30">不服药</i>
+                </li>
+            </ul>
+            <div class="trackBox"><i class="icon"></i><span>此次随访分类</span></div>
+            <div class="radio_four clearfix">
+                <div>
+                    <div><input type="radio" id="d_trackSort_1" name="radio_trackSort" value="0_控制满意" checked><label for="d_trackSort_1"></label><i class="fontSize30">控制满意</i></div>
+                    <div><input type="radio" id="d_trackSort_2" name="radio_trackSort" value="1_控制不满意"><label for="d_trackSort_2"></label><i class="fontSize30">控制不满意</i></div>
+                </div>
+                <div>
+                    <div><input type="radio" id="d_trackSort_3" name="radio_trackSort" value="2_不良反应"><label for="d_trackSort_3"></label><i class="fontSize30">不良反应</i></div>
+                    <div><input type="radio" id="d_trackSort_4" name="radio_trackSort" value="3_并发症"><label for="d_trackSort_4"></label><i class="fontSize30">并发症</i></div>
+                </div>
+            </div>
+            <div class="trackBox mt20"><i class="icon"></i><span>用药情况</span></div>
+            <ul class="sign_box">
+                <li><span>药物名称1</span><input type="text" value="" name="text_d_medicineName1" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_d_medicineName1_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_d_medicineName1_day" class="small" txtype="FloatZ1000W" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>药物名称2</span><input type="text" value="" name="text_d_medicineName2" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_d_medicineName2_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_d_medicineName2_day" class="small" txtype="FloatZ1000W" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>药物名称3</span><input type="text" value="" name="text_d_medicineName3" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_d_medicineName3_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_d_medicineName3_day" txtype="FloatZ1000W" class="small" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>其他药物</span><input type="text" value="" name="text_d_medicineName_other" class="big"></li>
+                <li>
+                    <span>用法用量</span>
+                    <input type="text" value="" name="text_d_medicineName_other_count" txtype="FloatZ1000W" class="small"><i>次/日</i>
+                    <input type="text" value="" name="text_d_medicineName_other_day" txtype="FloatZ1000W" class="small" style="margin-left: 0.6rem;"><i>每次</i>
+                </li>
+                <li><span>胰岛素种类</span><input type="text" value="" name="text_d_insulin" class="big"></li>
+                <li><span>胰岛素用法用量</span><input type="text" value="" name="text_d_insulin_amount" class="big"></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>转诊</span></div>
+            <ul class="sign_box">
+                <li><span>原因</span><input type="text" value="" name="text_d_reason" class="big"></li>
+                <li><span>机构及科别</span><input type="text" value="" name="text_d_referral_agency" class="big"></li>
+            </ul>
+            <div class="trackBox mt20"><i class="icon"></i><span>下次随访日期</span><input type="text" name="text_d_trackTime_next"></div>
+            <div class="trackBox mt20"><i class="icon"></i><span>随访医生签名</span><input type="text" name="text_d_doctorName"></div>
+        </form>
+        <div class="btnBox">
+            <button class="btn" id="form_diabetes_btn">确定</button>
+        </div>
+    </div>
+    <!--线下-->
+    <div class="form underLine hide">
+        <form class="form_3" id="form_underLine" >
+            <div class="trackBox mt20"><i class="icon"></i><span>随访单照片</span></div>
+            <input type="file" name="file" id="underLine" /><label for="underLine"></label><br><img src="" id="imgUrl" >
+        </form>
+        <div class="btnBox">
+            <button class="btn" id="form_underLine_btn">确定</button>
+        </div>
+    </div>
+</div>
+<!-- 弹框 -->
+<!--<div class="tc_box hide">-->
+    <!--<div class="tc hide"></div>-->
+    <!--<div class="tc_disease">-->
+        <!--<div class="search_box clearfix">-->
+            <!--<span class="cancel">取消</span>-->
+            <!--<span class="set">确定</span>-->
+        <!--</div>-->
+        <!--<div class="test_type_box">-->
+            <!--<div class="test_type acColor" saveType="1">高血压患者随访服务记录表</div>-->
+            <!--<div class="test_type" saveType="2">糖尿病患者随访服务记录表</div>-->
+            <!--<div class="test_type" saveType="3">线下</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<%- include('ejs/foot') %>
+</body>
+</html>

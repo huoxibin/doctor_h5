@@ -1,0 +1,49 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #ffffff;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump  infoDetail_btn"> </a>
+    <h1>用户随访</h1>
+</section>
+<div class="form_type">
+    <div class="test_type_box">
+        <!--<div class="test_type arrow_huo" saveType="1"></div>
+        <div class="test_type arrow_huo" saveType="2"></div>-->
+        <!--<div class="test_type" saveType="3">线下</div>-->
+    </div>
+</div>
+<div class="btnBox" style="position: fixed;bottom: 0;left: 50%;margin-left: -50%;width:100%;">
+    <button class="btn disabled" id="form_hypertension_btn">完成任务</button>
+</div>
+<!--弹框-->
+<div class="Htc_box hide">
+    <div class="Htc hide"></div>
+    <div class="Htc_disease">
+        <div class="Htc_content">
+            是否完成该任务?
+        </div>
+        <div class="Hsearch_box clearfix">
+            <span class="Hcancel">取消</span>
+            <span class="Hset">确定</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- 弹框 -->
+<!--<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <div class="tc_disease">
+        <div class="search_box clearfix">
+            <span class="cancel">取消</span>
+            <span class="set">确定</span>
+        </div>
+        <div class="test_type_box">
+            <div class="test_type acColor" saveType="1">高血压患者随访服务记录表</div>
+            <div class="test_type" saveType="2">糖尿病患者随访服务记录表</div>
+            <div class="test_type" saveType="3">线下</div>
+        </div>
+    </div>
+</div>-->
+<%- include('ejs/foot') %>
+</body>
+</html>

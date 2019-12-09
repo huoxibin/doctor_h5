@@ -1,0 +1,332 @@
+@r:50rem;
+//健康方案
+.form_type{
+  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 128/@r 30/@r 120/@r 30/@r;
+
+}
+//方案历史
+.title{
+  height: 101/@r;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 101/@r;
+  font-size: 28/@r;
+  .title_l{
+    img{
+      width: 40/@r;
+      height: 40/@r;
+    }
+    span{
+      padding-left: 18/@r;
+      color: #49DDEF;
+    }
+  }
+  .title_r{
+    img{
+      width:20/@r;
+      height:35/@r;
+      padding-left: 24/@r;
+    }
+    span{
+      font-size: 28/@r;
+      color: #666666;
+    }
+  }
+}
+//方案历史---列表
+.titleList{
+  height: 101/@r;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 101/@r;
+  font-size: 28/@r;
+  .title_l{
+    img{
+      width: 40/@r;
+      height: 40/@r;
+    }
+    span{
+      padding-left: 18/@r;
+      color: #333333;;
+    }
+  }
+  .title_r{
+    img{
+      width:20/@r;
+      height:35/@r;
+      padding-left: 24/@r;
+    }
+    span{
+      font-size: 28/@r;
+      color: #666666;
+    }
+  }
+}
+
+
+
+//分割线
+.splitLine{
+  margin-left: -30/@r;
+  width: 100vw;
+  height: 1px;
+  border-bottom:1px solid #E0E0E0;
+}
+//运动建议、膳食建议、行为建议、心里建议、特别叮嘱内容展示
+.sportText,.dietText,.actionText,.heartText,.precautionsText,.specialText{
+  margin-top: -20/@r;
+  font-size: 30/@r;
+  color: #666666;
+}
+//分割内容 --文案展示
+.splitTexto{
+  margin-top: 36/@r;
+  margin-left: -30/@r;
+  width: 100vw;
+  height: 20/@r;
+  background: #F9F9F9;
+  border:none;
+}
+//分割内容
+.splitText{
+  margin-left: -30/@r;
+  width: 100vw;
+  height: 20/@r;
+  background: #F9F9F9;
+  border:none;
+}
+//运动建议、膳食建议、特别叮嘱、行为建议、心里建议
+.sport_title,.diet_title,.special_title,.action_title,.heart_title,.precautions_title,.special_title_h{
+  height: 114/@r;
+  line-height: 114/@r;
+  position: relative;
+  i{
+    display: inline-block;
+    background-image: linear-gradient(-180deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+    border-radius: 3px;
+    width: 6/@r;
+    height: 30/@r;
+    padding-top: 0/@r;
+    position: absolute;
+    top: 40/@r;
+  }
+  span{
+    font-weight:bolder;
+    padding-left: 20/@r;
+    font-size: 30/@r;
+    color: #333333;
+  }
+}
+
+//运动建议textarea
+.sport_text{
+  width: 100%;
+  #sportTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 422/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+//膳食建议textarea
+.diet_text{
+  width: 100%;
+  #diettTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 175/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+//行为建议textarea
+.action_text{
+  width: 100%;
+  #actionTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 175/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+//心理建议textarea
+.heart_text{
+  width: 100%;
+  #heartTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 175/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+//其他textarea
+.precautions_text{
+  width: 100%;
+  margin-bottom: 40/@r;
+  #precautionsTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 175/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+
+//特别叮嘱textarea
+.special_text{
+  width: 100%;
+  #specialTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 340/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+  #specialTxte{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 340/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none
+  }
+}
+//确定按钮---（文案展示时）
+#sureBtno{
+  margin-top: 100/@r;
+  display: flex;
+  justify-content:center;
+  .sure{
+    background-image: linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+    border-radius: 20/@r;
+    height: 90/@r;
+    width: 95%;
+    text-align: center;
+    line-height: 90/@r;
+    font-size: 36/@r;
+    color: #FFFFFF;
+    margin:auto;
+  }
+}
+//确定按钮
+#sureBtn{
+  margin-top: 100/@r;
+  display: flex;
+  justify-content:center;
+  .sure{
+    background-image: linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+    border-radius: 20/@r;
+    height: 90/@r;
+    width: 95%;
+    text-align: center;
+    line-height: 90/@r;
+    font-size: 36/@r;
+    color: #FFFFFF;
+    margin:auto;
+  }
+}
+//确定按钮
+#sureBtnTwo{
+  margin-top: 100/@r;
+  display: flex;
+  justify-content:center;
+  .sure{
+    background-image: linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+    border-radius: 20/@r;
+    height: 90/@r;
+    width: 95%;
+    text-align: center;
+    line-height: 90/@r;
+    font-size: 36/@r;
+    color: #FFFFFF;
+    margin:auto;
+  }
+}
+
+//督促里面的 特别叮嘱
+.noSpecial_text{
+  width: 100%;
+  #noSpecialTxt{
+    padding: 25/@r 16/@r 23/@r 30/@r;
+    width: 93%;
+    height: 340/@r;
+    background: #FAFAFA;
+    border-radius: 12/@r;
+    border:none;
+  }
+}
+//督促文案
+.remindContent{
+  margin-top: 36/@r;
+  width: 100%;
+  height: 80/@r;
+  font-size: 28/@r;
+  color: #B4B4B4;
+  line-height: 50/@r;
+}
+//督促按钮
+#remindBtn{
+  margin-top: 400/@r;
+  display: flex;
+  justify-content:center;
+  .sure{
+    background-image: linear-gradient(-180deg, #6EEADD 0%, #66E7E1 13%, #46DCF1 100%);
+    border-radius: 20/@r;
+    height: 90/@r;
+    width: 95%;
+    text-align: center;
+    line-height: 90/@r;
+    font-size: 36/@r;
+    color: #FFFFFF;
+    margin:auto;
+  }
+}
+
+//短信H5唤醒app
+
+.hide{
+  display: none;
+}
+
+#wrapper{
+  position: absolute;
+  top:65px!important;
+  height: 1260/@r;
+  overflow: hidden!important;
+}
+#wrapper ul li{
+  padding:0/@r 30/@r;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

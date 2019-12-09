@@ -1,0 +1,16 @@
+<%- include('ejs/head') %>
+<body>
+<header class="Ynav Jnav">
+    <em  class="a Y_tump Docjump J_jumpBtn"></em>
+    <h1>扣税说明</h1>
+</header>
+<div class="Y_docIndex J_patient J_protocol J_rule">
+    <p>劳务报酬预扣预缴税款计算公式：个人所得金额=每次收入额-个人应纳税金额</p>
+    <p>1）每次收入不足4000元时个人应纳税金额= （每次收入额-800）*20%</p>
+    <p>2）每次收入在大于4000元，小于20000元时个人应纳税金额=每次收入额*（1-20%）*20%</p>
+    <p>3）每次收入在大于20000元，小于50000元时个人应纳税金额=每次收入额*（1-20%）*30%-2000</p>
+    <p>4）每次收入在大于50000元个人应纳税金额=每次收入额*（1-20%）*40%-7000</p>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

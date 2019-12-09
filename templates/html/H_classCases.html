@@ -1,0 +1,684 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #F9F9F9;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+    <h1>病例详情</h1>
+    <span class="invitesImg collectBtn"></span>
+    <span class="invitesImg shareBtn"></span>
+</section>
+<section class="shareHeader hide">
+    <span class="logo"></span>
+    <span class="appName">哆咖医生</span>
+    <span class="openApp" id="openApp">打开</span>
+</section>
+
+    <div class="form_type" style="display: block">
+        <div class="casesDemo">
+            <div class="demoTitle"><!--得了A型糖尿病，你要知道的的事。--></div>
+            <!------------------------------------------------个人头像------------------------------------------------->
+            <div class="perInfo">
+                <div class="perInfo_img">
+                    <!--<img src="../images/JpatientD.png"/>-->
+                </div>
+                <div class="perInfo_good">
+                    <p>
+                        <span class="name"><!--曲美文--></span>
+                        <span class="job"><!--主任医师--></span>
+                    </p>
+                    <p class="hospitalName">
+                        <span class="hospital"><!--广安门医院--></span>
+                        <span class="doctorDepartment"><!--肛肠科--></span>
+                    </p>
+                    <p class="goodAt" style="display: none">
+                        <span class="goodAtCon">
+                            <!--对各类肛肠科常见、多发病，如内痔、外痔、混痔、肛瘘、肛裂、肛周脓肿、脱肛及其他疑难杂症的诊断、治疗。擅长各类肛肠科疾病手术，在微创手术领域有丰富的临床经验，擅长采用中西医结合疗法对肛肠科疾病和疑难病进行诊治。-->
+                        </span>
+                        <span class="triangle">
+                            <img src="../images/H_triangle_n.png"/>
+                        </span>
+                    </p>
+                    <p class="peopleTitle">[基本信息]</p>
+                    <p class="baseInfo">
+                        <!--患者：<span class="sex">女</span>，<span class="age">21</span>岁-->
+                    </p>
+                </div>
+            </div>
+            <!------------------------------------------------一堆疾病------------------------------------------------->
+            <div class="people">
+                <p class="peopleTitle">[主诉]</p>
+                <p class="tell peopleText"><!--发热，关节疼痛，皮疹半年，北部疼痛2周。--></p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[现病史]</p>
+                <p class="currentDisease peopleText">
+                    <!--2017年3月初患者后背出现发热、咽痛、咳嗽、皮疹、多关节疼痛，体温高达39.8度，
+                    发热时出现颈部皮疹，伴瘙痒，无口腔溃疡、脱发、光过敏等异常，就诊于“北大医院，
+                    化验显WBC27”95*10/9L、中性粒细胞百分比为54.54%、血清铁蛋白486ng/ml、血沉59MM/h。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[既往史]</p>
+                <p class="past peopleText">
+                   <!-- 5月钱于我科诊断为类固醇糖尿病，予门冬胰岛素治
+                    疗。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[个人史]</p>
+                <p class="personal peopleText">
+                    <!--吸烟20年，酗酒。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[婚育史]</p>
+                <p class="marriage peopleText">
+                    <!--结过3次婚。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[月经史]</p>
+                <p class="menstruation peopleText">
+                    <!--每月15号来月经。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[外伤及手术史]</p>
+                <p class="trauma peopleText">
+                    <!--2014年做过一次胸部手术。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[中毒及药物过敏史]</p>
+                <p class="poisoning peopleText">
+                    <!--对花粉过敏。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[冶游史]</p>
+                <p class="metalTour peopleText">
+                    <!--患过下疳、淋病性尿道炎的性病史。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[家族史]</p>
+                <p class="family peopleText">
+                    <!--祖父祖母有高血压，家族遗传高血压。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[查体]</p>
+                <p class="physicalExamination peopleText">
+                    <!--满月面容，全身皮肤可见皮疹消退色素沉着，腋下、臀部、大腿内侧可见紫斑纹形成。心肺腹查体未见明显异常，双下肢无水肿，关节无红肿压痛。胸10-12椎体压痛。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[辅助检查]</p>
+                <p class="auxiliary peopleText">
+                    <!--满月面容，全身皮肤可见皮疹消退色素沉着，腋下、臀部、大腿内侧可见紫斑纹形成。
+                    心肺腹查体未见明显异常，双下肢无水肿，关节无红肿压痛。胸10-12椎体压痛。-->
+                </p>
+                <!--------------------------------------------------缩略图start--------------------------------------------->
+                <div id="H_disImaList" class="my-gallery" data-pswp-uid="1">
+                    <!--<figure class="h_figImg">
+                        <div class="img-dv">
+                            <a href="../images//jk1.jpg" data-size="1920x1080">
+                                <img src="../images//jk1.jpg">
+                            </a>
+                        </div>
+                        <figcaption style="display:none;">在这里可增加图片描述</figcaption>
+                    </figure>-->
+                </div>
+                <!-----查看更多------>
+                <div class="viewMore">
+                    <p>查看更多</p>
+                </div>
+                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="pswp__bg"></div>
+                    <div class="pswp__scroll-wrap">
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+                        <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar" style="margin-top:15px">
+                                <div class="pswp__counter"></div>
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                        <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                            </button>
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                            </button>
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------------------------------缩略图end---------------------------------------------->
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[诊断]</p>
+                <div class="suoImg">
+                    <p class="diagnosis peopleText">
+                        <!--1、成人斯蒂尔病
+                        2、激素诱导骨质疏松（GIOP）并胸椎压缩骨折。
+                        3、类固醇性糖尿病-->
+                    </p>
+                </div>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[鉴别诊断]</p>
+                <p class="Identification peopleText">
+                    <!--激素诱导骨质疏松（GIOP）并胸椎压缩骨折。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[治疗]</p>
+                <p class="treatment peopleText">
+                    <!--甲泼尼龙片12mg Bid，同时给补钙和骨化三醇、保
+                    肝、护胃、降糖等治疗。-->
+                </p>
+            </div>
+            <div class="people">
+                <p class="peopleTitle">[分析总结]</p>
+                <p class="analysis peopleText">
+                    <!--患者为青年女性，长期大剂量糖皮质激素使用后背部
+                    疼痛，用常见的原因不能解释，并且骨密度只是指示
+                    骨量低下。但胸椎的核磁结果是新发的胸椎压缩性骨
+                    折。故对于长期激素治疗的患者，即使是年轻的患者
+                    ，也要警惕激素诱导骨质疏松带来的并发症。本患者
+                    经过正规的抗骨质疏松治疗后，腰痛明显改善，未再
+                    出现心发骨折。-->
+                </p>
+            </div>
+            <div class="people copyRight" style="display: none">
+                本文为哆咖医生原创，未经允许，禁止转载。
+            </div>
+        </div>
+        <!-----------------------------------------------------讨论内容-------------------------------------------------->
+        <div class="commentArea">
+            <div class="titleCon">
+                <i></i>
+                <span>精彩讨论</span>
+            </div>
+            <div class="yesTalk">
+                <ul class="history">
+                    <!--<li commentId="46">
+                            <div class="perImg">
+                                <img src="../images/JpatientD.png"/>
+                            </div>
+                            <div class="perSpeech">
+                                <div class="perName">
+                                    <div class="doctorName">李医生</div>
+                                    <div class="doctorSnap">
+                                        <span>17</span>
+                                        <img src="../images/H_collect_n.png"/>
+                                    </div>
+                                </div>
+                                <div class="speechCon">
+                                    好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                </div>
+                                <div class="speechTime">
+                                    <span class="talkTime">刚刚</span>
+                                    <p class="replyNum">
+                                        <span class="wenzi">回复</span>
+                                    </p>
+                                </div>
+                                <div class="speechTwo">
+                                    <div class="getList">
+                                        <p twoCommentId="56" class="huiDoctor">
+                                            <span class="doctorName">习近平</span>:
+                                            <span class="talkCont">英雄所见略同!</span>
+                                        </p>
+                                        <p twoCommentId="57" class="huiDoctor">
+                                            <span class="doctorName">霍喜彬</span>:
+                                            <span class="talkCont">真实的案列，可以给人带去不一样的感真实的案列，可以给人带去不一样的感!</span>
+                                        </p>
+                                    </div>
+                                    <div class="totalLength">
+                                        <p>共<span>37</span>条回复></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>-->
+                </ul>
+                <div class="downLoad" style="display: none">
+                    正在加载中---
+                </div>
+                <div class="showAllData" style="display: none">
+                    已展示全部数据
+                </div>
+            </div>
+
+            <dl class="noTalk" style="display: none">
+                <dt><img src="../images/H_noTalk.png"></dt>
+                <dd>该文章不支持讨论</dd>
+            </dl>
+        </div>
+        <!--------------------------------------------------评论区按钮--------------------------------------------------->
+        <div class="commentBtn">
+            <!--参与讨论(评论区)-->
+            <div class="btnOne">
+                <div class="discussion">
+                    <p>参与讨论</p>
+                </div>
+                <div class="attend goBottom">
+                    <img src="../images/h_history.png">
+                    <span>评论区</span>
+                </div>
+                <div class="attend goTop" style="display: none">
+                    <img src="../images/tips.png">
+                    <span>正文</span>
+                </div>
+            </div>
+            <!--参与讨论(输入区)-->
+            <div class="btnTwo" style="display: none">
+                <div class="discussion">
+                    <input class="disInput" type="text" clickYes id="saytext" name="saytext" placeholder="说说您的看法" value=''/>
+                </div>
+                <div class="attend">
+                    <img class="emotion" id="emotionId" src="../images/H_expression.png">
+                    <span id="publish">发布</span>
+                    <span id="publishFour" style="display: none">发布</span>
+                    <span id="publishFive" style="display: none">发布</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹框 -->
+    <div class="tc_box hide">
+        <div class="tc hide"></div>
+
+        <div class="Hnav">
+            <!------统计回复数量------->
+            <div class="dialogTop" fuCommentId="">
+                <img src="../images/h_dialog.png"/>
+                <span><!--20--></span>条回复
+            </div>
+        </div>
+        <div class="dialogReply">
+            <!------该医生说的话------->
+            <div class="docotrTalk">
+                <div class="perImg">
+                    <!--<img src="../images/JpatientD.png"/>-->
+                </div>
+                <div class="perSpeech">
+                    <div class="perName">
+                        <div class="doctorName"><!--李医生--></div>
+                        <div class="doctorSnap">
+                            <span><!--17--></span>
+                            <img src="../images/H_collect_n.png"/>
+                        </div>
+                    </div>
+                    <div class="speechCon">
+                       <!-- 好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。-->
+                    </div>
+                    <div class="speechTime">
+                        <span class="talkTime"><!--37分钟前--></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dialogAll">
+                全部讨论
+            </div>
+            <!------讨论内容------->
+            <div class="doctorDiscuss">
+                <ul class="doctorDiscussList">
+                    <!--<li>
+                            <div class="perImg">
+                                <img src="../images/JpatientD.png"/>
+                            </div>
+                            <div class="perSpeech">
+                                <div class="perName">
+                                    <div class="doctorName">李医生1</div>
+                                    <div class="doctorSnap">
+                                        <span>17</span>
+                                        <img src="../images/H_collect_n.png"/>
+                                    </div>
+                                </div>
+                                <div class="speechCon">
+                                    好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                                </div>
+                                <div class="speechTime">
+                                    <span class="talkTime">37分钟前</span>
+                                    <span class="wenzi">回复</span>
+                                </div>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生1</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">37分钟前</span>
+                                <span class="wenzi">回复</span>
+                            </div>
+                        </div>
+                    </li>-->
+                    <!--<li>
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生1</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">37分钟前</span>
+                                <span class="wenzi">回复</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生1</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">37分钟前</span>
+                                <span class="wenzi">回复</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生1</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">37分钟前</span>
+                                <span class="wenzi">回复</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="perImg">
+                            <img src="../images/JpatientD.png"/>
+                        </div>
+                        <div class="perSpeech">
+                            <div class="perName">
+                                <div class="doctorName">李医生1</div>
+                                <div class="doctorSnap">
+                                    <span>17</span>
+                                    <img src="../images/H_collect_n.png"/>
+                                </div>
+                            </div>
+                            <div class="speechCon">
+                                好详细，真的学到了，每一个细节都是经验的积累，希望以后有机会可以当面交流。
+                            </div>
+                            <div class="speechTime">
+                                <span class="talkTime">37分钟前</span>
+                                <span class="wenzi">回复</span>
+                            </div>
+                        </div>
+                    </li>-->
+                </ul>
+                <div class="downLoad" style="display: none">
+                    正在加载中---
+                </div>
+                <div class="showAllData" style="display: none">
+                    已展示全部数据
+                </div>
+            </div>
+        </div>
+        <!----底部输入框按钮事件-->
+        <div class="dialogCommentBtn">
+            <!--参与讨论(评论区)-->
+            <div class="btnOne" style="display: none">
+                <p style="color: #ccc">说说您的看法</p>
+            </div>
+            <!--参与讨论(输入区)-->
+            <div class="btnTwo">
+                <div class="discussion">
+                    <input class="disInput" clickYes id="dialogSaytext" name="saytext" placeholder="说说您的看法" value=''/>
+                </div>
+                <div class="attend">
+                    <img class="emotion" id="dialogEmotionId" src="../images/H_expression.png">
+                    <span id="dialogPublish">发布</span>
+                    <span id="dialogToSomePublish" style="display: none">发布</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="hide recruitgomore"><span class="getMoreBtn" id="getMoreBtn">打开APP查看更多详情</span></div>
+<%- include('ejs/foot') %>
+</body>
+<!----------------------------------缩略图的js--------------------------->
+<script type="text/javascript">
+   var initPhotoSwipeFromDOM = function(gallerySelector) {
+      // 解析来自DOM元素幻灯片数据（URL，标题，大小...）
+      var parseThumbnailElements = function(el) {
+         var thumbElements = el.childNodes,
+            numNodes = thumbElements.length,
+            items = [],
+            figureEl,
+            linkEl,
+            size,
+            item,
+            divEl;
+         for(var i = 0; i < numNodes; i++) {
+            figureEl = thumbElements[i]; // <figure> element
+            // 仅包括元素节点
+            if(figureEl.nodeType !== 1) {
+               continue;
+            }
+            divEl = figureEl.children[0];
+            linkEl = divEl.children[0]; // <a> element
+            /*------------------------------------------bug修复start----------------------*/
+            var img = new Image();
+            img.src = linkEl.getAttribute('href');
+            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+            /*------------------------------------------bug修复end------------------------*/
+            size = linkEl.getAttribute('data-size').split('x');
+            // 创建幻灯片对象
+            item = {
+               src: linkEl.getAttribute('href'),
+               w: parseInt(size[0], 10),
+               h: parseInt(size[1], 10)
+            };
+            if(figureEl.children.length > 1) {
+               item.title = figureEl.children[1].innerHTML;
+            }
+            if(linkEl.children.length > 0) {
+               // <img> 缩略图节点, 检索缩略图网址
+               item.msrc = linkEl.children[0].getAttribute('src');
+            }
+            item.el = figureEl; // 保存链接元素 for getThumbBoundsFn
+            items.push(item);
+         }
+         return items;
+      };
+
+      // 查找最近的父节点
+      var closest = function closest(el, fn) {
+         return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+      };
+
+      // 当用户点击缩略图触发
+      var onThumbnailsClick = function(e) {
+         e = e || window.event;
+         e.preventDefault ? e.preventDefault() : e.returnValue = false;
+         var eTarget = e.target || e.srcElement;
+         var clickedListItem = closest(eTarget, function(el) {
+            return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+         });
+         if(!clickedListItem) {
+            return;
+         }
+         var clickedGallery = clickedListItem.parentNode,
+            childNodes = clickedListItem.parentNode.childNodes,
+            numChildNodes = childNodes.length,
+            nodeIndex = 0,
+            index;
+         for (var i = 0; i < numChildNodes; i++) {
+            if(childNodes[i].nodeType !== 1) {
+               continue;
+            }
+            if(childNodes[i] === clickedListItem) {
+               index = nodeIndex;
+               break;
+            }
+            nodeIndex++;
+         }
+         if(index >= 0) {
+            openPhotoSwipe( index, clickedGallery );
+         }
+         return false;
+      };
+
+      var photoswipeParseHash = function() {
+         var hash = window.location.hash.substring(1),
+            params = {};
+         if(hash.length < 5) {
+            return params;
+         }
+         var vars = hash.split('&');
+         for (var i = 0; i < vars.length; i++) {
+            if(!vars[i]) {
+               continue;
+            }
+            var pair = vars[i].split('=');
+            if(pair.length < 2) {
+               continue;
+            }
+            params[pair[0]] = pair[1];
+         }
+         if(params.gid) {
+            params.gid = parseInt(params.gid, 10);
+         }
+         return params;
+      };
+
+      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+         var pswpElement = document.querySelectorAll('.pswp')[0],
+            gallery,
+            options,
+            items;
+         items = parseThumbnailElements(galleryElement);
+         // 这里可以定义参数
+         options = {
+            barsSize: {
+               top: 100,
+               bottom: 100
+            },
+            fullscreenEl : false,
+            shareButtons: [
+               {id:'wechat', label:'分享微信', url:'#'},
+               {id:'weibo', label:'新浪微博', url:'#'},
+               {id:'download', label:'保存图片', url:'{{raw_image_url}}', download:true}
+            ],
+            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+            getThumbBoundsFn: function(index) {
+               var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                  pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                  rect = thumbnail.getBoundingClientRect();
+               return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+            }
+         };
+         if(fromURL) {
+            if(options.galleryPIDs) {
+               for(var j = 0; j < items.length; j++) {
+                  if(items[j].pid == index) {
+                     options.index = j;
+                     break;
+                  }
+               }
+            } else {
+               options.index = parseInt(index, 10) - 1;
+            }
+         } else {
+            options.index = parseInt(index, 10);
+         }
+         if( isNaN(options.index) ) {
+            return;
+         }
+         if(disableAnimation) {
+            options.showAnimationDuration = 0;
+         }
+         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+         /*------------------------------------------bug修复start----------------------*/
+         gallery.listen('imageLoadComplete', function(index, item) {
+            var linkEl = item.el.children[0];
+            var img = item.container.children[0];
+            if (!linkEl.getAttribute('data-size')) {
+               linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+               item.w = img.naturalWidth;
+               item.h = img.naturalHeight;
+               gallery.invalidateCurrItems();
+               gallery.updateSize(true);
+            }
+         });
+         /*------------------------------------------bug修复end------------------------*/
+         gallery.init();
+      };
+
+      var galleryElements = document.querySelectorAll( gallerySelector );
+      for(var i = 0, l = galleryElements.length; i < l; i++) {
+         galleryElements[i].setAttribute('data-pswp-uid', i+1);
+         galleryElements[i].onclick = onThumbnailsClick;
+      }
+      var hashData = photoswipeParseHash();
+      if(hashData.pid && hashData.gid) {
+         openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+      }
+   };
+
+   initPhotoSwipeFromDOM('.my-gallery');
+</script>
+</html>

@@ -1,0 +1,63 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #ffffff;">
+<section class="Ynav">
+    <a href="javascript:;" class="Y_tump  infoDetail_btn"> </a>
+    <h1>随访计划</h1>
+    <b class="Y_tump"></b>
+</section>
+<div class="trackPlan_detail">
+    <div class="trackPlan_list">
+        <div class="listImg_detail"><img src="" alt=""></div>
+        <div class="listInfo">
+            <div class="listInfo_top"><span class="customer_name">张亮</span><span class="sex"></span><span class="customer_age">32岁</span></div>
+            <div class="listInfo_bot">高血压、糖尿病、高血脂</div>
+        </div>
+    </div>
+    <div class="trackBox mt20">
+        <i class="icon"></i>
+        <span>选择时间</span>
+        <label for="test_default" class="pickTime"></label>
+        <input type="text" name="test_default" placeholder="2018.11.22  00:00" id="test_default" />
+
+    </div>
+    <div class="trackBox trackType">
+        <i class="icon"></i>
+        <span>选择随访方式</span>
+        <label for="test_type" class="pickTime"></label>
+        <input type="text" id="test_type" style="top: 0rem;" class="select-value2 form-control" value="线上随访 — 语音" readonly="readonly" style="transform: translateY(0px);">
+        <!--<div id="test_type">线上随访 — 语音</div>-->
+    </div>
+
+    <div class="trackBox trackNotice mt20">
+        <i class="icon"></i>
+        <span>备注提醒</span>
+    </div>
+    <div class="textarea">
+        <textarea name="" id="noticeTxt" value="" placeholder="请输入提醒事项" cols="30" rows="10"></textarea>
+    </div>
+    <div class="btnBox  mt20">
+        <button id="btn" class="btn saveTrackplan">确定</button>
+    </div>
+</div>
+<!-- 弹框
+<!--
+<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <div class="tc_disease">
+        <div class="search_box clearfix">
+            <span class="cancel">取消</span>
+            <span class="set">确定</span>
+        </div>
+        <div class="test_type_box">
+            <div class="test_type acColor" visitType="1">线上随访 — 图文</div>
+            <div class="test_type center acColor" visitType="2">线上随访 — 语音</div>
+            <div class="test_type center" visitType="3">线上随访 — 视频</div>
+            <div class="test_type center" visitType="4">线下随访</div>
+        </div>
+    </div>
+</div>
+-->
+<!-- 弹框 -->
+<%- include('ejs/foot') %>
+</body>
+</html>

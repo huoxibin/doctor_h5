@@ -1,0 +1,38 @@
+<% if (data.length>0){ %>
+   <% if (data.length>12){ var iLength=data.length-11%>
+    <ul>
+        <% for(i=0;i<data.length;i++){%>
+        <li class="dcListclick" iHref="../html/Y_DCdetails.html?diseaseName=<%=data[i]%>">
+                <%=data[i]%>
+        </li>
+        <% } %>
+    </ul>
+    <h6 class="JloadAll active">还有<%=iLength%>条结果点击展开<i></i></h6>
+   <% } else {%>
+        <ul>
+            <% for(i=0;i<data.length;i++){%>
+            <li class="dcListclick" iHref="../html/Y_DCdetails.html?diseaseName=<%=data[i]%>">
+                    <%=data[i]%>
+            </li>
+            <% } %>
+        </ul>
+       <h6 class="JloadAll">更多结果请输入完整搜索内容<i></i></h6>
+   <% } %>
+<% } else {%>
+     <dl>
+          <dt><img src="../images/Y_DCListSechBg.png"></dt>
+          <dd>暂无数据</dd>
+     </dl>
+<% } %>
+
+
+
+
+
+
+
+
+
+
+
+

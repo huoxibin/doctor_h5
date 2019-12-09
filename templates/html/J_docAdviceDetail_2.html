@@ -1,0 +1,428 @@
+<%- include('ejs/head') %>
+<body class="huiBody">
+<div class='wrap'>
+    <div class="J_patient J_temp">
+        <div class="TNB_list TNB_form">
+            <!--<section class="Ynav temNav">
+                <a href="J_docAdviceList.html" class="Y_tump adviceBack"> </a>
+                <h1 class="category">糖尿病咨询模板</h1>
+                <span class="temSave">保存</span>
+                <i class="temOk">确定</i>
+            </section>
+            <div class="Y_docIndex">
+                <form class="TNB_listForm">
+                    <div class="Teminput_item">
+                        <h4 class="clearfix">
+                            <label>问诊时间</label>
+                            <div class="form_right">
+                                <input type="text" name="startTime" value="2017-12-23"/>
+                                <em> d</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>患病年限</label>
+                            <div class="form_right">
+                                <input type="text" name="sickYears" placeholder="请输入患病年限"/>
+                                <em>年</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>确诊医院</label>
+                            <div class="form_right">
+                                <input type="text"  name="hospitalName"  placeholder="请输入确诊医院"/>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix form_block">
+                            <label>本次咨询原因</label>
+                            <div class="form_right">
+                                <textarea name="askReason" placeholder="请输入咨询原因"></textarea>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix item_title">
+                            <label>血糖情况</label>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>血糖最高值</label>
+                            <div class="form_right">
+                                <input type="text" name="highestNum" placeholder="请输入血糖最高值"/>
+                                <em>mmol/l</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>近期餐前血糖值</label>
+                            <div class="form_right">
+                                <input type="text" name="beforeEatNum" placeholder="请输入血糖值"/>
+                                <em>mmol/l</em>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>近期餐后血糖值</label>
+                            <div class="form_right">
+                                <input type="text" name="afterEatNum" placeholder="请输入血糖值"/>
+                                <em>mmol/l</em>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix item_title">
+                            <label>用药情况</label>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>用药类型</label>
+                            <div class="form_right">
+                                <input type="button" isTap="0" class="selectMadicType" value="请选择用药类型"/>
+                                <em>m</em>
+                            </div>
+                        </h4>
+                        <div class="selectH4 Jhide isTap2"> &lt;!&ndash;其他&ndash;&gt;
+                            <h4 class="clearfix">
+                                <label>药品名称</label>
+                                <div class="form_right">
+                                    <input type="text" placeholder="请输入药品名称"/>
+                                </div>
+                            </h4>
+                            <h4 class="clearfix">
+                                <label>用药剂量</label>
+                                <div class="form_right">
+                                    <input type="text" placeholder="请输入用药剂量"/>
+                                    <em>mmol/l</em>
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="selectH4 selectH4Change isTap3 Jhide"> &lt;!&ndash;胰岛素&ndash;&gt;
+                            <div class="clearfix form_block select_itemMadic checkedBox">
+                                <h5 class="medicalName"><i class=""></i><label>诺和灵R</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>诺和锐</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>诺和灵N</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>甘精胰岛素</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>地特胰岛素</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>50</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>30</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>25/75</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic">
+                                <h5 class="medicalName"><i class=""></i><label>70/30</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectH4 selectH4Change isTap4 Jhide"> &lt;!&ndash;口服药&ndash;&gt;
+                            <div class="clearfix form_block select_itemMadic checkedBox ejsg">
+                                <input type="hidden" name="ejsg" class="ejsg_ID">
+                                <h5 class="medicalName"><i class=""></i><label>二甲双胍</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic akbt">
+                                <input type="hidden" name="akbt" class="akbt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>阿卡波糖</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic yglbt">
+                                <input type="hidden" name="yglbt" class="yglbt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>优格列波糖</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic mglc">
+                                <input type="hidden" name="mglc" class="mglc_ID">
+                                <h5 class="medicalName"><i class=""></i><label>米格列醇</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic eglj">
+                                <input type="hidden" name="eglj" class="eglj_ID">
+                                <h5 class="medicalName"><i class=""></i><label>恩格列净</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic bglt">
+                                <input type="hidden" name="bglt" class="bglt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>吡格列酮</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic xglt">
+                                <input type="hidden" name="xglt" class="xglt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>西格列汀/利格列汀/阿格列汀</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic rgln">
+                                <input type="hidden" name="rgln" class="rgln_ID">
+                                <h5 class="medicalName"><i class=""></i><label>瑞格列奈</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic tl">
+                                <input type="hidden" name="tl" class="tl_ID">
+                                <h5 class="medicalName"><i class=""></i><label>唐力</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic glqt">
+                                <input type="hidden" name="glqt" class="glqt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>格列齐特</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic glbq">
+                                <input type="hidden" name="glbq" class="glbq_ID">
+                                <h5 class="medicalName"><i class=""></i><label>格列吡嗪</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic glkt">
+                                <input type="hidden" name="glkt" class="glkt_ID">
+                                <h5 class="medicalName"><i class=""></i><label>格列喹酮</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic glbn">
+                                <input type="hidden" name="glbn" class="glbn_ID">
+                                <h5 class="medicalName"><i class=""></i><label>格列本脲</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                            <div class="clearfix form_block select_itemMadic glmn">
+                                <input type="hidden" name="glmn" class="glmn_ID">
+                                <h5 class="medicalName"><i class=""></i><label>格列美脲</label></h5>
+                                <div class="form_right ">
+                                    <h6><span>早</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>午</span><input type="text" /><i>g</i></h6>
+                                    <h6><span>晚</span><input type="text" /><i>g</i></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix item_title">
+                            <label>其他</label>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>饮食控制</label>
+                            <div class="form_right radioSelect">
+                                <input type="hidden" name="controlFood"/>
+                                <p>
+                                    <dfn class="radioBtn checkedRadio" isId="1"></dfn>
+                                    <em>好</em>
+                                </p>
+                                <p>
+                                    <dfn class="radioBtn" isId="0"></dfn>
+                                    <em>差</em>
+                                </p>
+                            </div>
+                        </h4>
+                        <h4 class="clearfix">
+                            <label>运动情况</label>
+                            <div class="form_right radioSelect">
+                                <input type="hidden" name="sport"/>
+                                <p>
+                                    <dfn class="radioBtn checkedRadio" isId="1"></dfn>
+                                    <em>好</em>
+                                </p>
+                                <p>
+                                    <dfn class="radioBtn" isId="0"></dfn>
+                                    <em>差</em>
+                                </p>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="Teminput_item">
+                        <h4 class="clearfix form_block">
+                            <label>健康建议</label>
+                            <i class="Jtips">Tips >></i>
+                            <div class="form_right">
+                                <textarea placeholder="请输入您对本次咨询的健康建议" name="advise" class="TNB_advTTextarea"></textarea>
+                            </div>
+                        </h4>
+                    </div>
+                </form>
+            </div>-->
+        </div>
+        <div class="TNB_list TNB_medicType TNB_medTypes Jhide">
+            <section class="Ynav temNav">
+                <a href="J_docAdviceDetail_2.html" class="Y_tump medTypesBack"> </a>
+                <h1 class="category">用药类型</h1>
+                <i class="TNB_mTypeOk">确定</i>
+            </section>
+            <div class="Y_docIndex">
+                <form class="TNB_listForm">
+                    <input class="TNB_mTypeSelInp" type="hidden"/>
+                    <div class="Teminput_item">
+                        <h4 class="TNB_medTypeSelect clearfix" isTap="1">
+                            <label>中药或保健品</label>
+                            <div class="form_right">
+                                <em class=""></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isTap="3">
+                            <label>胰岛素</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isTap="4">
+                            <label>口服药</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isTap="2">
+                            <label>其他</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="TNB_list TNB_medicType TNB_adviceType Jhide">
+            <section class="Ynav temNav">
+                <a href="J_docAdviceDetail_2.html" class="Y_tump adviceBack"> </a>
+                <h1 class="category">Tips</h1>
+                <i class="TNB_adviceTypeOk">确定</i>
+            </section>
+            <div class="Y_docIndex">
+                <form class="TNB_listForm">
+                    <input class="TNB_adviceTypeInp" type="hidden"/>
+                    <div class="Teminput_item">
+                        <h4 class="TNB_medTypeSelect clearfix" isval="1">
+                            <label>糖尿病饮食</label>
+                            <div class="form_right">
+                                <em class=""></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="2">
+                            <label>坚持运动</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="3">
+                            <label>规律用药</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="4">
+                            <label>继续监测血糖：餐前餐后都要测</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                        <h4 class="TNB_medTypeSelect clearfix" isval="5">
+                            <label>到上级医院就诊</label>
+                            <div class="form_right">
+                                <em></em>
+                            </div>
+                        </h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<%- include('ejs/head') %>
+<body class="recruitBg">
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump goBack" id="recruitBg_back"></a>
+        <h1>报名信息</h1>
+        <!--<span class="invitesImg collectBtn"></span>-->
+        <!--<span class="invitesImg shareBtn"></span>-->
+    </section>
+    <!--<section class="shareHeader hide">-->
+        <!--<span class="logo"></span>-->
+        <!--<span class="appName">哆咖医生</span>-->
+        <!--<span class="openApp">打开</span>-->
+    <!--</section>-->
+    <section class="container recruit-join">
+        <h1>1.患者姓名</h1>
+        <!--<div class="recruit-join-radio">-->
+            <!--<input type="radio" id="h_salt_1" name="radio_h_salt" value="患者本人" checked="checked">-->
+            <!--<label for="h_salt_1"></label>-->
+            <!--<i>患者本人</i>-->
+        <!--</div>-->
+        <!--<div class="recruit-join-radio">-->
+            <!--<input type="radio" id="h_salt_2" name="radio_h_salt" value="患者家属">-->
+            <!--<label for="h_salt_2"></label>-->
+            <!--<i>患者家属</i>-->
+        <!--</div>-->
+        <!--<div class="recruit-join-radio">-->
+            <!--<input type="radio" id="h_salt_3" name="radio_h_salt" value="主治医生">-->
+            <!--<label for="h_salt_3"></label>-->
+            <!--<i>主治医生</i>-->
+        <!--</div>-->
+        <div class="recruit-join-input">
+            <input type="text" value="" name="nameVal" id="nameVal">
+        </div>
+        <h1>2.患者性别</h1>
+        <div class="recruit-join-input">
+            <input type="text" value="" name="sexVal" id="sexVal" readonly="readonly">
+        </div>
+        <h1>3.患者年龄</h1>
+        <div class="recruit-join-input">
+            <input type="text" value="" name="ageVal" id="ageVal" txtype="ageInt">
+        </div>
+        <h1>4.患者联系方式</h1>
+        <div class="recruit-join-input">
+            <input type="text" value="" name="telVal" id="telVal"> <!-- txtype="tel_move" -->
+        </div>
+        <h1>5.患者所在地区</h1>
+        <div class="recruit-join-input" id="local">
+            <div id="location"></div>
+        </div>
+        <h1>6.疾病史</h1>
+        <div class="recruit-join-input"><!--div-input" contenteditable="true"-->
+            <!--<input type="te">-->
+            <textarea id="diseaseHistoryVal"></textarea>
+        </div>
+        <h1>7.治疗史</h1>
+        <div class="recruit-join-input">
+            <!--<input type="text">-->
+            <textarea id="cureHistoryVal"></textarea>
+        </div>
+
+        <div class="join-agreement"><i class="recruit_icon"></i>已阅读并同意 <span>《知情同意书》</span></div>
+        <div class="submit-btn disabled">提 交</div>
+    </section>
+
+    <div class="getMore hide"><span class="getMoreBtn">打开APP查看更多详情</span></div>
+
+<div class="tc_box hide">
+    <div class="tc hide"></div>
+    <!--协议弹窗-->
+    <div class="tc_agreement hide">
+        <h1>患者招募知情协议</h1>
+        <div class="tc_agreement-txt">
+            <!--<p>关注医疗发展动态，享受医疗前沿技术；由于目前较多患者对于临床项目了解的信息不称，或者没有了解临床项目的途径，所以您的加入可能会帮助更多的患者。</p>-->
+            <!--1.加入此信息数据库为自愿原则。<br/>-->
+            <!--2.您推荐的患者将有机会听取知名专家的意见。<br/>-->
+            <!--3.您推荐的患者可能有机会享受的相应疾病的免费体检及治疗。<br/>-->
+            <!--4.请如实填写您的任何一项个人信息，以备事后和您联系，但您的个人信息本网站会绝对保密。<br/>-->
+            <!--5.在遇到符合您所在科室的临床试验项目时，本站有权与您进行联系。<br/>-->
+            <!--6.对于虚假注册者，本站有权利删除其所有注册资料。<br/>-->
+            <!--如果您同意以上全部条款请继续注册。<br/>-->
+            <h2>尊敬的医生/患者及家属：</h2>
+            <p>您好！感谢您参与医哆咖（健科云网）（以下简称“平台”）临床试验报名，参与相关的临床试验。为了确保试验的顺利进行并且很好的保证您的利益，请您务必完整阅读此知情同意书，并且确保您知晓并同意以下内容，如不同意请勿在平台进行报名或者其他操作；如您在平台进行报名或其他操作，视为您知晓并同意本知情同意书的全部内容：</p>
+            一、关于临床试验<br/>
+            临床试验是一项医学研究，目的是确定一种新药或一项治疗方法的疗效与安全性以及存在的副作用，是为帮助医生找到改善、控制、治疗疾病最佳方法所进行的研究性工作。每个试验都尝试找到更好的方法来预防，诊断和治疗疾病。临床试验是长期细致的研究过程中的最后阶段，设计执行良好的临床试验是发现能够提高人类健康的最快和最安全的方法。<br/>
+            二、关于研究<br/>
+            每次研究我们都会在自有平台（公众号“哆咖云医”和“医哆咖”、“哆咖医生APP”等）进行发布，可以进行具体查看。另外每个临床试验研究都有不同的设计和目的，想要获得更多的试验相关信息，也可在试验组致电您的时候，详细咨询试验组。平台只对患者信息负责，受合作试验组（以下简称“合作方”）委托进行患者招募。<br/>
+            三、关于报名<br/>
+            1、请认真且详细填写患者的病情及治疗信息，如果您是推荐医生，请确认您所填写信息的患者同意参加此项研究并且授权您来填写信息。并且承诺报名过程中提交的信息资料完全真实，无任何虚构事实及隐瞒真相的情况，并承担相应的法律责任。越精确的信息，可以大大提高临床试验入组的可能性。<br/>
+            2、本次报名完全秉承自愿原则，如在报名成功后因任何原因无法继续参加，可以随时选择退出。<br/>
+            3、报名成功后平台只负责将您提交的资料发送给合作试验组，所有报名患者都会在初筛后收到相关的短信，如果短信中提及已经被推荐给xxx试验组，请在收到短信通知后关闭陌生电话拦截功能，并且注意接听陌生电话（号码来源为上海）。由合作方进行后续筛选考察，并由合作方自行决定是否可以入组。平台不承担任何其他责任。<br/>
+            四、关于保密<br/>
+            1、您提交给平台的所有资料，平台会严格遵守保密原则，但您必须知晓并同意向平台提交的所有资料允许平台提交给合作方进行后续筛选，就此您不能以侵犯隐私权及其他侵权等理由要求平台承担责任。<br/>
+            2、您知晓并同意，对于平台因为计算机系统、网络安全等问题，而导致的资料意外泄漏，平台不对此负责。<br/>
+            3、您应妥善保管好自己的报名信息及账户信息，如因您的个人原因导致信息泄露或丢失的，由您自行承担责任。<br/>
+            五、关于通知<br/>
+            您知晓并同意，平台的各类通知，通过网页公告、系统通知、官方管理账号通知（公开或私下）、短信、电子邮件或者常规信件进行，通知发出后，即被视为已送达您。您对平台的通知，需通过平台正式公布的联系方式、通信地址、电子邮件地址等联系信息进行传达。<br/>
+            六、关于风险<br/>
+            平台郑重提醒您，临床试验研究具有一定的不可预知的风险性、不适及不良反应等，您全部知晓并承诺完全具有相应风险的承担能力。您知悉并确认，因您进行临床试验而产生的所有风险或后果等均与健科云网、平台无关。<br/>
+            七、在法律允许的最大范围内，平台保留对本知情同意书的最终解释权。<br/>
+            如果您已经充分了解上述内容，并且承诺自愿参加临床试验，请勾选“已阅读并同意《知情同意书》”提交报名。<br/>
+            如果您在填写报名表的过程中有任何咨询或是疑问，欢迎联系我们！<br/>
+            致电：18514795050（工作时间：周一到周五早9点半至下午6点半）<br/>
+            添加微信：YiDoKa-1（添加时请您注明所患疾病和是患者还是推荐医生）<br/>
+        </div>
+        <div class="tc_agreement-btn">
+            <span class="btn-left">取消</span>
+            <span class="btn-right">同意</span>
+        </div>
+    </div>
+    <!--地区弹窗-->
+    <div class="cityBox hide">
+        <h1>请选择所在地区<div class="closeTc_Pr"><i class="invitesImg closeTc"></i></div></h1>
+        <div class="choosed">已选择</div>
+        <div class="choosed_info">
+            <span id="province_span" class="hide"></span>
+            <span id="city_span" class="hide"></span>
+            <span id="area_span" class="active">请选择</span>
+            <!--<span class="active">请选择</span>-->
+        </div>
+        <div class="choosed">选择区县</div>
+        <ul class="clearfix cityBox_inner">
+            <li class="city_1"></li>
+            <li class="city_2 hide"></li>
+            <li class="city_3 hide"></li>
+        </ul>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

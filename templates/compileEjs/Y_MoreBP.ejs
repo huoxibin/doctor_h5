@@ -1,0 +1,48 @@
+<%var itemDate= data.item;for(i in itemDate){%>
+  <% var Y_data=itemDate[i];for(var j in Y_data){%>
+    <ul data-year="<%= j%>" class="ulItem">
+        <%if(j!=nowYear&&j!=lastYear){%>
+        <li class="calendar"></i><%= j%></li>
+        <%}%>
+        <% var Y_data1=Y_data[j];for(var k=0;k<Y_data1.length;k++ ){ var yearlist=Y_data1[k];%>
+        <% Ydata(yearlist.measureTime) %>
+        <li>
+            <!--时间-->
+            <div class="time"><span><%=times3%></span></div>
+            <!--血压高低-->
+            <%if(yearlist.sbp>139){%>
+            <div class="beyond"><span style="color:#F70505!important;text-align: center;"><%=yearlist.sbp%></span><img src="../images/Y_up.png" class="arrow"></div>
+            <%}else if(yearlist.sbp<90){%>
+            <div class="lower"><span style="color:#09C116!important;text-align: center;"><%=yearlist.sbp%></span><img src="../images/Y_down.png" class="arrow"></div>
+            <%}else{%>
+            <div class=""><span style="text-align: center;"><%=yearlist.sbp%></span></div>
+            <%}%>
+            <!--低压高低-->
+            <%if(yearlist.dbp>89){%>
+            <div class="beyond"><span style="color:#F70505!important;"><%=yearlist.dbp%></span><img src="../images/Y_up.png" class="arrow"></div>
+            <%}else if(yearlist.dbp<60){%>
+            <div class="lower"><span style="color:#09C116!important;"><%=yearlist.dbp%></span><img src="../images/Y_down.png" class="arrow"></div>
+            <%}else{%>
+            <div class=""><span><%=yearlist.dbp%></span></div>
+            <%}%>
+            <!--心率高低-->
+            <%if(yearlist.heartRate>100){%>
+            <div class="beyond"><span style="color:#F70505!important;"><%=yearlist.heartRate%></span><img src="../images/Y_up.png" class="arrow"></div>
+            <%}else if(yearlist.heartRate<60){%>
+            <div class="lower"><span style="color:#09C116!important;"><%=yearlist.heartRate%></span><img src="../images/Y_down.png" class="arrow"></div>
+            <%}else{ %>
+            <div class=""><span><%=yearlist.heartRate%></span></div>
+            <%}%>
+            <!--脉压差-->
+            <%if(yearlist.pressureHead>60){%>
+            <div class="beyond"><span style="color:#F70505!important;"><%=yearlist.pressureHead%></span><img src="../images/Y_up.png" class="arrow"></div>
+            <%}else if(yearlist.pressureHead<20){%>
+            <div class="lower"><span style="color:#09C116!important;"><%=yearlist.pressureHead%></span><img src="../images/Y_down.png" class="arrow"></div>
+            <%}else{%>
+            <div class=""><span><%=yearlist.pressureHead%></span></div>
+            <%}%>
+        </li>
+        <% }%>
+    </ul>
+   <% } %>
+<% } %>

@@ -1,0 +1,167 @@
+<div class="vedioTitle">
+    <p><%=data.title%></p>
+    <div><span><%=data.addTime%></span></div>
+</div>
+<div class="Y_familyCD">
+    <% if(data.contextType == 1){ %>
+    <!--图文-->
+    <div id="textBox">
+        <div class="ql-container ql-snow">
+            <div class="ql-editor">
+                <%=data.context.replace(/\t/g,'&nbsp;&nbsp;&nbsp;')%>
+            </div>
+        </div>
+    </div>
+    <% }else if(data.contextType == 3){ %>
+    <!--视频-->
+    <div id="videoBox">
+        <%if(data.videoType == 1){%>
+            <video
+                id='video'
+                controls
+                controlslist="nodownload"
+                preload='auto'
+                webkit-playsinline
+                playsinline
+                x5-playsinline
+                x-webkit-airplay="allow"
+                poster="<%=data.videoFrameUrl%>"
+            >
+                <source src="<%=data.context%>" type="video/mp4">
+                <source src="<%=data.context%>" type="video/webm">
+                <source src="<%=data.context%>" type="video/ogg">
+            </video>
+        <%}else{%>
+            <iframe
+                height="211"
+                width=100%
+                allowFullScreen="true"
+                frameborder="0"
+                src="<%=data.context%>"
+            >
+            </iframe>
+        <%}%>
+    </div>
+    <h1>简介：</h1>
+    <article><p><%=data.introduction%></p></article>
+    <% }else if(data.contextType == 4){ %>
+    <!--音频-->
+    <div id="audioBox">
+        <audio id="audioTag">
+            <source src="<%=data.context%>" type="audio/ogg">
+            <source src="<%=data.context%>" type="audio/mpeg">
+            <source src="<%=data.context%> "type="audio/wav">
+        </audio>
+
+        <div class="controls">
+            <!--播放暂停按钮-->
+            <button class="play-pause" id="playPause">
+                <span class="icon-btn icon-play"></span>
+            </button>
+            <!--播放当前时间-->
+            <span class="played-time">00:00</span>
+            <!--播放进度条-->
+            <div class="pgs">
+                <div class="pgs-play" id="progress"></div>
+                <div class="img"></div>
+            </div>
+            <!--音频总时长-->
+            <span class="audio-time" id="audioTime">0</span>
+
+        </div>
+    </div>
+    <h1>简介：</h1>
+    <article><p><%=data.introduction%></p></article>
+    <% }else{ %>
+    <% } %>
+</div>
+<div class="vedioTitle">
+    <div><span><%='来源：' + data.fromChannel%></span></div>
+</div>
+<% if (data.isAllowReport==0){ %>
+    <% if (data.articleType==1){ %>
+        <div class="copyrightMsg">
+            <p>本文为医哆咖原创，未经允许，禁止转载。<br/><br/>联系方式：400-1110-120</p>
+        </div>
+    <% } else { %>
+        <div class="copyrightMsg">
+            <p>版权归原创作者所有，转载仅作分享，如有侵权请联系后台删除。<br/>联系方式：400-1110-120</p>
+        </div>
+    <% } %>
+<% } else { %>
+    <div class="copyrightMsg">
+        <p>版权归原创作者所有，转载仅作分享，如有侵权请联系后台删除。<br/>联系方式：400-1110-120</p>
+    </div>
+<% } %>
+<script>
+    $(function(){
+        let audio = $('#audioTag').get(0);
+        //console.log(audio.currentTime,audio.duration)
+        //播放暂停控制
+        $('#playPause').on('touchstart',function(){
+            //监听音频播放时间并更新进度条
+            audio.addEventListener('timeupdate',updateProgress,false);
+            //监听播放完成事件
+            audio.addEventListener('ended',audioEnded,false);
+
+
+            //改变暂停/播放icon
+            if(audio.paused){
+                audio.play();
+                $('.icon-btn').removeClass('icon-play').addClass('icon-pause')
+            } else{
+                audio.pause();
+                $('.icon-btn').removeClass('icon-pause').addClass('icon-play')
+            }
+        })
+
+        //读取视频长度,设置页面时长显示-loadedmetadata:指定视频/音频（audio/video）的元数据加载后触发
+        //audio.duration 获取音频的时长，单位为秒
+        $('#audioTag').on("loadedmetadata",function () {
+            //alert(audio.duration)
+            $('#audioTime').text(transTime(this.duration));
+            audioTotaltime = this.duration;
+        });
+
+        let pgsWidth = $('.pgs .img').width()*1; //0.907是 进度条这个div和整个进度条图片宽度的比例
+        //点击进度条跳到指定点播放
+        $('.pgs .img').click(function (e) {
+            let rate = (e.offsetX - ($(this).width()-pgsWidth)/2)/pgsWidth;
+            audio.currentTime = audio.duration * rate;
+            updateProgress();
+        });
+
+    })
+    //转换音频时长显示
+    function transTime(time) {
+        //console.log(time)
+        let duration = parseInt(time);
+        let minute = parseInt(duration/60);
+        let sec = duration%60+'';
+        let isM0 = ':';
+        if(minute == 0){
+            minute = '00';
+        }else if(minute < 10 ){
+            minute = '0'+minute;
+        }
+        if(sec.length == 1){
+            sec = '0'+sec;
+        }
+        return minute+isM0+sec
+    }
+
+    //更新进度条
+    function updateProgress() {
+        let audio = $('#audioTag').get(0);
+        let value = Math.round((Math.floor(audio.currentTime) / Math.floor(audio.duration)) * 100, 0);
+        $('.pgs-play').css('width', value * 1 + '%');
+        $('.played-time').html(transTime(audio.currentTime));
+    }
+    //播放完成
+    function audioEnded() {
+        let audio =document.getElementsByTagName('audio')[0];
+        audio.currentTime=0;
+        audio.pause();
+        $('.play-pause>span').removeClass('icon-pause').addClass('icon-play');
+    }
+</script>

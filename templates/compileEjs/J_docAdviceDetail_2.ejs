@@ -1,0 +1,453 @@
+<% var applyFormData=data.applyForm;var medicineData=data.medicine==undefined||data.medicine==''?'':data.medicine;
+   var templetData=data.templet;
+%>
+<section class="Ynav temNav">
+    <dfn
+            <%if(styleD=='1'){%>
+                <%if (ifPatient=='1'){ %>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&ifPatient=1&style=1"
+                <% } else {%>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&myPatient=1&style=1"
+                <% } %>
+            <%}else{%>
+            <%if (ifPatient=='1'){ %>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&ifPatient=1&style=2"
+                <% } else {%>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&myPatient=1&style=2"
+                <% } %>
+            <%}%>
+            class="Y_tump adviceBack J_jumpBtnIback"> </dfn>
+    <h1 class="category">糖尿病咨询模板</h1>
+    <!--<i class="temOk">确定</i>
+    <span class="temSave">保存</span>-->
+</section>
+<div class="Y_docIndex JindexBox JindexBoxTop">
+    <form class="TNB_listForm JDCCon">
+        <div class="Teminput_item">
+            <h4 class="clearfix">
+                <label>问诊时间</label>
+                <div class="form_right">
+                    <input type="text" name="startTime"  value="<%=templetData.startTime%>"/>
+                    <em></em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>患病年限</label>
+                <div class="form_right">
+                    <input type="text" name="sickYears" placeholder="请输入患病年限" value="<%=templetData.sickYears%>"/>
+                    <em>年</em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>确诊医院</label>
+                <div class="form_right">
+                    <input type="text"  name="hospitalName"  placeholder="请输入确诊医院" value="<%=templetData.hospitalName%>"/>
+                </div>
+            </h4>
+            <h4 class="clearfix form_block">
+                <label>本次咨询原因</label>
+                <div class="form_right">
+                    <textarea name="askReason" value="<%=templetData.askReason%>"  placeholder="请输入咨询原因"><%=templetData.askReason%> </textarea>
+                </div>
+            </h4>
+        </div>
+        <div class="Teminput_item Teminput_itemXT">
+            <h4 class="clearfix item_title">
+                <label>血糖情况</label>
+            </h4>
+            <h4 class="clearfix">
+                <label>血糖最高值2</label>
+                <div class="form_right RightboxDoc">
+                    <input type="text" name="highestNum" placeholder="请输入血糖最高值" value="<%=templetData.highestNum%>"/>
+                    <em>mmol/l</em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>近期餐前血糖值</label>
+                <div class="form_right RightboxDoc">
+                    <input type="text" name="beforeEatNum" placeholder="请输入血糖值" value="<%=templetData.beforeEatNum%>"/>
+                    <em>mmol/l</em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>近期餐后血糖值</label>
+                <div class="form_right RightboxDoc">
+                    <input type="text" name="afterEatNum" placeholder="请输入血糖值" value="<%=templetData.afterEatNum%>"/>
+                    <em>mmol/l</em>
+                </div>
+            </h4>
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix item_title">
+                <label>用药情况</label>
+            </h4>
+            <h4 class="clearfix">
+                <label>用药类型</label>
+                <div class="form_right">
+                    <input type="button" isTap="<%=templetData.medicineType%>" class="selectMadicType" name="medicineType"
+                            <% if (templetData.medicineType==0){ %>
+                                value="请选择用药类型"
+                            <% } else if(templetData.medicineType==1){%>
+                                value="中药或保健品"
+                            <% } else if(templetData.medicineType==2){%>
+                                value="其他"
+                            <% } else if(templetData.medicineType==3){%>
+                                value="胰岛素"
+                            <% } else{%>
+                                value="口服药"
+                            <% } %>
+                    />
+                    <em></em>
+                </div>
+            </h4>
+            <div class="selectH4 Jhide isTap2"> <!--其他-->
+                <h4 class="clearfix">
+                    <label>药品名称</label>
+                    <div class="form_right">
+                        <% if(templetData.medicineType==2){%>
+                        <input type="text" placeholder="请输入药品名称" class="'" name="medicineName"  value="<%=templetData.medicineName%>"/>
+                        <% } %>
+                    </div>
+                </h4>
+                <h4 class="clearfix">
+                    <label>用药剂量</label>
+                    <div class="form_right">
+                        <% if(templetData.medicineType==2){%>
+                        <input type="text" placeholder="请输入用药剂量" class="'" name="medicineQuantity" value="<%=templetData.medicineQuantity%>"/>
+                        <% } %>
+                        <em>mmol/l</em>
+                    </div>
+                </h4>
+            </div>
+            <div class="selectH4 selectH4Change isTap3 Jhide"> <!--胰岛素-->
+                <div class="clearfix form_block select_itemMadic checkedBox nhlR">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="nhlR" class="ajaxInp nhlR_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>诺和灵R</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic nhr">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="nhr" class="ajaxInp nhr_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>诺和锐</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic nhlN">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="nhlN" class="ajaxInp nhlN_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>诺和灵N</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic gjyds">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="gjyds" class="ajaxInp gjyds_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>甘精胰岛素</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic dtyds">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="dtyds" class="ajaxInp dtyds_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>地特胰岛素</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic fifty">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="fifty" class="ajaxInp fifty_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>50</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic thirty">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="thirty" class="ajaxInp thirty_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>30</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic twentyFiveSeventyFive">
+                    <% if(templetData.medicineType==3){%>
+                    <input type="hidden" name="twentyFiveSeventyFive" class="ajaxInp twentyFiveSeventyFive_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>25/75</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic seventyThirty">
+                    <% if(templetData.medicineType==3){ %>
+                    <input type="hidden" name="seventyThirty" class="ajaxInp seventyThirty" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>70/30</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="selectH4 selectH4Change isTap4 Jhide"> <!--口服药-->
+                <div class="clearfix form_block select_itemMadic checkedBox ejsg">
+                    <% if(templetData.medicineType==4){
+
+                    %>
+                    <input type="hidden" name="ejsg" class="ajaxInp ejsg_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>二甲双胍</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic akbt">
+                    <% if(templetData.medicineType==4){ %>
+                    <input type="hidden" name="akbt" class="ajaxInp akbt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>阿卡波糖</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic yglbt">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="yglbt" class="ajaxInp yglbt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>优格列波糖</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic mglc">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="mglc" class="ajaxInp mglc_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>米格列醇</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic eglj">
+                    <% if(templetData.medicineType==4){ %>
+                    <input type="hidden" name="eglj" class="ajaxInp eglj_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>恩格列净</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic bglt">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="bglt" class="ajaxInp bglt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>吡格列酮</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic xglt">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="xglt" class="ajaxInp xglt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>西格列汀/利格列汀/阿格列汀</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic rgln">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="rgln" class="ajaxInp rgln_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>瑞格列奈</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic tl">
+                    <% if(templetData.medicineType==4){ %>
+                    <input type="hidden" name="tl" class="ajaxInp tl_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>唐力</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic glqt">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="glqt" class="ajaxInp glqt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>格列齐特</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic glbq">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="glbq" class="ajaxInp glbq_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>格列吡嗪</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic glkt">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="glkt" class="ajaxInp glkt_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>格列喹酮</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic glbn">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="glbn" class="ajaxInp glbn_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>格列本脲</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+                <div class="clearfix form_block select_itemMadic glmn">
+                    <% if(templetData.medicineType==4){%>
+                    <input type="hidden" name="glmn" class="ajaxInp glmn_ID" >
+                    <% } %>
+                    <h5 class="medicalName"><i class=""></i><label>格列美脲</label></h5>
+                    <div class="form_right ">
+                        <h6><span>早</span><input type="text" name="morning" class="morning_inp"/><i>g</i></h6>
+                        <h6><span>午</span><input type="text" name="noon" class="noon_inp"/><i>g</i></h6>
+                        <h6><span>晚</span><input type="text" name="night" class="night_inp"/><i>g</i></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix item_title">
+                <label>其他</label>
+            </h4>
+            <h4 class="clearfix">
+                <label>饮食控制</label>
+                <div class="form_right radioSelect">
+                    <input type="hidden" name="controlFood" value="<%=templetData.controlFood%>"/>
+                    <% if (templetData.controlFood==1){ %>
+                        <p>
+                            <dfn class="radioBtn checkedRadio" isId="1"></dfn>
+                            <em>好</em>
+                        </p>
+                        <p>
+                            <dfn class="radioBtn" isId="0"></dfn>
+                            <em>差</em>
+                        </p>
+                    <% } else{%>
+                        <p>
+                            <dfn class="radioBtn " isId="1"></dfn>
+                            <em>好</em>
+                        </p>
+                        <p>
+                            <dfn class="radioBtn checkedRadio" isId="0"></dfn>
+                            <em>差</em>
+                        </p>
+                    <% } %>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>运动情况</label>
+                <div class="form_right radioSelect">
+                    <input type="hidden" name="sport" value="<%=templetData.sport%>"/>
+                    <% if (templetData.sport==1){ %>
+                        <p>
+                            <dfn class="radioBtn checkedRadio" isId="1"></dfn>
+                            <em>好</em>
+                        </p>
+                        <p>
+                            <dfn class="radioBtn" isId="0"></dfn>
+                            <em>差</em>
+                        </p>
+                    <% } else{%>
+                        <p>
+                            <dfn class="radioBtn " isId="1"></dfn>
+                            <em>好</em>
+                        </p>
+                        <p>
+                            <dfn class="radioBtn checkedRadio" isId="0"></dfn>
+                            <em>差</em>
+                        </p>
+                    <% } %>
+                </div>
+            </h4>
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix form_block">
+                <label>健康建议</label>
+                <i class="Jtips">Tips </i>
+                <div class="form_right">
+                    <textarea placeholder="请输入您对本次咨询的健康建议" name="advise" class="TNB_advTTextarea" value="<%=templetData.advise%>"><%=templetData.advise%></textarea>
+                </div>
+            </h4>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+

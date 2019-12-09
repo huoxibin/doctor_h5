@@ -1,0 +1,49 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="overflow: hidden!important;background: #fff">
+<div class='Y_wrap wrap'>
+    <section class="Ynav">
+        <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+        <h1>血糖</h1>
+    </section>
+    <div class="Y_MoreBS">
+        <!--图表-->
+        <div class="shadowWrapper shadowWrapper1">
+            <table>
+                <thead>
+                <tr>
+                    <th rowspan="2">时间</th>
+                    <th colspan="2">早餐</th>
+                    <th colspan="2">午餐</th>
+                    <th colspan="2">晚餐</th>
+                    <th rowspan="2">睡前</th>
+                </tr>
+                <tr>
+                    <th>空腹</th>
+                    <th>后2h</th>
+                    <th>前</th>
+                    <th>后2h</th>
+                    <th>前</th>
+                    <th>后2h</th>
+                </tr>
+                </thead>
+            </table>
+            <!--滚动区域-->
+            <div id="wrapper" style="overflow: hidden;">
+                <div id="scroller">
+                    <div id="pullDown">
+                        <span class="pullDownLabel">下拉刷新</span>
+                    </div>
+                    <div id="thelist">
+                    </div>
+                    <div id="pullUp">
+                        <span class="pullUpLabel">上拉加载更多</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--图表end-->
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

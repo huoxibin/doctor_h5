@@ -1,0 +1,61 @@
+<div class="j_patient_up J_historyDealBox">
+    <section class="Ynav">
+        <a href="javascript:window.history.back();" class="Y_tump"> </a>
+        <h1 class="category"></h1>
+    </section>
+    <div class="p_datTop flexbox J_historyDeal">
+        <div class="p_cont">
+            <h2><%=data.amount%></h2>
+            <b class="name">账户金额(元)</b>
+        </div>
+    </div>
+</div>
+<div class="p_datBottom p_datBottomHis Y_incomeDe">
+   <!-- <h4>
+        <label>代扣劳务报酬所得税</label>
+        <span class="sex"><%=data.taxAccount%></span>
+    </h4>-->
+    <h4>
+        <label>服务类型</label>
+        <span class="sex"><%=memo%></span>
+    </h4>
+    <% var ic=data.content==''?'':JSON.parse(data.content); if(decodeURI(memo)=='家庭医生服务'){ %>
+    <h4 style="height:inherit;">
+        <label>服务项</label>
+        <%if(ic==''){%>
+            <span class="birthDay" style="width:64%!important;"></span>
+        <%}else{%>
+            <span class="birthDay" style="width:64%!important;"><%=ic.packageItemName%></span>
+        <% } %>
+    </h4>
+    <% } %>
+    <h4>
+        <label>服务对象</label>
+        <span class="birthDay"><%=data.fromAccount%></span>
+    </h4>
+    <h4>
+        <label>到账时间</label>
+        <span class="healthCard"><%=data.successTime%></span>
+    </h4>
+    <% if(decodeURI(memo)=='家庭医生服务'){ %>
+        <h4>
+            <label>流水单号</label>
+            <span class="familyNo"><%=data.orderNo%></span>
+        </h4>
+    <% } else {%>
+        <h4>
+            <label>哆咖订单号</label>
+            <span class="familyNo"><%=data.orderNo%></span>
+        </h4>
+    <% } %>
+</div>
+
+
+
+
+
+
+
+
+
+

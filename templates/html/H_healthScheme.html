@@ -1,0 +1,161 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #ffffff;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:window.history.back();" class="Y_tump  infoDetail_btn"> </a>
+    <h1>健康方案</h1>
+    <b class="Y_tump H_editor" style="display: none">编辑</b>
+    <b class="Y_tump H_reset" style="display: none">重置</b>
+</section>
+
+<div class="form_type">
+
+    <div class="title">
+        <div class="title_l">
+            <img src="../images/h_person.png">
+            <span class="H_createTime"></span>
+        </div>
+        <!--<div class="title_r">-->
+            <!--<span>方案历史</span>-->
+            <!--<img src="../images/huiRight.png">-->
+        <!--</div>-->
+    </div>
+    <div class="splitLine"></div>
+
+    <!--已有方案文案展示-->
+    <div class="textPlan" style="display: block">
+        <div class="sport_title hide">
+            <i></i>
+            <span>运动建议</span>
+        </div>
+        <div class="sportText">
+           <!-- 推荐运动方式：慢跑
+            慢跑速度：通常为每分钟100~120米；
+            慢跑时间：最佳时间17~18点；
+            慢跑次数：每次10~15分钟，在一个月内逐步提升到每次20分钟，每周3次；
+            运动适宜与否自测：不觉得难受、不喘粗气不面红耳赤，每分钟心率＜（180-年龄）-->
+        </div>
+        <div class="diet_title hide">
+            <i></i>
+            <span>膳食建议</span>
+        </div>
+        <div class="dietText">
+            <!--餐前提醒：少食高钠盐、高脂肪食品，提倡多食高钾、高蛋白、高钙食品，如：菠菜、香蕉、橘子、奶制品等。-->
+        </div>
+        <div class="action_title hide">
+            <i></i>
+            <span>行为建议</span>
+        </div>
+        <div class="actionText">
+            <!--餐前提醒：少食高钠盐、高脂肪食品，提倡多食高钾、高蛋白、高钙食品，如：菠菜、香蕉、橘子、奶制品等。-->
+        </div>
+        <div class="heart_title hide">
+            <i></i>
+            <span>心理建议</span>
+        </div>
+        <div class="heartText">
+            <!--餐前提醒：少食高钠盐、高脂肪食品，提倡多食高钾、高蛋白、高钙食品，如：菠菜、香蕉、橘子、奶制品等。-->
+        </div>
+        <div class="precautions_title hide">
+            <i></i>
+            <span>其他</span>
+        </div>
+        <div class="precautionsText">
+            <!--餐前提醒：少食高钠盐、高脂肪食品，提倡多食高钾、高蛋白、高钙食品，如：菠菜、香蕉、橘子、奶制品等。-->
+        </div>
+        <div class="special_title hide">
+            <i></i>
+            <span>特别叮嘱</span>
+        </div>
+        <div class="specialText">
+            <!--一日三餐请按时吃饭-->
+        </div>
+
+
+        <div id="sureBtnTwo" style="display: none">
+            <div class="sure">
+                确定
+            </div>
+        </div>
+
+
+        <!--下面是平台推送才展示出来的-->
+        <div class="splitTexto"></div>
+        <div class="special_title_h">
+            <i></i>
+            <span>特别叮嘱</span>
+        </div>
+        <div class="special_text">
+            <textarea name="" id="specialTxte" value="" placeholder="可鼓励用户继续保持自测数据和问卷填写"></textarea>
+        </div>
+        <div id="sureBtno">
+            <div class="sure">
+                确定
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--点击*编辑*的时候显示-->
+    <div class="editor" style="display: none">
+        <div class="sport_title">
+            <i></i>
+            <span>运动建议</span>
+        </div>
+        <div class="sport_text">
+            <textarea name="" id="sportTxt" value="" placeholder="请输入提醒事项"></textarea>
+        </div>
+        <div class="diet_title">
+            <i></i>
+            <span>膳食建议</span>
+        </div>
+        <div class="diet_text">
+            <textarea name="" id="diettTxt" value="" placeholder="请输入提醒事项"></textarea>
+        </div>
+        <div class="action_title">
+            <i></i>
+            <span>行为建议</span>
+        </div>
+        <div class="action_text">
+            <textarea name="" id="actionTxt" value="" placeholder="请输入提醒事项"></textarea>
+        </div>
+        <div class="heart_title">
+            <i></i>
+            <span>心理建议</span>
+        </div>
+        <div class="heart_text">
+            <textarea name="" id="heartTxt" value="" placeholder="请输入提醒事项"></textarea>
+        </div>
+        <div class="precautions_title">
+            <i></i>
+            <span>其他</span>
+        </div>
+        <div class="precautions_text">
+            <textarea name="" id="precautionsTxt" value="" placeholder="请输入提醒事项"></textarea>
+        </div>
+        <div class="splitText"></div>
+        <div class="special_title">
+            <i></i>
+            <span>特别叮嘱</span>
+        </div>
+        <div class="special_text">
+            <textarea name="" id="specialTxt" value="" placeholder="可鼓励用户继续保持自测数据和问卷填写"></textarea>
+        </div>
+        <div id="sureBtn">
+            <div class="sure">
+                确定
+            </div>
+        </div>
+    </div>
+
+    <!--当从家医签约列表的跳到患者详情---再从干预方案跳到这的时候，planId为0显示这个-->
+    <dl class="JnoData">
+        <dt><img src="../images/Y_HeathBg1.png"></dt>
+        <dd>该患者还没有健康方案</dd>
+    </dl>
+</div>
+
+
+<%- include('ejs/foot') %>
+</body>
+</html>

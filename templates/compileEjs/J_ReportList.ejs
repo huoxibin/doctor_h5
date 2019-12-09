@@ -1,0 +1,40 @@
+<dl>
+    <dt><%=data.year%></dt>
+    <dd>
+        <div class="repList">
+            <h2><%=data.month%>月健康月报</h2>
+            <span><%=data.monthLast%></span>
+            <p>本月月报将于次月的1号出炉，敬请期待</p>
+        </div>
+    </dd>
+</dl>
+<% var isData=data.data;for(var i=0;i<isData.length;i++){%>
+<dl class="active">
+    <% var iFdata=isData[i];for(var v in iFdata){%>
+        <%  var nowYear = new Date().getFullYear();
+        if (nowYear==v){ %>
+               <dt class="noYear"></dt>
+        <% } else { %>
+               <dt><%=v%></dt>
+        <% } %>
+    <% var idata=iFdata[v];for(var j=0;j<idata.length;j++){%>
+    <dd>
+        <a href="J_healthReport.html?monthId=<%=idata[j].id%>&userId=<%=userId%>&myBack=1&month=<%=idata[j].reportMonth%>">
+            <div class="repList">
+                <h2><%=idata[j].reportMonth%>月健康月报</h2>
+                <% var nowLast = new Date(idata[j].reportYear,idata[j].reportMonth,0).getDate()%>
+                <span><%=idata[j].reportMonth+'.01~'+idata[j].reportMonth+'.'+nowLast%></span>
+                <p>本月月报已经出来了，快去看看吧</p>
+            </div>
+        </a>
+    </dd>
+    <% } %>
+    <% } %>
+</dl>
+<% } %>
+
+
+
+
+
+

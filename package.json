@@ -1,0 +1,36 @@
+{
+  "name": "doctor_h5",
+  "version": "0.5.0",
+  "description": "doctor_h5",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp test dev",
+    "test": "gulp dev test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.cloudh.net.cn:doctor/doctor_h5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "ejs": "^2.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.4.2",
+    "gulp-data": "^1.2.1",
+    "gulp-ejs": "^1.2.1",
+    "gulp-imagemin": "3.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "2.1.2",
+    "gulp-util": "^3.0.4",
+    "run-sequence": "^2.2.0"
+  },
+  "dependencies": {
+    "vant": "^2.0.9"
+  }
+}

@@ -1,0 +1,203 @@
+<% for(var i=0;i<data.length;i++){%>
+<div <% if (i==0){%>
+        class="Y_MediCont show"
+        <% } else { %>
+        class="Y_MediCont"
+        <% } %> >
+    <form class="Y_MediContForm">
+    <div class='Y_MediCalcDeT'>
+        <input type="hidden" name="category" class="category" value="<%=category%>"/>
+        <input type="hidden" name="name" class="name" value="<%=name%>"/>
+        <ul>
+            <% if (data.length>1){ %>
+            <li class="select-li">
+                <div class="Y_chekbox condition-select">
+                    <input id='race'
+                            <% if (data[i].sex ==9){%>
+                                <% if (data[i].age!=0){%>
+                                       name='age'
+                                <% } else { %>
+                                       name=''
+                                <% } %>
+                            <% } else { %>
+                               name='sex'
+                            <% } %>
+                           type="hidden" value=""/>
+                    <div class="Y_selectEd">
+                        <% if (data[i].sex ==9){ %>
+                            <% if (data[i].age!=0){%>
+                                <% for(var j=0;j<data.length;j++){%>
+                                <h5  <% if (j==0){%>
+                                    class="S_radio check0 active"
+                                        <% } else { %>
+                                    class="S_radio check0"
+                                        <% } %>
+                                    isVal="<%=data[j].age%>" isInp="age">
+                                    <i></i>
+                                    <% if (data[j].age ==1){ %>
+                                    <label>婴儿</label>
+                                    <% }else if(data[j].age ==7){ %>
+                                    <label>7岁</label>
+                                    <% } else if(data[j].age ==12) { %>
+                                    <label>12岁</label>
+                                    <% }%>
+                                </h5>
+                                <% } %>
+                            <% } %>
+                        <% } else { %>
+                            <% for(var j=0;j<data.length;j++){%>
+                            <h5     <% if (j==0){%>
+                                    class="S_radio check0 active"
+                                    <% } else { %>
+                                    class="S_radio check0"
+                                    <% } %>
+                                isVal="<%=data[j].sex%>"  isInp="sex"  >
+                                <i></i>
+                                <% if (data[j].sex ==1){ %>
+                                <% if (name =="体表面积"){ %>
+                                <label>成年男性</label>
+                                <% } else { %>
+                                <label>男性</label>
+                                <% }%>
+                                <% }else if(data[j].sex ==2){ %>
+                                <label>儿童</label>
+                                <% } else { %>
+                                <% if (name =="体表面积"){ %>
+                                <label>成年女性</label>
+                                <% } else { %>
+                                <label>女性</label>
+                                <% }%>
+                                <% }%>
+                                </label>
+                            </h5>
+                            <% } %>
+                        <% }%>
+                    </div>
+                </div>
+            </li>
+            <% } else { %>
+            <li class="select-li Jhide" ></li>
+            <% }%>
+            <% if (data[i].param1){ %>
+            <li>
+                <div class='Y_height input-item height-select flexbox'>
+                    <p><%=data[i].param1.name%></p>
+                    <span
+                            <% if(data[i].param1.unit==null || data[i].param1.unit=='null' || data[i].param1.unit=='date'){%>
+                            data-unit=""
+                            <% } else { %>
+                            data-unit="<%=data[i].param1.unit%>"
+                            <% } %> >
+                        <% if(name=='孕周' || name=='预产期'){%>
+                            <% if(data[i].param1.unit=='date'){%>
+                               <input class="flex noAfter" type="text" name="param1" value="" />
+                            <% } %>
+                         <% } else { %>
+                               <input class="flex" type="number" name="param1" value="" />
+                         <% } %>
+                        </span>
+                </div>
+            </li>
+            <% }%>
+            <% if (data[i].param2){ %>
+            <li>
+                <div class='Y_height input-item height-select flexbox'>
+                    <p><%=data[i].param2.name%></p>
+                    <span
+                        <% if(data[i].param2.unit==null || data[i].param2.unit=='null' || data[i].param2.unit=='date'){%>
+                             data-unit=""
+                        <% } else { %>
+                             data-unit="<%=data[i].param2.unit%>"
+                        <% } %> >
+                        <% if(name=='孕周' || name=='预产期'){%>
+                        <% if(data[i].param2.unit=='date'){%>
+                        <input class="flex noAfter" type="text" name="param2" value="">
+                        <% } %>
+                        <% } else { %>
+                        <input class="flex" type="number" name="param2" value="">
+                        <% } %>
+                    </span>
+                </div>
+            </li>
+            <% }%>
+            <% if (data[i].param3){ %>
+            <li>
+                <div class='Y_height input-item height-select flexbox'>
+                    <p><%=data[i].param3.name%></p>
+                    <span
+                            <% if(data[i].param3.unit==null || data[i].param3.unit=='null' || data[i].param3.unit=='date'){%>
+                            data-unit=""
+                            <% } else { %>
+                            data-unit="<%=data[i].param3.unit%>"
+                            <% } %> >
+                        <% if(name=='孕周' || name=='预产期'){%>
+                        <% if(data[i].param3.unit=='date'){%>
+                        <input class="flex noAfter" type="text" name="param3" value="">
+                        <% } %>
+                        <% } else { %>
+                        <input class="flex" type="number" name="param3" value="">
+                        <% } %>
+                    </span>
+                </div>
+            </li>
+            <% }%>
+            <% if (data[i].param4){ %>
+            <li>
+                <div class='Y_height input-item height-select flexbox'>
+                    <p><%=data[i].param4.name%></p>
+                    <span
+                            <% if(data[i].param4.unit==null || data[i].param4.unit=='null' || data[i].param4.unit=='date'){%>
+                            data-unit=""
+                            <% } else { %>
+                            data-unit="<%=data[i].param4.unit%>"
+                            <% } %> >
+                        <% if(name=='孕周' || name=='预产期'){%>
+                        <% if(data[i].param4.unit=='date'){%>
+                        <input class="flex noAfter" type="text" name="param4" value="">
+                        <% } %>
+                        <% } else { %>
+                        <input class="flex" type="number" name="param4" value="">
+                        <% } %>
+                    </span>
+                </div>
+            </li>
+            <% }%>
+            <% if (data[i].result){ %>
+            <li style="height:auto;">
+                <div class='Y_height resultbox flexbox'>
+                    <p style="height:auto;"><%=data[i].result.name%></p>
+                    <span
+                            <%  if(data[i].result.unit==null || data[i].result.unit=='null' || data[i].param1.unit=='date'){%>
+                            data-unit=""
+                            <% } else { %>
+                            data-unit="<%=data[i].result.unit%>"
+                            <% } %> >
+                        <input class="flex resultInp" type="text" name="" value="" readonly></span>
+                </div>
+            </li>
+            <% }%>
+        </ul>
+    </div>
+    <div class='Y_MediCalcDeB'>
+        <% if (data[i].formula){ %>
+          <p>计算公式：<i><%=data[i].formula%></i></p>
+        <% }%>
+        <% if (data[i].note){ %>
+           <p>注释：<i><%=data[i].note%></i></p>
+        <% }%>
+        <% if (data[i].consult){ %>
+          <p>参考：<i><%=data[i].consult%></i></p>
+        <% }%>
+    </div>
+</form>
+</div>
+<% } %>
+
+
+
+
+
+
+
+
+

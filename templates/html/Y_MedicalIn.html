@@ -1,0 +1,52 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="overflow: hidden!important;">
+<div class='wrap' style="overflow: hidden!important;">
+    <section class="Ynav">
+        <!--<a href="Y_docIndex.html" class="Y_tump"> </a>-->
+        <a href="javascript:;" class="Y_tump J_jumpBtn"> </a>
+        <h1>医学资讯</h1>
+        <b class="Y_tump"></b>
+    </section>
+    <div class="Y_docIndex" style="overflow: hidden!important;">
+       <div class='Y_MedicalInT'>
+           <ul id="list">
+               <!-- <li class="active">高血压<i></i></li>
+                <li>冠心病<i></i></li>
+                <li>脑卒中<i></i></li>
+                <li>代谢综合中<i></i></li>
+                <li>肺心<i></i></li>-->
+           </ul>
+        </div>
+        <div class='Y_medCon Y_medInCon'>
+            <!--滚动区域-->
+            <div id="wrapper" style="overflow: hidden;overflow-y: auto!important;top:96px;">
+                <div id="scroller" class="JcontentBox">
+                    <div id="pullDown">
+                        <span class="pullDownLabel"></span>
+                    </div>
+                    <div id="thelist" class="clearfix">
+                        <!--<div class='Y_medCon_C'>
+                        <dl>
+                            <dt><img src="../images/Y_medicalImg1.png"></dt>
+                            <dd>
+                                <h3>中国医改四个新热点的聚焦</h3>
+                                <p>2017-12-30</p>
+                            </dd>
+                        </dl>
+                    </div>-->
+                    </div>
+                    <div id="pullUp">
+                        <span class="pullUpLabel"></span>
+                    </div>
+                </div>
+                <!--滚动条-->
+                <div class="Y_gdt">
+                    <div class="Y_gdt1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@r:50rem;
+[class|=switch] {
+	position: relative;
+	display: inline-block;
+	width:111/@r;
+	height: 58/@r;
+	border-radius:100/@r;
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+.switch-on {
+	border: 1px solid white;
+	/*box-shadow: white 0px 0px 0px 16px inset;*/
+	transition: border 0.4s, box-shadow 0.2s, background-color 1.2s;
+	/*background-color: white;*/
+	cursor: pointer;
+	border-color:#49DDEF!important;
+	box-shadow:#49DDEF 0px 0px 0px 16px inset!important;
+	background-color:#49DDEF!important;
+	top:15/@r;
+}
+.slider {
+	position: absolute;
+	display: inline-block;
+	width: 56/@r;
+	height:56/@r;
+	background: white;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+}
+.switch-on .slider {
+	left:54/@r;
+	transition: background-color 0.4s, left 0.2s;
+}
+.switch-off {
+	border: 1px solid #dfdfdf;
+	transition: border 0.4s, box-shadow 0.4s;
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset!important;
+	background-color: rgb(255, 255, 255)!important;
+	cursor: pointer;
+	border-color: rgb(223, 223, 223)!important;
+	top:15/@r;
+}
+.switch-off .slider {
+	left: 0;
+	transition: background-color 0.4s, left 0.2s;
+}
+.switch-on.switch-disabled{
+	opacity:.5;
+	cursor:auto;
+}
+.switch-off.switch-disabled{
+	background-color:#F0F0F0 !important;
+	cursor:auto;
+}
+
+.Y_RRconDown i{
+	position: absolute;
+	width:25/@r;
+	height:35/@r;
+	top: 29/@r;
+	right: 10/@r;
+	margin-left: -11/@r;
+	background: url(../images/huiRight.png) no-repeat;
+	display: block;
+	background-size:contain;
+}
+
+.Y_MySerTXT p span img {
+	width:20/@r;
+	height:35/@r;
+	padding-left: 20/@r;
+}
+
+.Y_RRconDown i.cur {
+	width: 35/@r;
+	height: 20/@r;
+	background: url(../images/JserTop.png) no-repeat;
+	background-size: contain;
+	top: 35/@r;
+	right: 15/@r;
+}

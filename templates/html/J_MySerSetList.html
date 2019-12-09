@@ -1,0 +1,55 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody MediCalcBody ">
+<div class="wrap">
+   <section class="Ynav">
+      <dfn href="javascript:;" class="a Y_tump JserBack"> </dfn>
+      <h1 class="isT">0-6岁儿童增值服务包</h1>
+      <b class="Y_tump JsaveBar">保存</b>
+   </section>
+   <div class="Y_docIndex">
+      <div class='J_MySerSet J_MySerSetList'>
+          <div class="J_setTitle">
+             <h2 class="sign_d_title">共<i>20</i>项服务</h2>
+              <b class="checkAll">全选</b>
+          </div>
+          <div class="J_setCont">
+              <div class="J_setContList J_setContLists">
+                  <ul>
+
+                  </ul>
+              </div>
+          </div>
+          <button type="button" class="addSer">添加服务项</button>
+      </div>
+   </div>
+</div>
+<div class="JdialogBox">
+    <div class="diaBox">
+        <div class="diaTitle">编辑服务项</div>
+        <form>
+            <input type="hidden" name="packageId" class="packageId" value=''/>
+            <input type="hidden" name="itemId" class="id itemId" value=''/>
+            <input type="hidden" name="kind" class="kind" value="" />
+
+            <input type="text" name="itemName" placeholder="输入服务项名称" class="name itemName itemNames inputSel"  value=''>
+            <h6 class="clearfix">
+                <input type="number" name="frequency" class="frequency inputSel"  placeholder="0" value=''>
+                <span>次/年</span>
+            </h6>
+            <h6 class="clearfix">
+                  <input name="price" class="price inputSel"  type="text" value='' placeholder="0.00">
+                  <span>元/次</span>
+             </h6>
+            <h6 class="suggestPriceBox" style="display: none">建议价格：<i class="suggestPrice"></i></h6>
+            <textarea contenteditable="true" style="margin-top:15px" name="description" cols="3" placeholder="输入服务项说明" class="description inputSel" class="setNei"></textarea>
+            <dfn class="keydownVal"><em>0</em>/40</dfn>
+        </form>
+        <div class="btnBox">
+            <button class="cancleBtn" type="button">取消</button>
+            <button class="okBtn" type="button">确认</button>
+        </div>
+    </div>
+</div>
+<%- include('ejs/foot') %>
+</body>
+</html>

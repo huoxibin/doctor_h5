@@ -1,0 +1,27 @@
+<% var itemDate= data.result; for(i in itemDate){%>
+<% var date=itemDate[i];for(var j in date){%>
+<ul data-year="<%= j%>" class="ulItem">
+    <%if(j!=nowYear&&j!=lastYear){%>
+    <li class="calendar" style="border: 0;height: 40px;margin: 0;margin-left: 20px;"></i><%= j%></li>
+    <%}%>
+    <% date[j].forEach(function(data,index){%>
+    <% Ydata(data.measuringTime) %>
+    <li>
+        <!--时间-->
+        <div class="time"><span><%=times1%></span></div>
+        <!--体温-->
+        <%if(data.centigradeLevel=='正常'){%>
+        <div class=""><span style="text-align: center;"><%=data.centigrade%></span></div>
+        <%}else if(data.centigradeLevel=='体温偏低'){%>
+        <div class="lower"><span style="color:#09C116!important;text-align: center;"><%=data.centigrade%></span><img src="../images/Y_down.png" class="arrow"></div>
+        <%}else{%>
+        <div class="beyond"><span style="color:#F70505!important;text-align: center;"><%=data.centigrade%></span><img src="../images/Y_up.png" class="arrow"></div>
+        <%}%>
+    </li>
+    <% })%>
+    <%if(date[j].length%2!=0){%>
+    <li></li>
+    <%}%>
+</ul>
+<% } %>
+<% } %>

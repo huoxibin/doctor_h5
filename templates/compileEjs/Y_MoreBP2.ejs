@@ -1,0 +1,34 @@
+<% for(i=0;i<data.length;i++){%>
+<div class="Y_familyC">
+    <div class="Y_title">
+        <%if(data[i].user){%>
+            <%if(data[i].user[0].name!=null){%>
+                   <h2><img src="../images/Y_familyicon5.png"/><b><%=data[i].user[0].name%></b></h2>
+                <%}else{%>
+                   <h2><img src="../images/Y_familyicon5.png"/><b><%=data[i].user[0].mobile%></b></h2>
+            <%}%>
+        <%}%>
+        <p>收藏于<time><%=new Date(data[i].groupDate).format('yyyy-MM-dd')%></time></p>
+    </div>
+    <div class="Y_familyCCon">
+        <%var idata=data[i].data;for(j=0;j<idata.length;j++){%>
+        <dl>
+            <a href="../html/J_inforDetail.html?<%=idata[j].id%>">
+                <dt><img src="<%=idata[j].smallImage%>"/></dt>
+                <dd>
+                    <p><%=idata[j].title%></p>
+                    <time><%=new Date(idata[j].favoriteTime).format('yyyy-MM-dd')%></time>
+                </dd>
+            </a>
+        </dl>
+        <%}%>
+    </div>
+</div>
+
+<% } %>
+
+
+
+
+
+

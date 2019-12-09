@@ -1,0 +1,116 @@
+<% var applyFormData=data.applyForm;var medicineData=data.medicine==undefined||data.medicine==''?'':data.medicine;
+   var templetData=data.templet;var iH=templetData.historyNum==undefined||templetData.historyNum==''?'':eval('(' + templetData.historyNum + ')');var iHs=templetData.recentNum==undefined || templetData.recentNum==''?'':eval('(' + templetData.recentNum + ')');
+%>
+<section class="Ynav temNav">
+    <dfn
+            <%if(styleD=='1'){%>
+                <%if (ifPatient=='1'){ %>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&ifPatient=1&style=1"
+                <% } else {%>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&myPatient=1&style=1"
+                <% } %>
+            <%}else{%>
+                <%if (ifPatient=='1'){ %>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&ifPatient=1&style=2"
+                <% } else {%>
+                    isHref="J_docAdviceList.html?memberId=<%=memberId%>&myPatient=1&style=2"
+                <% } %>
+            <%}%>
+            class="Y_tump adviceBack J_jumpBtnIback"> </dfn>
+    <h1 class="category">高血压咨询模板</h1>
+    <!--<i class="temOk">确定</i>
+    <span class="temSave">保存</span>-->
+</section>
+<div class="Y_docIndex JindexBox JindexBoxTop">
+    <form class="TNB_listForm JDCCon">
+        <div class="Teminput_item">
+            <h4 class="clearfix">
+                <label>问诊时间</label>
+                <div class="form_right">
+                    <input type="text" name="startTime"  value="<%=templetData.startTime%>"/>
+                    <em></em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>患病年限</label>
+                <div class="form_right">
+                    <input type="text" name="sickYears" placeholder="请输入患病年限" value="<%=templetData.sickYears%>"/>
+                    <em>年</em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>确诊医院</label>
+                <div class="form_right">
+                    <input type="text"  name="hospitalName"  placeholder="请输入确诊医院" value="<%=templetData.hospitalName%>"/>
+                </div>
+            </h4>
+            <h4 class="clearfix form_block">
+                <label>本次咨询原因</label>
+                <div class="form_right">
+                    <textarea name="askReason" value="<%=templetData.askReason%>"  placeholder="请输入咨询原因"><%=templetData.askReason%> </textarea>
+                </div>
+            </h4>
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix item_title">
+                <label>血压情况</label>
+            </h4>
+            <h4 class="clearfix">
+                <label>历史最高血压值</label>
+                <div class="form_right historyNum_Box Num_Box" >
+                    <input type="text"  class="historyNum flau_u_ro" placeholder="" value="<%=iH.highestNum%>"/>&nbsp;/&nbsp;<input type="text" class="historyNumlowNum"  placeholder="" value="<%=iH.lowNum%>"/>
+                    <em>mmHg</em>
+                </div>
+            </h4>
+            <h4 class="clearfix">
+                <label>近期血压水平</label>
+                <div class="form_right recentNum_Box Num_Box">
+                    <input type="text" class="recentNum flau_u_ro" placeholder="" value="<%=iHs.highestNum%>"/> &nbsp;/&nbsp;<input type="text"  class="recentNumlowNum" placeholder="" value="<%=iHs.lowNum%>"/>
+                    <em>mmHg</em>
+                </div>
+            </h4>
+            <h4 class="clearfix form_block">
+                <label>引起血压升高的原因</label>
+                <div class="form_right">
+                    <textarea name="askReason" placeholder="请输入引起血压升高的原因"><%=templetData.sickReason%></textarea>
+                </div>
+            </h4>
+
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix item_title">
+                <label>用药情况</label>
+            </h4>
+            <div class="selectH4 isTap2"> <!--其他-->
+                <h4 class="clearfix">
+                    <label>药品名称</label>
+                    <div class="form_right">
+                        <input type="text" placeholder="请输入药品名称" name="medicineName" value="<%=templetData.medicineName%>"/>
+                    </div>
+                </h4>
+                <h4 class="clearfix">
+                    <label>用药剂量</label>
+                    <div class="form_right">
+                        <input type="text" placeholder="请输入用药剂量" name="medicineQuantity" value="<%=templetData.medicineQuantity%>"/>
+                        <em>mmol/l</em>
+                    </div>
+                </h4>
+            </div>
+        </div>
+        <div class="Teminput_item">
+            <h4 class="clearfix form_block">
+                <label>健康建议</label>
+                <i class="Jtips">Tips </i>
+                <div class="form_right">
+                    <textarea placeholder="请输入您对本次咨询的健康建议" name="advise" class="TNB_advTTextarea" value="<%=templetData.advise%>"><%=templetData.advise%></textarea>
+                </div>
+            </h4>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+

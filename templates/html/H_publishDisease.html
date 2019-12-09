@@ -1,0 +1,551 @@
+<%- include('ejs/head') %>
+<body class="Y_HuiBody" style="position: relative;background: #fff;overflow-x: hidden">
+<section class="Ynav">
+    <a href="javascript:window.history.back();" class="Y_tump J_jumpBtn"> </a>
+    <h1>发表经典病例</h1>
+</section>
+
+<div class="form_type">
+<!--病例标题-->
+    <div class="diseasesTitleMes">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">病例标题</span>
+                <span class="mustHas">*</span>
+            </div>
+        </div>
+        <div class="textareaCon">
+            <textarea name="" id="diseasesTitle" class="zd_textarea" maxlength="30" value="" placeholder="请填写您的病例标题(不能超30字)"></textarea>
+        </div>
+    </div>
+<!--分割线-->
+    <div class="lineDu"></div>
+<!--基本信息-->
+    <div class="baseInfoMes">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">基本信息</span>
+                <span class="mustHas">*</span>
+            </div>
+        </div>
+        <div class="textareaCon">
+            <textarea name="" id="baseInfo" class="zd_textarea" value="" placeholder="姓名、性别、年龄"></textarea>
+        </div>
+    </div>
+<!--主诉-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">主诉</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="tell" class="zd_textarea" value="" placeholder="请填写您的主诉"></textarea>
+        </div>
+    </div>
+<!--现病史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">现病史</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="currentDisease" class="zd_textarea" value="" placeholder="请填写您的现病史"></textarea>
+        </div>
+    </div>
+<!--即往史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">即往史</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="past" class="zd_textarea" value="" placeholder="请填写您的即往史"></textarea>
+        </div>
+    </div>
+<!--个人史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">个人史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="personal" class="zd_textarea" value="" placeholder="请填写您的个人史"></textarea>
+        </div>
+    </div>
+<!--婚育史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">婚育史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="marriage" class="zd_textarea" value="" placeholder="请填写您的婚育史"></textarea>
+        </div>
+    </div>
+<!--月经史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">月经史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="menstruation" class="zd_textarea" value="" placeholder="请填写您的月经史"></textarea>
+        </div>
+    </div>
+<!--外伤及手术史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">外伤及手术史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="trauma" class="zd_textarea" value="" placeholder="请填写您的外伤及手术史"></textarea>
+        </div>
+    </div>
+<!--中毒及药物过敏史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">中毒及药物过敏史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="poisoning" class="zd_textarea" value="" placeholder="请填写您的中毒及药物过敏史"></textarea>
+        </div>
+    </div>
+<!--冶游史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">冶游史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="metalTour" class="zd_textarea" value="" placeholder="请填写您的冶游史"></textarea>
+        </div>
+    </div>
+<!--家族史-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">家族史</span>
+                <span class="mustHas"></span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="family" class="zd_textarea" value="" placeholder="请填写您的家族史"></textarea>
+        </div>
+    </div>
+<!--查体-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">查体</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="physicalExamination" class="zd_textarea" value="" placeholder="请填写您的查体"></textarea>
+        </div>
+    </div>
+<!--辅助检查-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">辅助检查</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none;margin-bottom: 0">
+            <textarea name="" id="auxiliary" class="zd_textarea" value="" placeholder="请填写您的辅助检查"></textarea>
+        </div>
+        <div class="fuIMg" style="display: none">
+            <!--------------------------------------------------缩略图start--------------------------------------------->
+            <div id="H_disImaList" class="my-gallery" data-pswp-uid="1">
+                <!--<figure class="h_figImg">
+                    <div class="img-dv">
+                        <a href="../images//Y_medicalImg1.png" data-size="1920x1080">
+                            <img src="../images//Y_medicalImg1.png">
+                        </a>
+                    </div>
+                    <figcaption style="display:none;">在这里可增加图片描述1</figcaption>
+                </figure>-->
+            </div>
+            <!--为了删除添加的元素start-->
+            <div class="imgWei" id="imgWeiId">
+               <!-- <div class="deleteImg">
+                    <img src="../images/H_delete.png">
+                </div>-->
+            </div>
+            <!--为了删除添加的元素end-->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="pswp__bg"></div>
+                <div class="pswp__scroll-wrap">
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+                    <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar" style="margin-top:15px">
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                            <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                            <div class="pswp__preloader" style="display: none">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------------缩略图end---------------------------------------------->
+            <!--上传图片-->
+            <div class="btnAddImg">
+                <form class="imgType" style="opacity: 0;" id="myForm" action="" method="post">
+                    <input type="file" accept="image/*" capture="camera" multiple id="upload" >
+                </form>
+                <img src="../images/H_addImg.png">
+            </div>
+        </div>
+    </div>
+<!--诊断-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">诊断</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="diagnosis" class="zd_textarea" value="" placeholder="请填写您的诊断"></textarea>
+        </div>
+    </div>
+<!--鉴别诊断-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">鉴别诊断</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="Identification" class="zd_textarea" value="" placeholder="请填写您的鉴别诊断"></textarea>
+        </div>
+    </div>
+<!--治疗-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">治疗</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="treatment" class="zd_textarea" value="" placeholder="请填写您的治疗"></textarea>
+        </div>
+    </div>
+<!--分析总结-->
+    <div class="historyList">
+        <div class="titleCon">
+            <div class="one">
+                <span class="typeList">分析总结</span>
+                <span class="mustHas">*</span>
+            </div>
+            <div class="two">
+
+            </div>
+        </div>
+        <div class="textareaCon" style="display: none">
+            <textarea name="" id="analysis" class="zd_textarea" value="" placeholder="请填写您的分析总结"></textarea>
+        </div>
+    </div>
+<!--底部按钮-->
+    <div class="btnBottom">
+        <p id="cannel">取消</p>
+        <p id="publish">发布</p>
+    </div>
+
+    <!--loading图-->
+    <div class="tc_box hide">
+        <div class="tc hide"></div>
+        <div class="tc_disease hide">
+            <img src="../images/loading.gif"/>
+            <h3>保存中--</h3>
+        </div>
+    </div>
+
+</div>
+<%- include('ejs/foot') %>
+</body>
+<!----------------------------------缩略图的js--------------------------->
+<script type="text/javascript">
+   var initPhotoSwipeFromDOM = function(gallerySelector) {
+      // 解析来自DOM元素幻灯片数据（URL，标题，大小...）
+      var parseThumbnailElements = function(el) {
+         var thumbElements = el.childNodes,
+            numNodes = thumbElements.length,
+            items = [],
+            figureEl,
+            linkEl,
+            size,
+            item,
+            divEl;
+         for(var i = 0; i < numNodes; i++) {
+            figureEl = thumbElements[i]; // <figure> element
+            // 仅包括元素节点
+            if(figureEl.nodeType !== 1) {
+               continue;
+            }
+            divEl = figureEl.children[0];
+            linkEl = divEl.children[0]; // <a> element
+            /*------------------------------------------bug修复start----------------------*/
+            var img = new Image();
+            img.src = linkEl.getAttribute('href');
+            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+            /*------------------------------------------bug修复end------------------------*/
+            size = linkEl.getAttribute('data-size').split('x');
+            // 创建幻灯片对象
+            item = {
+               src: linkEl.getAttribute('href'),
+               w: parseInt(size[0], 10),
+               h: parseInt(size[1], 10)
+            };
+            if(figureEl.children.length > 1) {
+               item.title = figureEl.children[1].innerHTML;
+            }
+            if(linkEl.children.length > 0) {
+               // <img> 缩略图节点, 检索缩略图网址
+               item.msrc = linkEl.children[0].getAttribute('src');
+            }
+            item.el = figureEl; // 保存链接元素 for getThumbBoundsFn
+            items.push(item);
+         }
+         return items;
+      };
+
+      // 查找最近的父节点
+      var closest = function closest(el, fn) {
+         return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+      };
+
+      // 当用户点击缩略图触发
+      var onThumbnailsClick = function(e) {
+         e = e || window.event;
+         e.preventDefault ? e.preventDefault() : e.returnValue = false;
+         var eTarget = e.target || e.srcElement;
+         var clickedListItem = closest(eTarget, function(el) {
+            return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+         });
+         if(!clickedListItem) {
+            return;
+         }
+         var clickedGallery = clickedListItem.parentNode,
+            childNodes = clickedListItem.parentNode.childNodes,
+            numChildNodes = childNodes.length,
+            nodeIndex = 0,
+            index;
+         for (var i = 0; i < numChildNodes; i++) {
+            if(childNodes[i].nodeType !== 1) {
+               continue;
+            }
+            if(childNodes[i] === clickedListItem) {
+               index = nodeIndex;
+               break;
+            }
+            nodeIndex++;
+         }
+         if(index >= 0) {
+            openPhotoSwipe( index, clickedGallery );
+         }
+         return false;
+      };
+
+      var photoswipeParseHash = function() {
+         var hash = window.location.hash.substring(1),
+            params = {};
+         if(hash.length < 5) {
+            return params;
+         }
+         var vars = hash.split('&');
+         for (var i = 0; i < vars.length; i++) {
+            if(!vars[i]) {
+               continue;
+            }
+            var pair = vars[i].split('=');
+            if(pair.length < 2) {
+               continue;
+            }
+            params[pair[0]] = pair[1];
+         }
+         if(params.gid) {
+            params.gid = parseInt(params.gid, 10);
+         }
+         return params;
+      };
+
+      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+         var pswpElement = document.querySelectorAll('.pswp')[0],
+            gallery,
+            options,
+            items;
+         items = parseThumbnailElements(galleryElement);
+         // 这里可以定义参数
+         options = {
+            barsSize: {
+               top: 100,
+               bottom: 100
+            },
+            fullscreenEl : false,
+            shareButtons: [
+               {id:'wechat', label:'分享微信', url:'#'},
+               {id:'weibo', label:'新浪微博', url:'#'},
+               {id:'download', label:'保存图片', url:'{{raw_image_url}}', download:true}
+            ],
+            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+            getThumbBoundsFn: function(index) {
+               var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                  pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                  rect = thumbnail.getBoundingClientRect();
+               return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+            }
+         };
+         if(fromURL) {
+            if(options.galleryPIDs) {
+               for(var j = 0; j < items.length; j++) {
+                  if(items[j].pid == index) {
+                     options.index = j;
+                     break;
+                  }
+               }
+            } else {
+               options.index = parseInt(index, 10) - 1;
+            }
+         } else {
+            options.index = parseInt(index, 10);
+         }
+         if( isNaN(options.index) ) {
+            return;
+         }
+         if(disableAnimation) {
+            options.showAnimationDuration = 0;
+         }
+         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+         /*------------------------------------------bug修复start----------------------*/
+         gallery.listen('imageLoadComplete', function(index, item) {
+            var linkEl = item.el.children[0];
+            var img = item.container.children[0];
+            if (!linkEl.getAttribute('data-size')) {
+               linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+               item.w = img.naturalWidth;
+               item.h = img.naturalHeight;
+               gallery.invalidateCurrItems();
+               gallery.updateSize(true);
+            }
+         });
+         /*------------------------------------------bug修复end------------------------*/
+         gallery.init();
+      };
+
+      var galleryElements = document.querySelectorAll( gallerySelector );
+      for(var i = 0, l = galleryElements.length; i < l; i++) {
+         galleryElements[i].setAttribute('data-pswp-uid', i+1);
+         galleryElements[i].onclick = onThumbnailsClick;
+      }
+      var hashData = photoswipeParseHash();
+      if(hashData.pid && hashData.gid) {
+         openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+      }
+   };
+   initPhotoSwipeFromDOM('.my-gallery');
+</script>
+<!----------------------------------上传图片--------------------------->
+<script>
+   function init(){
+      var u = navigator.userAgent;
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      if(isiOS){
+         document.getElementById("upload").removeAttribute("capture","camera");
+      }
+   };
+   init();
+
+</script>
+</html>

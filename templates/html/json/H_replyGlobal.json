@@ -1,0 +1,18 @@
+{
+  "title": "全局回复",
+  "ico":"",
+  "styles": [
+    "../css/Y_style.css",
+    "../css/H_replyGlobal.css"
+  ],
+  "scripts": [
+    "../js/common/jquery-1.8.1.min.js",
+    "../js/common/Cookie.js",
+    "../js/common/touch.js",
+    "../js/common/iscroll.js",
+    "../js/common/fastclick.js",
+    "../js/common/ejs.min.js",
+    "../js/common/jquery.qqFace.js",
+    "../js/projectJs/H_replyGlobal.js"
+  ]
+}

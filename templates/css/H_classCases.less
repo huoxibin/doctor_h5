@@ -1,0 +1,838 @@
+@r:50rem;
+/*------------这是类名为form_type的大盒子----------*/
+body,html{-webkit-overflow-scrolling:touch;}
+.form_type{
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 28/@r;
+  padding: 128/@r 0/@r 0/@r 0/@r;
+}
+.Ynav b{
+  margin-top: -8/@r;
+  margin-right:35/@r;
+}
+/*-----------------------------分享之后的header------------------------------------*/
+.invitesImg {
+  background: url(../images/invites.png) no-repeat top center;
+  background-size: 10rem 6rem;
+}
+.collectBtn{
+  display: inline-block;
+  width: 40/@r;
+  height: 44/@r;
+  background-position: 0 -197/@r;
+  position: absolute;
+  top: 60/@r;
+  right: 90/@r;
+}
+.collectBtn.active{
+  background-position: -58/@r -197/@r;
+}
+.shareBtn{
+  display: inline-block;
+  width: 44/@r;
+  height: 44/@r;
+  background-position: -114/@r -197/@r;
+  position: absolute;
+  top: 60/@r;
+  right: 20/@r;
+}
+/*-----------------------------------------------------经典病例样式-----------------------------------------------------*/
+.casesDemo{
+  background: #fff;
+  padding: 40/@r 30/@r;
+  .demoTitle{
+    font-size: 36/@r;
+    color: #333333;
+    font-weight: bolder;
+  }
+  .perInfo{
+    margin-top: 42/@r;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30/@r;
+    color: #333;
+    .perInfo_good{
+      flex: 1;
+      order: 1;
+      p{
+        span{
+          padding-right: 46/@r;
+        }
+        .triangle{
+          img{
+            width:30/@r;
+            height:30/@r;
+          }
+        }
+        margin-bottom: 18/@r;
+      }
+      .hospitalName{
+        margin-bottom: 60/@r;
+      }
+      .peopleTitle{
+        font-size: 32/@r;
+        font-weight: bolder;
+        color: #333;
+      }
+      .baseInfo{
+        margin-bottom: 0;
+      }
+    }
+    .perInfo_img{
+      order: 2;
+      box-sizing: border-box;
+      width:200/@r;
+      height:231/@r;
+      background: url(../images/JpatientDP.png) no-repeat top center;
+      background-size: contain;
+      border-radius: 10/@r;
+    }
+  }
+  .people{
+    margin-top:40/@r;
+    .peopleTitle{
+      font-size: 32/@r;
+      font-weight: bolder;
+      color: #333;
+    }
+    .peopleText{
+      margin-top: 20/@r;
+      font-size: 30/@r;
+      color: #333333;
+      letter-spacing: 0;
+    }
+  }
+  .copyRight{
+    font-size: 28/@r;
+    color: #999999;
+  }
+}
+/*-----------------------------------------------------评论内容样式-----------------------------------------------------*/
+.commentArea{
+  margin-top: 20/@r;
+  margin-bottom: 100/@r;
+  background: #fff;
+  padding: 0/@r 30/@r 100/@r 30/@r;
+  /*滚动条-------start*/
+  .iscrollDisList{
+    position: relative;
+    padding-bottom: 50/@r;
+    #wrapper{
+      position: absolute;
+      top: 10px;
+      bottom:0px;
+      height: 1400/@r!important;
+      overflow: hidden!important;
+    }
+  }
+  /*滚动条---------end*/
+  .titleCon{
+    height: 90/@r;
+    line-height: 90/@r;
+    position: relative;
+    border-bottom: 1px solid #FAFAFA;
+    i{
+      display: inline-block;
+      background-image: linear-gradient(-180deg, #64E6E2 0%, #57E2E9 60%, #49DDEF 100%);
+      border-radius: 3px;
+      width: 6/@r;
+      height: 30/@r;
+      position: absolute;
+      top: 32/@r;
+    }
+    span{
+      padding-left:25/@r;
+      font-size: 30/@r;
+      color: #333333;
+      font-weight:bolder;
+    }
+  }
+  /*----------yesTalk-------------*/
+  .yesTalk{
+    li{
+      padding: 30/@r 0/@r;
+      border-bottom: 1px solid #FAFAFA;
+      display: flex;
+      justify-content: space-between;
+      .perImg{
+        display: flex;
+        justify-content: flex-start;
+        width:84/@r;
+        height:84/@r;
+        background: url(../images/JpatientDP.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 50%;
+      }
+      .perSpeech{
+        margin-left: 30/@r;
+        flex: 1;
+        .perName{
+          display: flex;
+          justify-content: space-between;
+          .doctorName{
+            font-size: 32/@r;
+            color: #333333;
+          }
+          .doctorSnap{
+            span{
+              font-size: 30/@r;
+              color:#CCCCCC;
+              padding-right: 20/@r;
+            }
+            img{
+              width: 35/@r;
+              height: 30/@r;
+              padding-bottom: 10/@r;
+            }
+          }
+        }
+        .speechCon{
+          margin-top:20/@r;
+          font-size: 28/@r;
+          color: #666666;
+        }
+        .speechTime{
+          margin-top:20/@r;
+          height: 37/@r;
+          line-height: 37/@r;
+          .talkTime{
+            font-size: 26/@r;
+            color: #999999;
+            padding-right: 0/@r!important;
+          }
+          .replyNum{
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 10/@r;
+            background: #fff;
+            font-size: 20/@r;
+            min-width:100/@r;
+            height:40/@r;
+            text-align: center;
+            line-height: 40/@r;
+            border-radius: 16/@r;
+            .replyCount{
+              font-size: 24/@r;
+              color: #999999;
+            }
+            .wenzi{
+              font-size: 26/@r;
+              color: #999999;
+            }
+          }
+        }
+        .speechTwo{
+          margin-top:20/@r;
+          background: #FAFAFA;
+          border-radius: 10/@r;
+          box-sizing: border-box;
+          padding: 20/@r;
+          .getList{
+            p{
+              margin: 0;
+              padding: 0;
+              .doctorName{
+                font-size: 24/@r;
+                color: #333333;
+              }
+              .talkCont{
+                padding-left: 10/@r;
+                font-size: 24/@r;
+                color: #666666;
+              }
+            }
+            p:nth-child(2){
+              margin-top: 10/@r;
+            }
+          }
+          .totalLength{
+            margin-top: 10/@r;
+            p{
+              font-size: 24/@r;
+              color: #49DDEF;
+            }
+          }
+        }
+      }
+    }
+    .downLoad{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+    }
+    .showAllData{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+      font-weight: 600;
+    }
+  }
+  /*----------noTalk(禁言)-------------*/
+  .noTalk{
+    width:100%;
+    text-align: center;
+    margin-top: 100/@r;
+    img{
+      width: 350/@r;
+      height: 250/@r;
+    }
+    dd{
+      margin-top: 30/@r;
+      margin-bottom:80/@r;
+    }
+  }
+}
+/*-----------------------------------------------------评论区样式-----------------------------------------------------*/
+.commentBtn{
+  .btnOne{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      p{
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        text-align:center;
+        color: #666666;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #666666;
+      }
+    }
+  }
+  .btnTwo{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #666666;
+      }
+    }
+  }
+}
+
+/*---------------------------缩略图样式start------------------------------*/
+* {margin: 0;padding: 0;}
+.clearfix::before, .clearfix::after {
+  display: block;
+  content: '';
+  visibility: hidden;
+  height: 100%;
+  clear: both;
+}
+.my-gallery {
+  display: flex;
+  flex-wrap:wrap;
+  .h_figImg{
+    margin-left:40/@r;
+    margin-top:40/@r;
+    .img-dv{
+      width: 202/@r;
+      height:202/@r;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .h_figImg:nth-child(3n+1) {
+    margin-left: 0;
+  }
+}
+.pswp__img{
+  /*width: 100% !important;
+  height: auto!important;
+  top: -150px !important;*/
+}
+/*---------------------------缩略图样式end------------------------------*/
+.viewMore{
+  margin-top:30/@r;
+  width:100%;
+  height: 42/@r;
+  display: flex;
+  justify-content: center;
+  p{
+    height: 42/@r;
+    line-height: 42/@r;
+    font-size: 30/@r;
+    color: #B4B4B4;
+  }
+}
+.h_Hide{
+  display: none!important;
+}
+
+/*--------------分享出去之后的查看更多---------------*/
+.viewMoreClass{
+  width: 100%;
+  height: 80/@r;
+  margin-top: 100/@r;
+  z-index:111;
+  .getMoreBtn{
+    display: block;
+    width: 598/@r;
+    height: 80/@r;
+    line-height: 80/@r;
+    background-image: linear-gradient(-1deg, #47DCF0 0%, #66E7E2 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+    border-radius: 40px;
+    font-size: 30/@r;
+    color: #FFFFFF;
+    text-align: center;
+    margin:0 auto;
+  }
+}
+
+
+//暂无数据
+.H_noData{
+  width:100%;
+  text-align: center;
+  margin-top: 100/@r;
+  img{
+    width: 350/@r;
+    height: 250/@r;
+  }
+  dd{
+    margin-top: 30/@r;
+    margin-bottom:80/@r;
+    font-size: 30/@r;
+    color: #666;
+  }
+}
+
+//点赞和没点赞的类名
+.snapClass{
+  color: #6DE4F2!important;
+}
+.noSnapClass{
+
+}
+
+//表情样式添加
+#facebox{
+  width: 100%;
+  left: 0px!important;
+  top:118/@r!important;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  //height: 300/@r;
+  //overflow-y: scroll;
+  table{
+    width: 90%;
+    margin-left: 5%;
+    tr{
+     line-height: 70/@r!important;
+      td{
+        line-height: 70/@r!important;
+      }
+    }
+  }
+}
+
+
+//--------------------------------------------------遮盖层
+.tc_box{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-y: scroll;
+}
+.tc{
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.4;
+  z-index: 101;
+}
+
+.Hnav{
+  height: 2.56rem;
+  background: #C6C6C6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 10;
+  .dialogTop{
+    position: fixed;
+    top: 55/@r;
+    width: 100%;
+    text-align: center;
+    height: 90/@r;
+    line-height: 90/@r;
+    background: #fff;
+    border-top-left-radius:25/@r;
+    border-top-right-radius:25/@r;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 36/@r;
+    color: #333333;
+    z-index:101;
+    img{
+      width: 30/@r;
+      height: 30/@r;
+      position: absolute;
+      left: 40/@r;
+      top:30/@r;
+    }
+  }
+}
+//上面内容得
+.dialogReply{
+  height: 500px;
+  background: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  position: absolute;
+  top: 950px;
+  //该医生说的话
+  .docotrTalk{
+    background: #fff;
+    padding: 26/@r 30/@r 40/@r 30/@r;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    .perImg{
+      display: flex;
+      justify-content: flex-start;
+      width:84/@r;
+      height:84/@r;
+      background: url(../images/JpatientDP.png) no-repeat top center;
+      background-size: cover;
+      border-radius: 50%;
+      //img{
+      //  width:84/@r;
+      //  height:84/@r;
+      //}
+    }
+    .perSpeech{
+      margin-left: 30/@r;
+      flex: 1;
+      .perName{
+        display: flex;
+        justify-content: space-between;
+        .doctorName{
+          font-size: 32/@r;
+          color: #333333;
+        }
+        .doctorSnap{
+          span{
+            font-size: 30/@r;
+            color:#CCCCCC;
+            padding-right: 20/@r;
+          }
+          img{
+            width: 35/@r;
+            height: 30/@r;
+            padding-bottom: 10/@r;
+          }
+        }
+      }
+      .speechCon{
+        margin-top:20/@r;
+        font-size: 28/@r;
+        color: #666666;
+      }
+      .speechTime{
+        margin-top:20/@r;
+        height: 37/@r;
+        line-height: 37/@r;
+        .talkTime{
+          font-size: 26/@r;
+          color: #999999;
+          padding-right: 40/@r;
+        }
+      }
+    }
+  }
+  .dialogAll{
+    background: #fff;
+    width:100%;
+    padding: 20/@r 30/@r 30/@r 30/@r;
+    font-size: 30/@r;
+    color: #333333;
+    font-weight: bolder;
+  }
+  //讨论内容
+  .doctorDiscuss{
+    background: #fff;
+    width: 100%;
+    min-height: 600/@r;
+    margin-bottom: 150/@r;
+    ul{
+      li{
+        padding: 26/@r 30/@r 40/@r 30/@r;
+        border-bottom: 1px solid #FAFAFA;
+        display: flex;
+        justify-content: space-between;
+        .perImg{
+          display: flex;
+          justify-content: flex-start;
+          width:84/@r;
+          height:84/@r;
+          background: url(../images/JpatientDP.png) no-repeat top center;
+          background-size: cover;
+          border-radius: 50%;
+          //img{
+          //  width:84/@r;
+          //  height:84/@r;
+          //}
+        }
+        .perSpeech{
+          margin-left: 30/@r;
+          flex: 1;
+          .perName{
+            display: flex;
+            justify-content: space-between;
+            .doctorName{
+              font-size: 32/@r;
+              color: #333333;
+            }
+            .doctorSnap{
+              span{
+                font-size: 30/@r;
+                color:#CCCCCC;
+                padding-right: 20/@r;
+              }
+              img{
+                width: 35/@r;
+                height: 30/@r;
+                padding-bottom: 10/@r;
+              }
+            }
+          }
+          .speechCon{
+            margin-top:20/@r;
+            font-size: 28/@r;
+            color: #666666;
+          }
+          .speechTime{
+            margin-top:20/@r;
+            height: 37/@r;
+            line-height: 37/@r;
+            .talkTime{
+              font-size: 26/@r;
+              color: #999999;
+              padding-right: 40/@r;
+            }
+            .wenzi{
+              font-size: 26/@r;
+              color: #999999;
+            }
+          }
+        }
+      }
+    }
+    .downLoad{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+    }
+    .showAllData{
+      width: 100%;
+      height: 100/@r;
+      text-align: center;
+      line-height: 100/@r;
+      font-size: 24/@r;
+      color: #999999;
+      font-weight: 600;
+    }
+  }
+}
+
+//底部输入框样式
+.dialogCommentBtn{
+  z-index: 110;
+  width: 100%;
+  position: fixed;
+  bottom: 0/@r;
+  .btnOne{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    padding: 25/@r 30/@r;
+    p{
+      box-sizing: border-box;
+      width: 100%;
+      height: 70/@r;
+      font-size: 30/@r;
+      line-height: 70/@r;
+      text-align:left;
+      padding-left: 40/@r;
+      color: #666666;
+      background: #F1F1F1;
+      border: 1px solid #DEDBDB;
+      border-radius: 12/@r;
+    }
+  }
+  .btnTwo{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #6DE4F2;
+      }
+    }
+  }
+  .btnThree{
+    box-sizing: border-box;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    background:#fff;
+    width: 100%;
+    height: 120/@r;
+    position: fixed;
+    bottom: 0/@r;
+    display: flex;
+    justify-content: space-between;
+    .discussion{
+      flex:2;
+      padding:25/@r 30/@r;
+      .disInput{
+        display: inline-block;
+        width: 100%;
+        height: 70/@r;
+        font-size: 30/@r;
+        line-height: 70/@r;
+        padding-left: 40/@r;
+        background: #F1F1F1;
+        border: 1px solid #DEDBDB;
+        border-radius: 12/@r;
+      }
+    }
+    .attend{
+      height: 120/@r;
+      line-height: 120/@r;
+      padding-left: 30/@r;
+      padding-right: 40/@r;
+      img{
+        width:39/@r;
+        height:39/@r;
+      }
+      span{
+        padding-left: 20/@r;
+        font-size: 30/@r;
+        color: #6DE4F2;
+      }
+    }
+  }
+  .keyBoard{
+    width: 100%;
+    height: 0/@r;
+    background: #fff;
+  }
+}
+
+.overflow-hidden{
+  position: fixed;
+  width: 100%;
+}
